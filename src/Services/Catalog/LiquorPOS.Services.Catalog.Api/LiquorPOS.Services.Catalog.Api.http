@@ -1,0 +1,6 @@
+@LiquorPOS.Services.Catalog.Api_HostAddress = http://localhost:5286
+
+GET {{LiquorPOS.Services.Catalog.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
