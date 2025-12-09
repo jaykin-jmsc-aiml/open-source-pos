@@ -1,15 +1,19 @@
 using Serilog;
+using LiquorPOS.Services.CustomerLoyalty.Application;
+using LiquorPOS.Services.CustomerLoyalty.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseSerilog((context, configuration) =>
-    configuration.ReadFrom.Configuration(context.Configuration)
-        .WriteTo.Console()
-        .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day));
+    configuration.ReadFrom.Configuration(context.Configuration));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddProblemDetails();
+
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddHealthChecks();
 
@@ -21,14 +25,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseExceptionHandler("/error");
 app.UseSerilogRequestLogging();
+app.UseStatusCodePages();
+app.UseExceptionHandler();
+
+app.UseAuthorization();
 
 app.MapControllers();
 app.MapHealthChecks("/health");
-
-app.MapGet("/", () => Results.Ok(new { service = "CustomerLoyalty", status = "running" }))
-    .WithName("Root")
-    .WithOpenApi();
 
 app.Run();
