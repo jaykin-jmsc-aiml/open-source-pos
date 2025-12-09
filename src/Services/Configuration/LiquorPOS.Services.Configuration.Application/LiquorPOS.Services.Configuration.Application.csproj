@@ -13,4 +13,9 @@
     <PackageReference Include="MediatR" Version="14.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LiquorPOS.Services.Configuration.Domain\LiquorPOS.Services.Configuration.Domain.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\LiquorPOS.BuildingBlocks\LiquorPOS.BuildingBlocks.csproj" />
+  </ItemGroup>
+
 </Project>

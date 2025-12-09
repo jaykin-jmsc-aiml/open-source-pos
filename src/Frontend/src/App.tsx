@@ -25,6 +25,8 @@ function App() {
     fetchServices()
   }, [])
 
+  console.log(services)
+
   return (
     <div className="min-h-screen bg-gray-100">
       <header className="bg-blue-600 text-white shadow-lg">
