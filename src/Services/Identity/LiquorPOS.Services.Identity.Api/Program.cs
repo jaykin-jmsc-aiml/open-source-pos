@@ -1,9 +1,13 @@
 using System;
 using System.Text;
 using FluentValidation;
+using LiquorPOS.Services.Identity.Application.Commands.AssignUserRoles;
 using LiquorPOS.Services.Identity.Application.Commands.Login;
+using LiquorPOS.Services.Identity.Application.Commands.RefreshToken;
 using LiquorPOS.Services.Identity.Application.Commands.Register;
+using LiquorPOS.Services.Identity.Application.Commands.RevokeToken;
 using LiquorPOS.Services.Identity.Application.Options;
+using LiquorPOS.Services.Identity.Application.Queries;
 using LiquorPOS.Services.Identity.Application.Services;
 using LiquorPOS.Services.Identity.Infrastructure.Identity;
 using LiquorPOS.Services.Identity.Infrastructure.Persistence;
@@ -86,7 +90,11 @@ builder.Services.AddHostedService<IdentitySeederHostedService>();
 builder.Services.AddMediatR(config =>
     config.RegisterServicesFromAssemblies(
         typeof(RegisterCommand).Assembly,
-        typeof(LoginCommand).Assembly));
+        typeof(LoginCommand).Assembly,
+        typeof(RefreshTokenCommand).Assembly,
+        typeof(RevokeTokenCommand).Assembly,
+        typeof(AssignUserRolesCommand).Assembly,
+        typeof(GetUsersQuery).Assembly));
 
 builder.Services.AddValidatorsFromAssemblyContaining<RegisterCommandValidator>();
 builder.Services.AddFluentValidationAutoValidation();
