@@ -10,15 +10,15 @@ public class RefreshTokenTests
     {
         var userId = Guid.NewGuid();
 
-        var token = RefreshToken.Create(userId);
+        var (token, plainToken) = RefreshToken.Create(userId);
 
         token.Should().NotBeNull();
         token.UserId.Should().Be(userId);
-        token.Token.Should().NotBeEmpty();
+        plainToken.Should().NotBeEmpty();
         token.ExpiresAt.Should().BeAfter(DateTime.UtcNow);
         token.CreatedAt.Should().BeCloseTo(DateTime.UtcNow, TimeSpan.FromSeconds(1));
         token.RevokedAt.Should().BeNull();
-        token.ReplacedByToken.Should().BeNull();
+        token.ReplacedByTokenHash.Should().BeNull();
         token.Id.Should().NotBe(Guid.Empty);
     }
 
@@ -28,7 +28,7 @@ public class RefreshTokenTests
         var userId = Guid.NewGuid();
         var duration = TimeSpan.FromDays(14);
 
-        var token = RefreshToken.Create(userId, duration);
+        var (token, _) = RefreshToken.Create(userId, duration);
 
         token.ExpiresAt.Should().BeCloseTo(DateTime.UtcNow.Add(duration), TimeSpan.FromSeconds(1));
     }
@@ -42,29 +42,10 @@ public class RefreshTokenTests
     }
 
     [Fact]
-    public void CreateOrThrow_WithValidUserId_ShouldReturnToken()
-    {
-        var userId = Guid.NewGuid();
-
-        var token = RefreshToken.CreateOrThrow(userId);
-
-        token.Should().NotBeNull();
-        token.UserId.Should().Be(userId);
-    }
-
-    [Fact]
-    public void CreateOrThrow_WithEmptyUserId_ShouldThrowArgumentException()
-    {
-        var action = () => RefreshToken.CreateOrThrow(Guid.Empty);
-
-        action.Should().Throw<ArgumentException>();
-    }
-
-    [Fact]
     public void IsExpired_WithFutureExpiration_ShouldReturnFalse()
     {
         var userId = Guid.NewGuid();
-        var token = RefreshToken.Create(userId);
+        var (token, _) = RefreshToken.Create(userId);
 
         token.IsExpired.Should().BeFalse();
     }
@@ -73,7 +54,7 @@ public class RefreshTokenTests
     public void IsExpired_WithPastExpiration_ShouldReturnTrue()
     {
         var userId = Guid.NewGuid();
-        var token = RefreshToken.Create(userId, TimeSpan.FromMilliseconds(1));
+        var (token, _) = RefreshToken.Create(userId, TimeSpan.FromMilliseconds(1));
 
         System.Threading.Thread.Sleep(100);
 
@@ -84,7 +65,7 @@ public class RefreshTokenTests
     public void IsRevoked_WithoutRevocation_ShouldReturnFalse()
     {
         var userId = Guid.NewGuid();
-        var token = RefreshToken.Create(userId);
+        var (token, _) = RefreshToken.Create(userId);
 
         token.IsRevoked.Should().BeFalse();
     }
@@ -93,7 +74,7 @@ public class RefreshTokenTests
     public void IsRevoked_AfterRevocation_ShouldReturnTrue()
     {
         var userId = Guid.NewGuid();
-        var token = RefreshToken.Create(userId);
+        var (token, _) = RefreshToken.Create(userId);
         token.Revoke();
 
         token.IsRevoked.Should().BeTrue();
@@ -103,7 +84,7 @@ public class RefreshTokenTests
     public void IsValid_WithValidToken_ShouldReturnTrue()
     {
         var userId = Guid.NewGuid();
-        var token = RefreshToken.Create(userId);
+        var (token, _) = RefreshToken.Create(userId);
 
         token.IsValid.Should().BeTrue();
     }
@@ -112,7 +93,7 @@ public class RefreshTokenTests
     public void IsValid_WithRevokedToken_ShouldReturnFalse()
     {
         var userId = Guid.NewGuid();
-        var token = RefreshToken.Create(userId);
+        var (token, _) = RefreshToken.Create(userId);
         token.Revoke();
 
         token.IsValid.Should().BeFalse();
@@ -122,7 +103,7 @@ public class RefreshTokenTests
     public void IsValid_WithExpiredToken_ShouldReturnFalse()
     {
         var userId = Guid.NewGuid();
-        var token = RefreshToken.Create(userId, TimeSpan.FromMilliseconds(1));
+        var (token, _) = RefreshToken.Create(userId, TimeSpan.FromMilliseconds(1));
 
         System.Threading.Thread.Sleep(100);
 
@@ -130,66 +111,10 @@ public class RefreshTokenTests
     }
 
     [Fact]
-    public void Rotate_WithValidToken_ShouldSucceed()
-    {
-        var userId = Guid.NewGuid();
-        var oldToken = RefreshToken.Create(userId);
-        var oldTokenValue = oldToken.Token;
-
-        var newToken = oldToken.Rotate();
-
-        newToken.Should().NotBeNull();
-        newToken.UserId.Should().Be(userId);
-        newToken.Token.Should().NotBe(oldTokenValue);
-        newToken.IsValid.Should().BeTrue();
-
-        oldToken.IsRevoked.Should().BeTrue();
-        oldToken.ReplacedByToken.Should().Be(newToken.Token);
-        oldToken.RevokedAt.Should().NotBeNull();
-    }
-
-    [Fact]
-    public void Rotate_WithRevokedToken_ShouldThrowInvalidOperationException()
-    {
-        var userId = Guid.NewGuid();
-        var token = RefreshToken.Create(userId);
-        token.Revoke();
-
-        var action = () => token.Rotate();
-
-        action.Should().Throw<InvalidOperationException>();
-    }
-
-    [Fact]
-    public void Rotate_WithExpiredToken_ShouldThrowInvalidOperationException()
-    {
-        var userId = Guid.NewGuid();
-        var token = RefreshToken.Create(userId, TimeSpan.FromMilliseconds(1));
-
-        System.Threading.Thread.Sleep(100);
-
-        var action = () => token.Rotate();
-
-        action.Should().Throw<InvalidOperationException>();
-    }
-
-    [Fact]
-    public void Rotate_WithCustomDuration_ShouldSucceed()
-    {
-        var userId = Guid.NewGuid();
-        var oldToken = RefreshToken.Create(userId);
-        var duration = TimeSpan.FromDays(14);
-
-        var newToken = oldToken.Rotate(duration);
-
-        newToken.ExpiresAt.Should().BeCloseTo(DateTime.UtcNow.Add(duration), TimeSpan.FromSeconds(1));
-    }
-
-    [Fact]
     public void Revoke_WithValidToken_ShouldSucceed()
     {
         var userId = Guid.NewGuid();
-        var token = RefreshToken.Create(userId);
+        var (token, _) = RefreshToken.Create(userId);
 
         token.Revoke();
 
@@ -201,7 +126,7 @@ public class RefreshTokenTests
     public void Revoke_WithAlreadyRevokedToken_ShouldNotThrow()
     {
         var userId = Guid.NewGuid();
-        var token = RefreshToken.Create(userId);
+        var (token, _) = RefreshToken.Create(userId);
         token.Revoke();
 
         var action = () => token.Revoke();
@@ -214,19 +139,65 @@ public class RefreshTokenTests
     public void Create_ShouldGenerateUniqueTokens()
     {
         var userId = Guid.NewGuid();
-        var token1 = RefreshToken.Create(userId);
-        var token2 = RefreshToken.Create(userId);
+        var (_, plainToken1) = RefreshToken.Create(userId);
+        var (_, plainToken2) = RefreshToken.Create(userId);
 
-        token1.Token.Should().NotBe(token2.Token);
+        plainToken1.Should().NotBe(plainToken2);
     }
 
     [Fact]
     public void Create_ShouldGenerateUniqueIds()
     {
         var userId = Guid.NewGuid();
-        var token1 = RefreshToken.Create(userId);
-        var token2 = RefreshToken.Create(userId);
+        var (token1, _) = RefreshToken.Create(userId);
+        var (token2, _) = RefreshToken.Create(userId);
 
         token1.Id.Should().NotBe(token2.Id);
+    }
+
+    [Fact]
+    public void MarkAsRotated_ShouldSetReplacedByTokenHash()
+    {
+        var userId = Guid.NewGuid();
+        var (oldToken, _) = RefreshToken.Create(userId);
+        var newTokenHash = "new-token-hash";
+
+        oldToken.MarkAsRotated(newTokenHash);
+
+        oldToken.IsRevoked.Should().BeTrue();
+        oldToken.ReplacedByTokenHash.Should().Be(newTokenHash);
+        oldToken.RevokedAt.Should().NotBeNull();
+    }
+
+    [Fact]
+    public void CreateWithHash_ShouldCreateTokenWithHash()
+    {
+        var userId = Guid.NewGuid();
+        var tokenHash = "test-token-hash";
+        var expiresAt = DateTime.UtcNow.AddDays(7);
+
+        var token = RefreshToken.CreateWithHash(userId, tokenHash, expiresAt);
+
+        token.Should().NotBeNull();
+        token.UserId.Should().Be(userId);
+        token.TokenHash.Should().Be(tokenHash);
+        token.ExpiresAt.Should().Be(expiresAt);
+    }
+
+    [Fact]
+    public void GenerateToken_ShouldReturnNonEmptyString()
+    {
+        var token = RefreshToken.GenerateToken();
+
+        token.Should().NotBeNullOrEmpty();
+    }
+
+    [Fact]
+    public void GenerateToken_ShouldReturnUniqueTokens()
+    {
+        var token1 = RefreshToken.GenerateToken();
+        var token2 = RefreshToken.GenerateToken();
+
+        token1.Should().NotBe(token2);
     }
 }

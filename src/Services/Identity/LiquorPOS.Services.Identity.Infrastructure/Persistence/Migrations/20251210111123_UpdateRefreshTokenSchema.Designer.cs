@@ -4,6 +4,7 @@ using LiquorPOS.Services.Identity.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LiquorPOS.Services.Identity.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(LiquorPOSIdentityDbContext))]
-    partial class LiquorPOSIdentityDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251210111123_UpdateRefreshTokenSchema")]
+    partial class UpdateRefreshTokenSchema
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
