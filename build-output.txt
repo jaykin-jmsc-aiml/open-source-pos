@@ -1,0 +1,103 @@
+
+Welcome to .NET 8.0!
+---------------------
+SDK Version: 8.0.416
+
+Telemetry
+---------
+The .NET tools collect usage data in order to help us improve your experience. It is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+
+Read more about .NET CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
+
+----------------
+Installed an ASP.NET Core HTTPS development certificate.
+To trust the certificate, view the instructions: https://aka.ms/dotnet-https-linux
+
+----------------
+Write your first app: https://aka.ms/dotnet-hello-world
+Find out what's new: https://aka.ms/dotnet-whats-new
+Explore documentation: https://aka.ms/dotnet-docs
+Report issues and find source on GitHub: https://github.com/dotnet/core
+Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli
+--------------------------------------------------------------------------------------
+  Determining projects to restore...
+  Restored /home/engine/project/tests/Services/SalesPOS/LiquorPOS.Services.SalesPOS.UnitTests/LiquorPOS.Services.SalesPOS.UnitTests.csproj (in 18.08 sec).
+  Restored /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Domain/LiquorPOS.Services.Identity.Domain.csproj (in 2 ms).
+  Restored /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Application/LiquorPOS.Services.Identity.Application.csproj (in 7 ms).
+  Restored /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Infrastructure/LiquorPOS.Services.Identity.Infrastructure.csproj (in 18.34 sec).
+  Restored /home/engine/project/src/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.Infrastructure/LiquorPOS.Services.CustomerLoyalty.Infrastructure.csproj (in 11 ms).
+  Restored /home/engine/project/src/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.Domain/LiquorPOS.Services.CustomerLoyalty.Domain.csproj (in 2 ms).
+  Restored /home/engine/project/src/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.Application/LiquorPOS.Services.CustomerLoyalty.Application.csproj (in 5 ms).
+  Restored /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Api/LiquorPOS.Services.Identity.Api.csproj (in 5.01 sec).
+  Restored /home/engine/project/src/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.Api/LiquorPOS.Services.CustomerLoyalty.Api.csproj (in 4.75 sec).
+  Restored /home/engine/project/src/Services/Configuration/LiquorPOS.Services.Configuration.Domain/LiquorPOS.Services.Configuration.Domain.csproj (in 4 ms).
+  Restored /home/engine/project/src/Services/Configuration/LiquorPOS.Services.Configuration.Application/LiquorPOS.Services.Configuration.Application.csproj (in 10 ms).
+  Restored /home/engine/project/src/Services/Configuration/LiquorPOS.Services.Configuration.Api/LiquorPOS.Services.Configuration.Api.csproj (in 6 ms).
+  Restored /home/engine/project/src/Services/Catalog/LiquorPOS.Services.Catalog.Infrastructure/LiquorPOS.Services.Catalog.Infrastructure.csproj (in 12 ms).
+  Restored /home/engine/project/src/Services/Catalog/LiquorPOS.Services.Catalog.Domain/LiquorPOS.Services.Catalog.Domain.csproj (in 2 ms).
+  Restored /home/engine/project/src/Services/Catalog/LiquorPOS.Services.Catalog.Application/LiquorPOS.Services.Catalog.Application.csproj (in 4 ms).
+  Restored /home/engine/project/src/Services/Configuration/LiquorPOS.Services.Configuration.Infrastructure/LiquorPOS.Services.Configuration.Infrastructure.csproj (in 136 ms).
+  Restored /home/engine/project/src/Services/Catalog/LiquorPOS.Services.Catalog.Api/LiquorPOS.Services.Catalog.Api.csproj (in 9 ms).
+  Restored /home/engine/project/src/BuildingBlocks/LiquorPOS.BuildingBlocks/LiquorPOS.BuildingBlocks.csproj (in 1 ms).
+  Restored /home/engine/project/tests/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.UnitTests/LiquorPOS.Services.ReportingAnalytics.UnitTests.csproj (in 10 ms).
+  Restored /home/engine/project/tests/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.UnitTests/LiquorPOS.Services.InventoryPurchasing.UnitTests.csproj (in 8 ms).
+  Restored /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj (in 9 ms).
+  Restored /home/engine/project/tests/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.UnitTests/LiquorPOS.Services.CustomerLoyalty.UnitTests.csproj (in 11 ms).
+  Restored /home/engine/project/tests/Services/Configuration/LiquorPOS.Services.Configuration.UnitTests/LiquorPOS.Services.Configuration.UnitTests.csproj (in 11 ms).
+  Restored /home/engine/project/tests/Services/Catalog/LiquorPOS.Services.Catalog.UnitTests/LiquorPOS.Services.Catalog.UnitTests.csproj (in 9 ms).
+  Restored /home/engine/project/src/Services/SalesPOS/LiquorPOS.Services.SalesPOS.Infrastructure/LiquorPOS.Services.SalesPOS.Infrastructure.csproj (in 15 ms).
+  Restored /home/engine/project/src/Services/SalesPOS/LiquorPOS.Services.SalesPOS.Domain/LiquorPOS.Services.SalesPOS.Domain.csproj (in 5 ms).
+  Restored /home/engine/project/src/Services/SalesPOS/LiquorPOS.Services.SalesPOS.Application/LiquorPOS.Services.SalesPOS.Application.csproj (in 7 ms).
+  Restored /home/engine/project/src/Services/SalesPOS/LiquorPOS.Services.SalesPOS.Api/LiquorPOS.Services.SalesPOS.Api.csproj (in 12 ms).
+  Restored /home/engine/project/src/ApiGateway/LiquorPOS.ApiGateway/LiquorPOS.ApiGateway.csproj (in 344 ms).
+  Restored /home/engine/project/src/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.Infrastructure/LiquorPOS.Services.ReportingAnalytics.Infrastructure.csproj (in 16 ms).
+  Restored /home/engine/project/src/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.Domain/LiquorPOS.Services.ReportingAnalytics.Domain.csproj (in 2 ms).
+  Restored /home/engine/project/src/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.Application/LiquorPOS.Services.ReportingAnalytics.Application.csproj (in 5 ms).
+  Restored /home/engine/project/src/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.Api/LiquorPOS.Services.ReportingAnalytics.Api.csproj (in 12 ms).
+  Restored /home/engine/project/src/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.Infrastructure/LiquorPOS.Services.InventoryPurchasing.Infrastructure.csproj (in 7 ms).
+  Restored /home/engine/project/src/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.Domain/LiquorPOS.Services.InventoryPurchasing.Domain.csproj (in 2 ms).
+  Restored /home/engine/project/src/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.Application/LiquorPOS.Services.InventoryPurchasing.Application.csproj (in 3 ms).
+  Restored /home/engine/project/src/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.Api/LiquorPOS.Services.InventoryPurchasing.Api.csproj (in 12 ms).
+  LiquorPOS.Services.Identity.Domain -> /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Domain/bin/Debug/net8.0/LiquorPOS.Services.Identity.Domain.dll
+  LiquorPOS.BuildingBlocks -> /home/engine/project/src/BuildingBlocks/LiquorPOS.BuildingBlocks/bin/Debug/net8.0/LiquorPOS.BuildingBlocks.dll
+  LiquorPOS.Services.Catalog.Domain -> /home/engine/project/src/Services/Catalog/LiquorPOS.Services.Catalog.Domain/bin/Debug/net8.0/LiquorPOS.Services.Catalog.Domain.dll
+  LiquorPOS.Services.InventoryPurchasing.Domain -> /home/engine/project/src/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.Domain/bin/Debug/net8.0/LiquorPOS.Services.InventoryPurchasing.Domain.dll
+  LiquorPOS.Services.Identity.Application -> /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Application/bin/Debug/net8.0/LiquorPOS.Services.Identity.Application.dll
+  LiquorPOS.Services.Catalog.Application -> /home/engine/project/src/Services/Catalog/LiquorPOS.Services.Catalog.Application/bin/Debug/net8.0/LiquorPOS.Services.Catalog.Application.dll
+  LiquorPOS.Services.SalesPOS.Domain -> /home/engine/project/src/Services/SalesPOS/LiquorPOS.Services.SalesPOS.Domain/bin/Debug/net8.0/LiquorPOS.Services.SalesPOS.Domain.dll
+  LiquorPOS.Services.Catalog.Infrastructure -> /home/engine/project/src/Services/Catalog/LiquorPOS.Services.Catalog.Infrastructure/bin/Debug/net8.0/LiquorPOS.Services.Catalog.Infrastructure.dll
+  LiquorPOS.Services.SalesPOS.Application -> /home/engine/project/src/Services/SalesPOS/LiquorPOS.Services.SalesPOS.Application/bin/Debug/net8.0/LiquorPOS.Services.SalesPOS.Application.dll
+  LiquorPOS.Services.SalesPOS.Infrastructure -> /home/engine/project/src/Services/SalesPOS/LiquorPOS.Services.SalesPOS.Infrastructure/bin/Debug/net8.0/LiquorPOS.Services.SalesPOS.Infrastructure.dll
+  LiquorPOS.Services.InventoryPurchasing.Application -> /home/engine/project/src/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.Application/bin/Debug/net8.0/LiquorPOS.Services.InventoryPurchasing.Application.dll
+  LiquorPOS.Services.Catalog.UnitTests -> /home/engine/project/tests/Services/Catalog/LiquorPOS.Services.Catalog.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Catalog.UnitTests.dll
+  LiquorPOS.Services.Identity.UnitTests -> /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Identity.UnitTests.dll
+  LiquorPOS.Services.Identity.Infrastructure -> /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Infrastructure/bin/Debug/net8.0/LiquorPOS.Services.Identity.Infrastructure.dll
+  LiquorPOS.Services.InventoryPurchasing.Infrastructure -> /home/engine/project/src/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.Infrastructure/bin/Debug/net8.0/LiquorPOS.Services.InventoryPurchasing.Infrastructure.dll
+  LiquorPOS.Services.CustomerLoyalty.Domain -> /home/engine/project/src/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.Domain/bin/Debug/net8.0/LiquorPOS.Services.CustomerLoyalty.Domain.dll
+  LiquorPOS.Services.InventoryPurchasing.UnitTests -> /home/engine/project/tests/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.InventoryPurchasing.UnitTests.dll
+  LiquorPOS.Services.SalesPOS.Api -> /home/engine/project/src/Services/SalesPOS/LiquorPOS.Services.SalesPOS.Api/bin/Debug/net8.0/LiquorPOS.Services.SalesPOS.Api.dll
+  LiquorPOS.Services.CustomerLoyalty.Application -> /home/engine/project/src/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.Application/bin/Debug/net8.0/LiquorPOS.Services.CustomerLoyalty.Application.dll
+  LiquorPOS.Services.Catalog.Api -> /home/engine/project/src/Services/Catalog/LiquorPOS.Services.Catalog.Api/bin/Debug/net8.0/LiquorPOS.Services.Catalog.Api.dll
+  LiquorPOS.Services.ReportingAnalytics.Domain -> /home/engine/project/src/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.Domain/bin/Debug/net8.0/LiquorPOS.Services.ReportingAnalytics.Domain.dll
+  LiquorPOS.Services.Identity.Api -> /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Api/bin/Debug/net8.0/LiquorPOS.Services.Identity.Api.dll
+  LiquorPOS.Services.ReportingAnalytics.Application -> /home/engine/project/src/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.Application/bin/Debug/net8.0/LiquorPOS.Services.ReportingAnalytics.Application.dll
+  LiquorPOS.Services.Configuration.Domain -> /home/engine/project/src/Services/Configuration/LiquorPOS.Services.Configuration.Domain/bin/Debug/net8.0/LiquorPOS.Services.Configuration.Domain.dll
+  LiquorPOS.Services.Configuration.Application -> /home/engine/project/src/Services/Configuration/LiquorPOS.Services.Configuration.Application/bin/Debug/net8.0/LiquorPOS.Services.Configuration.Application.dll
+  LiquorPOS.Services.CustomerLoyalty.UnitTests -> /home/engine/project/tests/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.CustomerLoyalty.UnitTests.dll
+  LiquorPOS.Services.Configuration.Infrastructure -> /home/engine/project/src/Services/Configuration/LiquorPOS.Services.Configuration.Infrastructure/bin/Debug/net8.0/LiquorPOS.Services.Configuration.Infrastructure.dll
+  LiquorPOS.Services.CustomerLoyalty.Infrastructure -> /home/engine/project/src/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.Infrastructure/bin/Debug/net8.0/LiquorPOS.Services.CustomerLoyalty.Infrastructure.dll
+  LiquorPOS.Services.Configuration.Api -> /home/engine/project/src/Services/Configuration/LiquorPOS.Services.Configuration.Api/bin/Debug/net8.0/LiquorPOS.Services.Configuration.Api.dll
+  LiquorPOS.Services.InventoryPurchasing.Api -> /home/engine/project/src/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.Api/bin/Debug/net8.0/LiquorPOS.Services.InventoryPurchasing.Api.dll
+  LiquorPOS.Services.CustomerLoyalty.Api -> /home/engine/project/src/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.Api/bin/Debug/net8.0/LiquorPOS.Services.CustomerLoyalty.Api.dll
+  LiquorPOS.Services.Configuration.UnitTests -> /home/engine/project/tests/Services/Configuration/LiquorPOS.Services.Configuration.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Configuration.UnitTests.dll
+  LiquorPOS.Services.SalesPOS.UnitTests -> /home/engine/project/tests/Services/SalesPOS/LiquorPOS.Services.SalesPOS.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.SalesPOS.UnitTests.dll
+  LiquorPOS.ApiGateway -> /home/engine/project/src/ApiGateway/LiquorPOS.ApiGateway/bin/Debug/net8.0/LiquorPOS.ApiGateway.dll
+  LiquorPOS.Services.ReportingAnalytics.Infrastructure -> /home/engine/project/src/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.Infrastructure/bin/Debug/net8.0/LiquorPOS.Services.ReportingAnalytics.Infrastructure.dll
+  LiquorPOS.Services.ReportingAnalytics.UnitTests -> /home/engine/project/tests/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.ReportingAnalytics.UnitTests.dll
+  LiquorPOS.Services.ReportingAnalytics.Api -> /home/engine/project/src/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.Api/bin/Debug/net8.0/LiquorPOS.Services.ReportingAnalytics.Api.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:01:00.85

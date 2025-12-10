@@ -1,0 +1,71 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  LiquorPOS.Services.Identity.Domain -> /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Domain/bin/Debug/net8.0/LiquorPOS.Services.Identity.Domain.dll
+  LiquorPOS.BuildingBlocks -> /home/engine/project/src/BuildingBlocks/LiquorPOS.BuildingBlocks/bin/Debug/net8.0/LiquorPOS.BuildingBlocks.dll
+  LiquorPOS.Services.Identity.Application -> /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Application/bin/Debug/net8.0/LiquorPOS.Services.Identity.Application.dll
+  LiquorPOS.Services.Catalog.Domain -> /home/engine/project/src/Services/Catalog/LiquorPOS.Services.Catalog.Domain/bin/Debug/net8.0/LiquorPOS.Services.Catalog.Domain.dll
+  LiquorPOS.Services.Identity.UnitTests -> /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Identity.UnitTests.dll
+Test run for /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Identity.UnitTests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+  LiquorPOS.Services.CustomerLoyalty.Domain -> /home/engine/project/src/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.Domain/bin/Debug/net8.0/LiquorPOS.Services.CustomerLoyalty.Domain.dll
+  LiquorPOS.Services.CustomerLoyalty.Application -> /home/engine/project/src/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.Application/bin/Debug/net8.0/LiquorPOS.Services.CustomerLoyalty.Application.dll
+  LiquorPOS.Services.CustomerLoyalty.UnitTests -> /home/engine/project/tests/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.CustomerLoyalty.UnitTests.dll
+Test run for /home/engine/project/tests/Services/CustomerLoyalty/LiquorPOS.Services.CustomerLoyalty.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.CustomerLoyalty.UnitTests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+
+Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: < 1 ms - LiquorPOS.Services.Identity.UnitTests.dll (net8.0)
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+  LiquorPOS.Services.Catalog.Application -> /home/engine/project/src/Services/Catalog/LiquorPOS.Services.Catalog.Application/bin/Debug/net8.0/LiquorPOS.Services.Catalog.Application.dll
+  LiquorPOS.Services.InventoryPurchasing.Domain -> /home/engine/project/src/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.Domain/bin/Debug/net8.0/LiquorPOS.Services.InventoryPurchasing.Domain.dll
+  LiquorPOS.Services.InventoryPurchasing.Application -> /home/engine/project/src/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.Application/bin/Debug/net8.0/LiquorPOS.Services.InventoryPurchasing.Application.dll
+
+Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: < 1 ms - LiquorPOS.Services.CustomerLoyalty.UnitTests.dll (net8.0)
+  LiquorPOS.Services.ReportingAnalytics.Domain -> /home/engine/project/src/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.Domain/bin/Debug/net8.0/LiquorPOS.Services.ReportingAnalytics.Domain.dll
+  LiquorPOS.Services.ReportingAnalytics.Application -> /home/engine/project/src/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.Application/bin/Debug/net8.0/LiquorPOS.Services.ReportingAnalytics.Application.dll
+  LiquorPOS.Services.ReportingAnalytics.UnitTests -> /home/engine/project/tests/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.ReportingAnalytics.UnitTests.dll
+Test run for /home/engine/project/tests/Services/ReportingAnalytics/LiquorPOS.Services.ReportingAnalytics.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.ReportingAnalytics.UnitTests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+  LiquorPOS.Services.Configuration.UnitTests -> /home/engine/project/tests/Services/Configuration/LiquorPOS.Services.Configuration.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Configuration.UnitTests.dll
+A total of 1 test files matched the specified pattern.
+Test run for /home/engine/project/tests/Services/Configuration/LiquorPOS.Services.Configuration.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Configuration.UnitTests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: < 1 ms - LiquorPOS.Services.ReportingAnalytics.UnitTests.dll (net8.0)
+  LiquorPOS.Services.SalesPOS.Domain -> /home/engine/project/src/Services/SalesPOS/LiquorPOS.Services.SalesPOS.Domain/bin/Debug/net8.0/LiquorPOS.Services.SalesPOS.Domain.dll
+  LiquorPOS.Services.SalesPOS.Application -> /home/engine/project/src/Services/SalesPOS/LiquorPOS.Services.SalesPOS.Application/bin/Debug/net8.0/LiquorPOS.Services.SalesPOS.Application.dll
+
+Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: < 1 ms - LiquorPOS.Services.Configuration.UnitTests.dll (net8.0)
+  LiquorPOS.Services.Catalog.UnitTests -> /home/engine/project/tests/Services/Catalog/LiquorPOS.Services.Catalog.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Catalog.UnitTests.dll
+Test run for /home/engine/project/tests/Services/Catalog/LiquorPOS.Services.Catalog.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Catalog.UnitTests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: < 1 ms - LiquorPOS.Services.Catalog.UnitTests.dll (net8.0)
+  LiquorPOS.Services.InventoryPurchasing.UnitTests -> /home/engine/project/tests/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.InventoryPurchasing.UnitTests.dll
+Test run for /home/engine/project/tests/Services/InventoryPurchasing/LiquorPOS.Services.InventoryPurchasing.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.InventoryPurchasing.UnitTests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: < 1 ms - LiquorPOS.Services.InventoryPurchasing.UnitTests.dll (net8.0)
+  LiquorPOS.Services.SalesPOS.UnitTests -> /home/engine/project/tests/Services/SalesPOS/LiquorPOS.Services.SalesPOS.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.SalesPOS.UnitTests.dll
+Test run for /home/engine/project/tests/Services/SalesPOS/LiquorPOS.Services.SalesPOS.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.SalesPOS.UnitTests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: < 1 ms - LiquorPOS.Services.SalesPOS.UnitTests.dll (net8.0)
