@@ -60,6 +60,40 @@ public sealed class User : Entity<Guid>
         return new User(email, firstName, lastName, passwordHash, phoneNumber);
     }
 
+    public static User CreateFromInfrastructure(
+        Guid id,
+        Email email,
+        string firstName,
+        string lastName,
+        PasswordHash passwordHash,
+        PhoneNumber? phoneNumber = null,
+        bool isActive = true,
+        DateTime? createdAt = null,
+        DateTime? lastModifiedAt = null,
+        DateTime? lastLoginAt = null)
+    {
+        if (email == null)
+            throw new ArgumentNullException(nameof(email));
+
+        if (string.IsNullOrWhiteSpace(firstName))
+            throw new ArgumentException("First name cannot be empty", nameof(firstName));
+
+        if (string.IsNullOrWhiteSpace(lastName))
+            throw new ArgumentException("Last name cannot be empty", nameof(lastName));
+
+        if (passwordHash == null)
+            throw new ArgumentNullException(nameof(passwordHash));
+
+        var user = new User(email, firstName, lastName, passwordHash, phoneNumber);
+        user.Id = id;
+        user.IsActive = isActive;
+        user.CreatedAt = createdAt ?? DateTime.UtcNow;
+        user.LastModifiedAt = lastModifiedAt;
+        user.LastLoginAt = lastLoginAt;
+
+        return user;
+    }
+
     public void AssignRole(Role role)
     {
         if (role == null)

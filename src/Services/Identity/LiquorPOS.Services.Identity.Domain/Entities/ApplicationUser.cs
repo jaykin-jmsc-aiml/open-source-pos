@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
-using LiquorPOS.Services.Identity.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 
-namespace LiquorPOS.Services.Identity.Infrastructure.Identity;
+namespace LiquorPOS.Services.Identity.Domain.Entities;
 
 public sealed class ApplicationUser : IdentityUser<Guid>
 {

@@ -1,6 +1,6 @@
 using System;
 using LiquorPOS.Services.Identity.Domain.ValueObjects;
-using LiquorPOS.Services.Identity.Infrastructure.Identity;
+using LiquorPOS.Services.Identity.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 
 namespace LiquorPOS.Services.Identity.Infrastructure.Security;

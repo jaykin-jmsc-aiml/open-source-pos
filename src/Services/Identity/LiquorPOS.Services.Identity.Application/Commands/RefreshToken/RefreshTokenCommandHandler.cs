@@ -1,7 +1,7 @@
 using LiquorPOS.Services.Identity.Application.Dtos;
-using LiquorPOS.Services.Identity.Application.Services;
+using LiquorPOS.Services.Identity.Domain.Services;
 using LiquorPOS.Services.Identity.Domain.Entities;
-using LiquorPOS.Services.Identity.Infrastructure.Identity;
+using LiquorPOS.Services.Identity.Domain.Entities;
 using LiquorPOS.Services.Identity.Infrastructure.Persistence;
 using LiquorPOS.Services.Identity.Infrastructure.Security;
 using MediatR;

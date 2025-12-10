@@ -1,8 +1,7 @@
 using LiquorPOS.Services.Identity.Application.Dtos;
-using LiquorPOS.Services.Identity.Application.Services;
+using LiquorPOS.Services.Identity.Domain.Services;
 using LiquorPOS.Services.Identity.Domain.Entities;
 using LiquorPOS.Services.Identity.Domain.ValueObjects;
-using LiquorPOS.Services.Identity.Infrastructure.Identity;
 using LiquorPOS.Services.Identity.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
@@ -71,23 +70,21 @@ public sealed class LoginCommandHandler : IRequestHandler<LoginCommand, LoginCom
                 return new LoginCommandResponse(false, "User account is locked. Please try again later.", null);
             }
 
-            var user = new User
-            {
-                Id = applicationUser.Id,
-                Email = Email.CreateOrThrow(applicationUser.Email!),
-                FirstName = applicationUser.FirstName,
-                LastName = applicationUser.LastName,
-                PhoneNumber = string.IsNullOrWhiteSpace(applicationUser.PhoneNumber)
-                    ? null
-                    : PhoneNumber.CreateOrThrow(applicationUser.PhoneNumber),
-                PasswordHash = PasswordHash.FromHashAndSalt(
+            var user = User.CreateFromInfrastructure(
+                applicationUser.Id,
+                Email.CreateOrThrow(applicationUser.Email!),
+                applicationUser.FirstName,
+                applicationUser.LastName,
+                PasswordHash.FromHashAndSalt(
                     applicationUser.PasswordHash!,
                     applicationUser.PasswordSalt ?? string.Empty),
-                IsActive = applicationUser.IsActive,
-                CreatedAt = applicationUser.CreatedAt,
-                LastModifiedAt = applicationUser.LastModifiedAt,
-                LastLoginAt = applicationUser.LastLoginAt
-            };
+                string.IsNullOrWhiteSpace(applicationUser.PhoneNumber)
+                    ? null
+                    : PhoneNumber.CreateOrThrow(applicationUser.PhoneNumber),
+                applicationUser.IsActive,
+                applicationUser.CreatedAt,
+                applicationUser.LastModifiedAt,
+                applicationUser.LastLoginAt);
 
             var (accessToken, refreshToken) = await _jwtTokenService.GenerateTokensAsync(user, cancellationToken);
 

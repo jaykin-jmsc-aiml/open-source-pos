@@ -1,6 +1,5 @@
 using System;
 using LiquorPOS.Services.Identity.Domain.Entities;
-using LiquorPOS.Services.Identity.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

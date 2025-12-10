@@ -1,5 +1,4 @@
 using LiquorPOS.Services.Identity.Domain.Entities;
-using LiquorPOS.Services.Identity.Infrastructure.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
