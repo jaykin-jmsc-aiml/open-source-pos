@@ -10,11 +10,11 @@ public sealed class RefreshTokenConfiguration : IEntityTypeConfiguration<Refresh
     {
         builder.ToTable("RefreshTokens");
 
-        builder.Property(token => token.Token)
+        builder.Property(token => token.TokenHash)
             .HasMaxLength(256)
             .IsRequired();
 
-        builder.Property(token => token.ReplacedByToken)
+        builder.Property(token => token.ReplacedByTokenHash)
             .HasMaxLength(256);
 
         builder.Property(token => token.UserId)
@@ -26,7 +26,9 @@ public sealed class RefreshTokenConfiguration : IEntityTypeConfiguration<Refresh
         builder.Property(token => token.ExpiresAt)
             .IsRequired();
 
-        builder.HasIndex(token => token.Token)
+        builder.HasIndex(token => token.TokenHash)
             .IsUnique();
+
+        builder.HasIndex(token => token.UserId);
     }
 }
