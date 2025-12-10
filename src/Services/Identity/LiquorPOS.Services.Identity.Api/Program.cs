@@ -1,5 +1,8 @@
 using System;
 using System.Text;
+using FluentValidation;
+using LiquorPOS.Services.Identity.Application.Commands.Login;
+using LiquorPOS.Services.Identity.Application.Commands.Register;
 using LiquorPOS.Services.Identity.Application.Options;
 using LiquorPOS.Services.Identity.Application.Services;
 using LiquorPOS.Services.Identity.Infrastructure.Identity;
@@ -80,6 +83,14 @@ builder.Services.Configure<IdentitySeedOptions>(builder.Configuration.GetSection
 builder.Services.AddScoped<IIdentitySeeder, IdentitySeeder>();
 builder.Services.AddHostedService<IdentitySeederHostedService>();
 
+builder.Services.AddMediatR(config =>
+    config.RegisterServicesFromAssemblies(
+        typeof(RegisterCommand).Assembly,
+        typeof(LoginCommand).Assembly));
+
+builder.Services.AddValidatorsFromAssemblyContaining<RegisterCommandValidator>();
+builder.Services.AddFluentValidationAutoValidation();
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -108,3 +119,5 @@ app.MapGet("/", () => Results.Ok(new { service = "Identity", status = "running" 
     .WithOpenApi();
 
 app.Run();
+
+public partial class Program { }
