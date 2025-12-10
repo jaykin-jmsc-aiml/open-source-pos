@@ -1,0 +1,268 @@
+using FluentAssertions;
+using LiquorPOS.Services.Identity.Application.Commands.RefreshToken;
+using LiquorPOS.Services.Identity.Application.Dtos;
+using LiquorPOS.Services.Identity.Application.Services;
+using LiquorPOS.Services.Identity.Domain.Entities;
+using LiquorPOS.Services.Identity.Infrastructure.Identity;
+using LiquorPOS.Services.Identity.Infrastructure.Persistence;
+using LiquorPOS.Services.Identity.Infrastructure.Security;
+using LiquorPOS.Services.Identity.UnitTests.TestHelpers;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Moq;
+
+namespace LiquorPOS.Services.Identity.UnitTests.Commands;
+
+public class RefreshTokenCommandHandlerTests
+{
+    private readonly Mock<IJwtTokenService> _jwtTokenServiceMock = new();
+    private readonly Mock<UserManager<ApplicationUser>> _userManagerMock;
+    private readonly Mock<LiquorPOSIdentityDbContext> _dbContextMock = new();
+    private readonly Mock<ILogger<RefreshTokenCommandHandler>> _loggerMock = new();
+    private readonly RefreshTokenCommandHandler _handler;
+
+    public RefreshTokenCommandHandlerTests()
+    {
+        _userManagerMock = new Mock<UserManager<ApplicationUser>>(
+            Mock.Of<IUserStore<ApplicationUser>>(),
+            null!, null!, null!, null!, null!, null!, null!, null!);
+
+        _handler = new RefreshTokenCommandHandler(
+            _jwtTokenServiceMock.Object,
+            _userManagerMock.Object,
+            _dbContextMock.Object,
+            _loggerMock.Object);
+    }
+
+    [Fact]
+    public async Task Handle_WithEmptyRefreshToken_ShouldReturnFailure()
+    {
+        // Arrange
+        var command = new RefreshTokenCommand("");
+
+        // Act
+        var result = await _handler.Handle(command, CancellationToken.None);
+
+        // Assert
+        result.Success.Should().BeFalse();
+        result.Message.Should().Be("Refresh token is required");
+        result.Data.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task Handle_WithNonExistentToken_ShouldReturnFailure()
+    {
+        // Arrange
+        var command = new RefreshTokenCommand("non_existent_token");
+        
+        _dbContextMock.Setup(x => x.RefreshTokens)
+            .ReturnsDbSet(new List<RefreshToken>().AsQueryable());
+
+        // Act
+        var result = await _handler.Handle(command, CancellationToken.None);
+
+        // Assert
+        result.Success.Should().BeFalse();
+        result.Message.Should().Be("Invalid refresh token");
+        result.Data.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task Handle_WithRevokedToken_ShouldReturnFailure()
+    {
+        // Arrange
+        var revokedToken = new RefreshToken
+        {
+            Id = Guid.NewGuid(),
+            UserId = Guid.NewGuid(),
+            TokenHash = TokenHasher.Hash("revoked_token"),
+            RevokedAt = DateTime.UtcNow.AddMinutes(-10),
+            ExpiresAt = DateTime.UtcNow.AddDays(7)
+        };
+
+        var command = new RefreshTokenCommand("revoked_token");
+        
+        _dbContextMock.Setup(x => x.RefreshTokens)
+            .ReturnsDbSet(new[] { revokedToken }.AsQueryable());
+
+        _jwtTokenServiceMock.Setup(x => x.RevokeRefreshTokenAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .Returns(Task.CompletedTask);
+
+        // Act
+        var result = await _handler.Handle(command, CancellationToken.None);
+
+        // Assert
+        result.Success.Should().BeFalse();
+        result.Message.Should().Be("Refresh token has been revoked. Please login again.");
+        result.Data.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task Handle_WithExpiredToken_ShouldReturnFailure()
+    {
+        // Arrange
+        var expiredToken = new RefreshToken
+        {
+            Id = Guid.NewGuid(),
+            UserId = Guid.NewGuid(),
+            TokenHash = TokenHasher.Hash("expired_token"),
+            ExpiresAt = DateTime.UtcNow.AddMinutes(-10)
+        };
+
+        var command = new RefreshTokenCommand("expired_token");
+        
+        _dbContextMock.Setup(x => x.RefreshTokens)
+            .ReturnsDbSet(new[] { expiredToken }.AsQueryable());
+
+        // Act
+        var result = await _handler.Handle(command, CancellationToken.None);
+
+        // Assert
+        result.Success.Should().BeFalse();
+        result.Message.Should().Be("Refresh token has expired. Please login again.");
+        result.Data.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task Handle_WithNonExistentUser_ShouldReturnFailure()
+    {
+        // Arrange
+        var validToken = new RefreshToken
+        {
+            Id = Guid.NewGuid(),
+            UserId = Guid.NewGuid(),
+            TokenHash = TokenHasher.Hash("valid_token"),
+            ExpiresAt = DateTime.UtcNow.AddDays(7)
+        };
+
+        var command = new RefreshTokenCommand("valid_token");
+        
+        _dbContextMock.Setup(x => x.RefreshTokens)
+            .ReturnsDbSet(new[] { validToken }.AsQueryable());
+
+        _userManagerMock.Setup(x => x.FindByIdAsync(It.IsAny<string>()))
+            .ReturnsAsync((ApplicationUser?)null);
+
+        // Act
+        var result = await _handler.Handle(command, CancellationToken.None);
+
+        // Assert
+        result.Success.Should().BeFalse();
+        result.Message.Should().Be("User not found");
+        result.Data.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task Handle_WithInactiveUser_ShouldReturnFailure()
+    {
+        // Arrange
+        var validToken = new RefreshToken
+        {
+            Id = Guid.NewGuid(),
+            UserId = Guid.NewGuid(),
+            TokenHash = TokenHasher.Hash("valid_token"),
+            ExpiresAt = DateTime.UtcNow.AddDays(7)
+        };
+
+        var inactiveUser = new ApplicationUser
+        {
+            Id = validToken.UserId,
+            Email = "test@example.com",
+            FirstName = "Test",
+            LastName = "User",
+            IsActive = false
+        };
+
+        var command = new RefreshTokenCommand("valid_token");
+        
+        _dbContextMock.Setup(x => x.RefreshTokens)
+            .ReturnsDbSet(new[] { validToken }.AsQueryable());
+
+        _userManagerMock.Setup(x => x.FindByIdAsync(validToken.UserId.ToString()))
+            .ReturnsAsync(inactiveUser);
+
+        // Act
+        var result = await _handler.Handle(command, CancellationToken.None);
+
+        // Assert
+        result.Success.Should().BeFalse();
+        result.Message.Should().Be("User account is inactive");
+        result.Data.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task Handle_WithValidTokenAndActiveUser_ShouldReturnSuccess()
+    {
+        // Arrange
+        var validToken = new RefreshToken
+        {
+            Id = Guid.NewGuid(),
+            UserId = Guid.NewGuid(),
+            TokenHash = TokenHasher.Hash("valid_token"),
+            ExpiresAt = DateTime.UtcNow.AddDays(7)
+        };
+
+        var activeUser = new ApplicationUser
+        {
+            Id = validToken.UserId,
+            Email = "test@example.com",
+            FirstName = "Test",
+            LastName = "User",
+            IsActive = true
+        };
+
+        var expectedAuthResponse = new AuthResponse(
+            "new_access_token",
+            "new_refresh_token",
+            15,
+            activeUser.Id,
+            activeUser.Email!,
+            activeUser.FirstName,
+            activeUser.LastName);
+
+        var command = new RefreshTokenCommand("valid_token");
+        
+        _dbContextMock.Setup(x => x.RefreshTokens)
+            .ReturnsDbSet(new[] { validToken }.AsQueryable());
+
+        _userManagerMock.Setup(x => x.FindByIdAsync(validToken.UserId.ToString()))
+            .ReturnsAsync(activeUser);
+
+        _jwtTokenServiceMock.Setup(x => x.RefreshTokensAsync("valid_token", It.IsAny<CancellationToken>()))
+            .ReturnsAsync(("new_access_token", "new_refresh_token"));
+
+        _dbContextMock.Setup(x => x.AuditLogs.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
+            .Returns(ValueTask.CompletedTask);
+
+        _dbContextMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync(1);
+
+        // Act
+        var result = await _handler.Handle(command, CancellationToken.None);
+
+        // Assert
+        result.Success.Should().BeTrue();
+        result.Message.Should().Be("Token refreshed successfully");
+        result.Data.Should().NotBeNull();
+        result.Data.Should().BeEquivalentTo(expectedAuthResponse);
+    }
+
+    [Fact]
+    public async Task Handle_WithException_ShouldReturnFailure()
+    {
+        // Arrange
+        var command = new RefreshTokenCommand("valid_token");
+        
+        _dbContextMock.Setup(x => x.RefreshTokens)
+            .Throws(new Exception("Database error"));
+
+        // Act
+        var result = await _handler.Handle(command, CancellationToken.None);
+
+        // Assert
+        result.Success.Should().BeFalse();
+        result.Message.Should().Be("An error occurred during token refresh");
+        result.Data.Should().BeNull();
+    }
+}
