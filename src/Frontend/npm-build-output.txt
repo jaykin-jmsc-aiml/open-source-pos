@@ -1,0 +1,7 @@
+npm warn Unknown env config "python". This will stop working in the next major version of npm.
+
+> liquorpos-frontend@1.0.0 build
+> tsc && vite build
+
+src/App.tsx(9,10): error TS6133: 'services' is declared but its value is never read.
+src/test/setup.ts(1,10): error TS6133: 'expect' is declared but its value is never read.
