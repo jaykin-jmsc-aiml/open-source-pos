@@ -1,5 +1,4 @@
 using LiquorPOS.Services.Identity.Domain.Entities;
-using LiquorPOS.Services.Identity.Infrastructure.Identity;
 using LiquorPOS.Services.Identity.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Identity;

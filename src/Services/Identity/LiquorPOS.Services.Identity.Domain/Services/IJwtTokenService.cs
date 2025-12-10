@@ -1,6 +1,6 @@
 using LiquorPOS.Services.Identity.Domain.Entities;
 
-namespace LiquorPOS.Services.Identity.Application.Services;
+namespace LiquorPOS.Services.Identity.Domain.Services;
 
 public interface IJwtTokenService
 {

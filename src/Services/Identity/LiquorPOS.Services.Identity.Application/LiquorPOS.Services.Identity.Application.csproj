@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -11,10 +11,12 @@
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
     <PackageReference Include="Mapster" Version="7.4.0" />
     <PackageReference Include="MediatR" Version="14.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.11" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\LiquorPOS.Services.Identity.Domain\LiquorPOS.Services.Identity.Domain.csproj" />
+    <ProjectReference Include="..\LiquorPOS.Services.Identity.Infrastructure\LiquorPOS.Services.Identity.Infrastructure.csproj" />
     <ProjectReference Include="..\..\..\BuildingBlocks\LiquorPOS.BuildingBlocks\LiquorPOS.BuildingBlocks.csproj" />
   </ItemGroup>
 

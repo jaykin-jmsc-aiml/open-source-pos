@@ -1,8 +1,8 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using LiquorPOS.Services.Identity.Application.Options;
-using LiquorPOS.Services.Identity.Application.Services;
+using LiquorPOS.Services.Identity.Domain.Options;
+using LiquorPOS.Services.Identity.Domain.Services;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
