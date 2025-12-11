@@ -10,6 +10,8 @@ namespace LiquorPOS.Services.Identity.IntegrationTests.Infrastructure;
 
 public sealed class IdentityWebApplicationFactory : WebApplicationFactory<Program>
 {
+    private readonly string _databaseName = $"IntegrationTestDb_{Guid.NewGuid()}";
+    
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         builder.ConfigureServices(services =>
@@ -24,7 +26,7 @@ public sealed class IdentityWebApplicationFactory : WebApplicationFactory<Progra
 
             services.AddDbContext<LiquorPOSIdentityDbContext>(options =>
             {
-                options.UseInMemoryDatabase("IntegrationTestDatabase");
+                options.UseInMemoryDatabase(_databaseName);
             });
 
             var serviceProvider = services.BuildServiceProvider();
@@ -47,7 +49,7 @@ public sealed class IdentityWebApplicationFactory : WebApplicationFactory<Progra
     private static async Task EnsureRolesExist(
         Microsoft.AspNetCore.Identity.RoleManager<ApplicationRole> roleManager)
     {
-        var roles = new[] { "Manager", "Cashier", "Admin" };
+        var roles = new[] { "Admin", "Manager", "Cashier", "User" };
 
         foreach (var roleName in roles)
         {

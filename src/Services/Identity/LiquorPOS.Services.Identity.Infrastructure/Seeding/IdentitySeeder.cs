@@ -42,7 +42,16 @@ public sealed class IdentitySeeder : IIdentitySeeder
 
     public async Task SeedAsync(CancellationToken cancellationToken)
     {
-        await _dbContext.Database.MigrateAsync(cancellationToken);
+        var isInMemory = _dbContext.Database.ProviderName == "Microsoft.EntityFrameworkCore.InMemory";
+        
+        if (isInMemory)
+        {
+            await _dbContext.Database.EnsureCreatedAsync(cancellationToken);
+        }
+        else
+        {
+            await _dbContext.Database.MigrateAsync(cancellationToken);
+        }
 
         await EnsureRolesAsync(cancellationToken);
         await EnsureAdminUserAsync(cancellationToken);
