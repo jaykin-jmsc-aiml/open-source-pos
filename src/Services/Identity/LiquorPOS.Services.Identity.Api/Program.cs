@@ -54,8 +54,8 @@ builder.Services.AddIdentityCore<ApplicationUser>(options =>
 
 builder.Services.AddScoped<IPasswordHasher<ApplicationUser>, DomainPasswordHasher>();
 
-builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection(JwtOptions.SectionName));
-var jwtOptions = builder.Configuration.GetSection(JwtOptions.SectionName).Get<JwtOptions>()
+builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("Jwt"));
+var jwtOptions = builder.Configuration.GetSection("Jwt").Get<JwtOptions>()
     ?? throw new InvalidOperationException("JWT configuration is missing");
 
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
@@ -96,8 +96,7 @@ builder.Services.AddMediatR(config =>
         typeof(AssignUserRolesCommand).Assembly,
         typeof(GetUsersQuery).Assembly));
 
-builder.Services.AddValidatorsFromAssemblyContaining<RegisterCommandValidator>();
-builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<RegisterCommand>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

@@ -35,14 +35,14 @@ public sealed class IdentityController : ControllerBase
     /// <response code="400">Validation error or duplicate email</response>
     /// <response code="500">Server error</response>
     [HttpPost("register")]
-    [ProduceResponseType(typeof(IdentityResponse<AuthResponse>), StatusCodes.Status200OK)]
-    [ProduceResponseType(typeof(IdentityResponse<object>), StatusCodes.Status400BadRequest)]
-    [ProduceResponseType(typeof(IdentityResponse<object>), StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(typeof(IdentityResponse<AuthResponse>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> Register([FromBody] RegisterRequest request, CancellationToken cancellationToken)
     {
         try
         {
-            _logger.Information("Registration attempt for email: {Email}", request.Email);
+            _logger.LogInformation("Registration attempt for email: {Email}", request.Email);
 
             var command = new RegisterCommand(
                 request.Email,
@@ -56,16 +56,16 @@ public sealed class IdentityController : ControllerBase
 
             if (!result.Success)
             {
-                _logger.Warning("Registration failed: {Message}", result.Message);
+                _logger.LogWarning("Registration failed: {Message}", result.Message);
                 return BadRequest(new IdentityResponse<object>(false, result.Message, null!));
             }
 
-            _logger.Information("Registration successful for email: {Email}", request.Email);
+            _logger.LogInformation("Registration successful for email: {Email}", request.Email);
             return Ok(new IdentityResponse<AuthResponse>(true, result.Message, result.Data!));
         }
         catch (Exception ex)
         {
-            _logger.Error(ex, "An error occurred during registration");
+            _logger.LogError(ex, "An error occurred during registration");
             return StatusCode(StatusCodes.Status500InternalServerError,
                 new IdentityResponse<object>(false, "An error occurred during registration", null!));
         }
@@ -80,30 +80,30 @@ public sealed class IdentityController : ControllerBase
     /// <response code="400">Invalid credentials or user inactive</response>
     /// <response code="500">Server error</response>
     [HttpPost("login")]
-    [ProduceResponseType(typeof(IdentityResponse<AuthResponse>), StatusCodes.Status200OK)]
-    [ProduceResponseType(typeof(IdentityResponse<object>), StatusCodes.Status400BadRequest)]
-    [ProduceResponseType(typeof(IdentityResponse<object>), StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(typeof(IdentityResponse<AuthResponse>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> Login([FromBody] LoginRequest request, CancellationToken cancellationToken)
     {
         try
         {
-            _logger.Information("Login attempt for email: {Email}", request.Email);
+            _logger.LogInformation("Login attempt for email: {Email}", request.Email);
 
             var command = new LoginCommand(request.Email, request.Password);
             var result = await _mediator.Send(command, cancellationToken);
 
             if (!result.Success)
             {
-                _logger.Warning("Login failed: {Message}", result.Message);
+                _logger.LogWarning("Login failed: {Message}", result.Message);
                 return BadRequest(new IdentityResponse<object>(false, result.Message, null!));
             }
 
-            _logger.Information("Login successful for email: {Email}", request.Email);
+            _logger.LogInformation("Login successful for email: {Email}", request.Email);
             return Ok(new IdentityResponse<AuthResponse>(true, result.Message, result.Data!));
         }
         catch (Exception ex)
         {
-            _logger.Error(ex, "An error occurred during login");
+            _logger.LogError(ex, "An error occurred during login");
             return StatusCode(StatusCodes.Status500InternalServerError,
                 new IdentityResponse<object>(false, "An error occurred during login", null!));
         }
@@ -141,7 +141,7 @@ public sealed class IdentityController : ControllerBase
         }
         catch (Exception ex)
         {
-            _logger.Error(ex, "An error occurred during token refresh");
+            _logger.LogError(ex, "An error occurred during token refresh");
             return StatusCode(StatusCodes.Status500InternalServerError,
                 new IdentityResponse<object>(false, "An error occurred during token refresh", null!));
         }
@@ -179,7 +179,7 @@ public sealed class IdentityController : ControllerBase
         }
         catch (Exception ex)
         {
-            _logger.Error(ex, "An error occurred during token revocation");
+            _logger.LogError(ex, "An error occurred during token revocation");
             return StatusCode(StatusCodes.Status500InternalServerError,
                 new IdentityResponse<object>(false, "An error occurred during token revocation", null!));
         }
@@ -227,7 +227,7 @@ public sealed class IdentityController : ControllerBase
         }
         catch (Exception ex)
         {
-            _logger.Error(ex, "An error occurred while retrieving users");
+            _logger.LogError(ex, "An error occurred while retrieving users");
             return StatusCode(StatusCodes.Status500InternalServerError,
                 new IdentityResponse<object>(false, "An error occurred while retrieving users", null!));
         }
@@ -272,7 +272,7 @@ public sealed class IdentityController : ControllerBase
         }
         catch (Exception ex)
         {
-            _logger.Error(ex, "An error occurred while retrieving user {UserId}", id);
+            _logger.LogError(ex, "An error occurred while retrieving user {UserId}", id);
             return StatusCode(StatusCodes.Status500InternalServerError,
                 new IdentityResponse<object>(false, "An error occurred while retrieving user", null!));
         }
@@ -320,7 +320,7 @@ public sealed class IdentityController : ControllerBase
         }
         catch (Exception ex)
         {
-            _logger.Error(ex, "An error occurred while assigning roles to user {UserId}", id);
+            _logger.LogError(ex, "An error occurred while assigning roles to user {UserId}", id);
             return StatusCode(StatusCodes.Status500InternalServerError,
                 new IdentityResponse<object>(false, "An error occurred while assigning roles", null!));
         }

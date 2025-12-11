@@ -2,7 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using FluentAssertions;
-using LiquorPOS.Services.Identity.Application.Options;
+using LiquorPOS.Services.Identity.Domain.Options;
 using LiquorPOS.Services.Identity.Infrastructure.Services;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;

@@ -1,10 +1,10 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using FluentAssertions;
-using LiquorPOS.Services.Identity.Application.Options;
+using LiquorPOS.Services.Identity.Domain.Options;
 using LiquorPOS.Services.Identity.Domain.Entities;
 using LiquorPOS.Services.Identity.Domain.ValueObjects;
-using LiquorPOS.Services.Identity.Infrastructure.Identity;
+using LiquorPOS.Services.Identity.Domain.Services;
 using LiquorPOS.Services.Identity.Infrastructure.Persistence;
 using LiquorPOS.Services.Identity.Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;

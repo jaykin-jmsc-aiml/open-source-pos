@@ -1,9 +1,9 @@
 using FluentAssertions;
 using LiquorPOS.Services.Identity.Application.Commands.RefreshToken;
 using LiquorPOS.Services.Identity.Application.Dtos;
-using LiquorPOS.Services.Identity.Application.Services;
+using LiquorPOS.Services.Identity.Infrastructure.Services;
 using LiquorPOS.Services.Identity.Domain.Entities;
-using LiquorPOS.Services.Identity.Infrastructure.Identity;
+using LiquorPOS.Services.Identity.Domain.Services;
 using LiquorPOS.Services.Identity.Infrastructure.Persistence;
 using LiquorPOS.Services.Identity.Infrastructure.Security;
 using LiquorPOS.Services.Identity.UnitTests.TestHelpers;
@@ -72,14 +72,11 @@ public class RefreshTokenCommandHandlerTests
     public async Task Handle_WithRevokedToken_ShouldReturnFailure()
     {
         // Arrange
-        var revokedToken = new RefreshToken
-        {
-            Id = Guid.NewGuid(),
-            UserId = Guid.NewGuid(),
-            TokenHash = TokenHasher.Hash("revoked_token"),
-            RevokedAt = DateTime.UtcNow.AddMinutes(-10),
-            ExpiresAt = DateTime.UtcNow.AddDays(7)
-        };
+        var revokedToken = RefreshToken.CreateWithHash(
+            Guid.NewGuid(),
+            TokenHasher.Hash("revoked_token"),
+            DateTime.UtcNow.AddDays(7));
+        revokedToken.Revoke();
 
         var command = new RefreshTokenCommand("revoked_token");
         
@@ -102,13 +99,10 @@ public class RefreshTokenCommandHandlerTests
     public async Task Handle_WithExpiredToken_ShouldReturnFailure()
     {
         // Arrange
-        var expiredToken = new RefreshToken
-        {
-            Id = Guid.NewGuid(),
-            UserId = Guid.NewGuid(),
-            TokenHash = TokenHasher.Hash("expired_token"),
-            ExpiresAt = DateTime.UtcNow.AddMinutes(-10)
-        };
+        var expiredToken = RefreshToken.CreateWithHash(
+            Guid.NewGuid(),
+            TokenHasher.Hash("expired_token"),
+            DateTime.UtcNow.AddMinutes(-10));
 
         var command = new RefreshTokenCommand("expired_token");
         
@@ -128,13 +122,10 @@ public class RefreshTokenCommandHandlerTests
     public async Task Handle_WithNonExistentUser_ShouldReturnFailure()
     {
         // Arrange
-        var validToken = new RefreshToken
-        {
-            Id = Guid.NewGuid(),
-            UserId = Guid.NewGuid(),
-            TokenHash = TokenHasher.Hash("valid_token"),
-            ExpiresAt = DateTime.UtcNow.AddDays(7)
-        };
+        var validToken = RefreshToken.CreateWithHash(
+            Guid.NewGuid(),
+            TokenHasher.Hash("valid_token"),
+            DateTime.UtcNow.AddDays(7));
 
         var command = new RefreshTokenCommand("valid_token");
         
@@ -157,17 +148,15 @@ public class RefreshTokenCommandHandlerTests
     public async Task Handle_WithInactiveUser_ShouldReturnFailure()
     {
         // Arrange
-        var validToken = new RefreshToken
-        {
-            Id = Guid.NewGuid(),
-            UserId = Guid.NewGuid(),
-            TokenHash = TokenHasher.Hash("valid_token"),
-            ExpiresAt = DateTime.UtcNow.AddDays(7)
-        };
+        var userId = Guid.NewGuid();
+        var validToken = RefreshToken.CreateWithHash(
+            userId,
+            TokenHasher.Hash("valid_token"),
+            DateTime.UtcNow.AddDays(7));
 
         var inactiveUser = new ApplicationUser
         {
-            Id = validToken.UserId,
+            Id = userId,
             Email = "test@example.com",
             FirstName = "Test",
             LastName = "User",
@@ -179,7 +168,7 @@ public class RefreshTokenCommandHandlerTests
         _dbContextMock.Setup(x => x.RefreshTokens)
             .ReturnsDbSet(new[] { validToken }.AsQueryable());
 
-        _userManagerMock.Setup(x => x.FindByIdAsync(validToken.UserId.ToString()))
+        _userManagerMock.Setup(x => x.FindByIdAsync(userId.ToString()))
             .ReturnsAsync(inactiveUser);
 
         // Act
@@ -195,17 +184,15 @@ public class RefreshTokenCommandHandlerTests
     public async Task Handle_WithValidTokenAndActiveUser_ShouldReturnSuccess()
     {
         // Arrange
-        var validToken = new RefreshToken
-        {
-            Id = Guid.NewGuid(),
-            UserId = Guid.NewGuid(),
-            TokenHash = TokenHasher.Hash("valid_token"),
-            ExpiresAt = DateTime.UtcNow.AddDays(7)
-        };
+        var userId = Guid.NewGuid();
+        var validToken = RefreshToken.CreateWithHash(
+            userId,
+            TokenHasher.Hash("valid_token"),
+            DateTime.UtcNow.AddDays(7));
 
         var activeUser = new ApplicationUser
         {
-            Id = validToken.UserId,
+            Id = userId,
             Email = "test@example.com",
             FirstName = "Test",
             LastName = "User",
@@ -226,7 +213,7 @@ public class RefreshTokenCommandHandlerTests
         _dbContextMock.Setup(x => x.RefreshTokens)
             .ReturnsDbSet(new[] { validToken }.AsQueryable());
 
-        _userManagerMock.Setup(x => x.FindByIdAsync(validToken.UserId.ToString()))
+        _userManagerMock.Setup(x => x.FindByIdAsync(userId.ToString()))
             .ReturnsAsync(activeUser);
 
         _jwtTokenServiceMock.Setup(x => x.RefreshTokensAsync("valid_token", It.IsAny<CancellationToken>()))
