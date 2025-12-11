@@ -298,9 +298,10 @@ public class UserEndpointsTests : IClassFixture<IdentityApiFactory>
 
     private async Task<string> CreateAdminUserAndGetToken()
     {
+        var uniqueEmail = $"admin-{Guid.NewGuid()}@example.com";
         var adminRequest = new
         {
-            Email = "admin@example.com",
+            Email = uniqueEmail,
             FirstName = "Admin",
             LastName = "User",
             Password = "AdminPassword123!",
@@ -313,7 +314,7 @@ public class UserEndpointsTests : IClassFixture<IdentityApiFactory>
 
         var loginRequest = new
         {
-            Email = "admin@example.com",
+            Email = uniqueEmail,
             Password = "AdminPassword123!"
         };
 
