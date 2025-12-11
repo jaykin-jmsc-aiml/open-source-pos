@@ -5,6 +5,7 @@ using LiquorPOS.Services.Identity.Infrastructure.Persistence;
 using LiquorPOS.Services.Identity.UnitTests.TestHelpers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Logging;
 using Moq;
 
@@ -157,7 +158,7 @@ public class AssignUserRolesCommandHandlerTests
             .ReturnsAsync(IdentityResult.Success);
 
         _dbContextMock.Setup(x => x.AuditLogs.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
-            .Returns(ValueTask.CompletedTask);
+            .Returns(new ValueTask<EntityEntry<AuditLog>>(new Mock<EntityEntry<AuditLog>>().Object));
 
         _dbContextMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(1);
@@ -203,7 +204,7 @@ public class AssignUserRolesCommandHandlerTests
             .ReturnsAsync(IdentityResult.Success);
 
         _dbContextMock.Setup(x => x.AuditLogs.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
-            .Returns(ValueTask.CompletedTask);
+            .Returns(new ValueTask<EntityEntry<AuditLog>>(new Mock<EntityEntry<AuditLog>>().Object));
 
         _dbContextMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(1);

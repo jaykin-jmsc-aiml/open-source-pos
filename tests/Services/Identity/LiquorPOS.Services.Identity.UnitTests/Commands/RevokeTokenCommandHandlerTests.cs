@@ -9,6 +9,7 @@ using LiquorPOS.Services.Identity.Infrastructure.Security;
 using LiquorPOS.Services.Identity.UnitTests.TestHelpers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Logging;
 using Moq;
 
@@ -56,7 +57,7 @@ public class RevokeTokenCommandHandlerTests
         var command = new RevokeTokenCommand("non_existent_token");
         
         _dbContextMock.Setup(x => x.RefreshTokens)
-            .ReturnsDbSet(new List<RefreshToken>().AsQueryable());
+            .Returns(DbSetMockHelper.CreateMockDbSetFromList(new List<RefreshToken>()));
 
         // Act
         var result = await _handler.Handle(command, CancellationToken.None);
@@ -70,19 +71,16 @@ public class RevokeTokenCommandHandlerTests
     public async Task Handle_WithAlreadyRevokedToken_ShouldReturnSuccess()
     {
         // Arrange
-        var alreadyRevokedToken = new RefreshToken
-        {
-            Id = Guid.NewGuid(),
-            UserId = Guid.NewGuid(),
-            TokenHash = TokenHasher.Hash("already_revoked_token"),
-            RevokedAt = DateTime.UtcNow.AddMinutes(-10),
-            ExpiresAt = DateTime.UtcNow.AddDays(7)
-        };
+        var alreadyRevokedToken = RefreshToken.CreateWithHash(
+            Guid.NewGuid(),
+            TokenHasher.Hash("already_revoked_token"),
+            DateTime.UtcNow.AddDays(7));
+        alreadyRevokedToken.Revoke();
 
         var command = new RevokeTokenCommand("already_revoked_token");
         
         _dbContextMock.Setup(x => x.RefreshTokens)
-            .ReturnsDbSet(new[] { alreadyRevokedToken }.AsQueryable());
+            .Returns(DbSetMockHelper.CreateMockDbSetFromList(new[] { alreadyRevokedToken }));
 
         // Act
         var result = await _handler.Handle(command, CancellationToken.None);
@@ -96,24 +94,21 @@ public class RevokeTokenCommandHandlerTests
     public async Task Handle_WithValidToken_ShouldReturnSuccess()
     {
         // Arrange
-        var validToken = new RefreshToken
-        {
-            Id = Guid.NewGuid(),
-            UserId = Guid.NewGuid(),
-            TokenHash = TokenHasher.Hash("valid_token"),
-            ExpiresAt = DateTime.UtcNow.AddDays(7)
-        };
+        var validToken = RefreshToken.CreateWithHash(
+            Guid.NewGuid(),
+            TokenHasher.Hash("valid_token"),
+            DateTime.UtcNow.AddDays(7));
 
         var command = new RevokeTokenCommand("valid_token");
         
         _dbContextMock.Setup(x => x.RefreshTokens)
-            .ReturnsDbSet(new[] { validToken }.AsQueryable());
+            .Returns(DbSetMockHelper.CreateMockDbSetFromList(new[] { validToken }));
 
         _jwtTokenServiceMock.Setup(x => x.RevokeRefreshTokenAsync("valid_token", It.IsAny<CancellationToken>()))
             .Returns(Task.CompletedTask);
 
         _dbContextMock.Setup(x => x.AuditLogs.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
-            .Returns(ValueTask.CompletedTask);
+            .Returns(new ValueTask<EntityEntry<AuditLog>>(new Mock<EntityEntry<AuditLog>>().Object));
 
         _dbContextMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(1);
