@@ -192,10 +192,14 @@ public sealed class TokenValidatorTests
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtOptions.SigningKey));
         var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
+        var notBefore = DateTime.UtcNow.AddMinutes(-5);
+        var expires = DateTime.UtcNow.AddMinutes(-1);
+
         var tokenDescriptor = new SecurityTokenDescriptor
         {
             Subject = new ClaimsIdentity(claims),
-            Expires = DateTime.UtcNow.AddMinutes(-1),
+            NotBefore = notBefore,
+            Expires = expires,
             Issuer = _jwtOptions.Issuer,
             Audience = _jwtOptions.Audience,
             SigningCredentials = credentials

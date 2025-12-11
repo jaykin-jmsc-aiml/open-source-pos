@@ -1,0 +1,1075 @@
+Build started 12/11/2025 11:04:04.
+     1>Project "/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj" on node 1 (Restore target(s)).
+     1>_GetAllRestoreProjectPathItems:
+         Determining projects to restore...
+       Restore:
+         X.509 certificate chain validation will use the fallback certificate bundle at '/home/engine/.dotnet/sdk/10.0.101/trustedroots/codesignctl.pem'.
+         X.509 certificate chain validation will use the fallback certificate bundle at '/home/engine/.dotnet/sdk/10.0.101/trustedroots/timestampctl.pem'.
+         Assets file has not changed. Skipping assets file writing. Path: /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Application/obj/project.assets.json
+         Restored /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Application/LiquorPOS.Services.Identity.Application.csproj (in 87 ms).
+         Assets file has not changed. Skipping assets file writing. Path: /home/engine/project/src/BuildingBlocks/LiquorPOS.BuildingBlocks/obj/project.assets.json
+         Assets file has not changed. Skipping assets file writing. Path: /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/obj/project.assets.json
+         Restored /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj (in 97 ms).
+         Restored /home/engine/project/src/BuildingBlocks/LiquorPOS.BuildingBlocks/LiquorPOS.BuildingBlocks.csproj (in 1 ms).
+         Assets file has not changed. Skipping assets file writing. Path: /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Domain/obj/project.assets.json
+         Restored /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Domain/LiquorPOS.Services.Identity.Domain.csproj (in 1 ms).
+         Assets file has not changed. Skipping assets file writing. Path: /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Infrastructure/obj/project.assets.json
+         Restored /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Infrastructure/LiquorPOS.Services.Identity.Infrastructure.csproj (in 5 ms).
+         
+         NuGet Config files used:
+             /home/engine/.nuget/NuGet/NuGet.Config
+         
+         Feeds used:
+             https://api.nuget.org/v3/index.json
+         All projects are up-to-date for restore.
+     1>Done Building Project "/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj" (Restore target(s)).
+   1:7>Project "/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj" on node 2 (VSTest target(s)).
+     1>BuildProject:
+         Build started, please wait...
+   1:7>Project "/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj" (1:7) is building "/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj" (1:8) on node 2 (default targets).
+   1:8>Project "/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj" (1:8) is building "/home/engine/project/src/BuildingBlocks/LiquorPOS.BuildingBlocks/LiquorPOS.BuildingBlocks.csproj" (2:9) on node 2 (default targets).
+     2>GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       CoreGenerateAssemblyInfo:
+       Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+       _GenerateSourceLinkFile:
+         Source Link file 'obj/Debug/net8.0/LiquorPOS.BuildingBlocks.sourcelink.json' is up-to-date.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildDependencyFile:
+       Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+       CopyFilesToOutputDirectory:
+         LiquorPOS.BuildingBlocks -> /home/engine/project/src/BuildingBlocks/LiquorPOS.BuildingBlocks/bin/Debug/net8.0/LiquorPOS.BuildingBlocks.dll
+     2>Done Building Project "/home/engine/project/src/BuildingBlocks/LiquorPOS.BuildingBlocks/LiquorPOS.BuildingBlocks.csproj" (default targets).
+   1:8>Project "/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj" (1:8) is building "/home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Domain/LiquorPOS.Services.Identity.Domain.csproj" (5:8) on node 1 (default targets).
+     5>GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       CoreGenerateAssemblyInfo:
+       Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+       _GenerateSourceLinkFile:
+         Source Link file 'obj/Debug/net8.0/LiquorPOS.Services.Identity.Domain.sourcelink.json' is up-to-date.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildDependencyFile:
+       Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+       CopyFilesToOutputDirectory:
+         LiquorPOS.Services.Identity.Domain -> /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Domain/bin/Debug/net8.0/LiquorPOS.Services.Identity.Domain.dll
+     5>Done Building Project "/home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Domain/LiquorPOS.Services.Identity.Domain.csproj" (default targets).
+   1:8>Project "/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj" (1:8) is building "/home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Application/LiquorPOS.Services.Identity.Application.csproj" (3:6) on node 2 (default targets).
+   3:6>Project "/home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Application/LiquorPOS.Services.Identity.Application.csproj" (3:6) is building "/home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Infrastructure/LiquorPOS.Services.Identity.Infrastructure.csproj" (4:8) on node 2 (default targets).
+     4>GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       CoreGenerateAssemblyInfo:
+       Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+       _GenerateSourceLinkFile:
+         Source Link file 'obj/Debug/net8.0/LiquorPOS.Services.Identity.Infrastructure.sourcelink.json' is up-to-date.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildDependencyFile:
+       Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildRuntimeConfigurationFiles:
+       Skipping target "GenerateBuildRuntimeConfigurationFiles" because all output files are up-to-date with respect to the input files.
+       CopyFilesToOutputDirectory:
+         LiquorPOS.Services.Identity.Infrastructure -> /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Infrastructure/bin/Debug/net8.0/LiquorPOS.Services.Identity.Infrastructure.dll
+     4>Done Building Project "/home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Infrastructure/LiquorPOS.Services.Identity.Infrastructure.csproj" (default targets).
+     3>GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       CoreGenerateAssemblyInfo:
+       Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+       _GenerateSourceLinkFile:
+         Source Link file 'obj/Debug/net8.0/LiquorPOS.Services.Identity.Application.sourcelink.json' is up-to-date.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildDependencyFile:
+       Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+       CopyFilesToOutputDirectory:
+         LiquorPOS.Services.Identity.Application -> /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Application/bin/Debug/net8.0/LiquorPOS.Services.Identity.Application.dll
+     3>Done Building Project "/home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Application/LiquorPOS.Services.Identity.Application.csproj" (default targets).
+     1>GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       CoreGenerateAssemblyInfo:
+       Skipping target "CoreGenerateAssemblyInfo" because all output files are up-to-date with respect to the input files.
+       _GenerateSourceLinkFile:
+         Source Link file 'obj/Debug/net8.0/LiquorPOS.Services.Identity.UnitTests.sourcelink.json' is up-to-date.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       _CopyOutOfDateSourceItemsToOutputDirectory:
+       Skipping target "_CopyOutOfDateSourceItemsToOutputDirectory" because all output files are up-to-date with respect to the input files.
+       GenerateBuildDependencyFile:
+       Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildRuntimeConfigurationFiles:
+       Skipping target "GenerateBuildRuntimeConfigurationFiles" because all output files are up-to-date with respect to the input files.
+       CopyFilesToOutputDirectory:
+         LiquorPOS.Services.Identity.UnitTests -> /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Identity.UnitTests.dll
+     1>Done Building Project "/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj" (default targets).
+     1>BuildProject:
+         Build completed.
+         
+Test run for /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Identity.UnitTests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 18.0.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Identity.UnitTests.dll
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.0)
+[xUnit.net 00:00:00.17]   Discovering: LiquorPOS.Services.Identity.UnitTests
+[xUnit.net 00:00:00.29]   Discovered:  LiquorPOS.Services.Identity.UnitTests
+[xUnit.net 00:00:00.29]   Starting:    LiquorPOS.Services.Identity.UnitTests
+[xUnit.net 00:00:00.52]     LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithInactiveUser_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:00.52]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:00.52]       Stack Trace:
+[xUnit.net 00:00:00.52]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:00.52]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:00.52]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:00.52]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:00.52]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(22,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor()
+[xUnit.net 00:00:00.52]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:00.57]     LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithExpiredToken_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:00.57]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:00.58]       Stack Trace:
+[xUnit.net 00:00:00.58]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:00.58]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(22,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor()
+[xUnit.net 00:00:00.58]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:00.58]     LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithValidTokenAndActiveUser_ShouldReturnSuccess [FAIL]
+[xUnit.net 00:00:00.58]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:00.58]       Stack Trace:
+[xUnit.net 00:00:00.58]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:00.58]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(22,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor()
+[xUnit.net 00:00:00.58]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:00.58]     LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithNonExistentUser_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:00.58]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:00.58]       Stack Trace:
+[xUnit.net 00:00:00.58]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:00.58]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(22,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor()
+[xUnit.net 00:00:00.58]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:00.58]     LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithException_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:00.58]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:00.58]       Stack Trace:
+[xUnit.net 00:00:00.58]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:00.58]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(22,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor()
+[xUnit.net 00:00:00.58]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:00.58]     LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithEmptyRefreshToken_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:00.58]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:00.58]       Stack Trace:
+[xUnit.net 00:00:00.58]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:00.58]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(22,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor()
+[xUnit.net 00:00:00.58]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:00.58]     LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithRevokedToken_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:00.58]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:00.58]       Stack Trace:
+[xUnit.net 00:00:00.58]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:00.58]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(22,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor()
+[xUnit.net 00:00:00.58]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:00.58]     LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithNonExistentToken_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:00.58]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:00.58]       Stack Trace:
+[xUnit.net 00:00:00.58]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:00.58]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:00.58]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(22,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor()
+[xUnit.net 00:00:00.58]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+     Warning:
+     The component "Fluent Assertions" is governed by the rules defined in the Xceed License Agreement and
+     the Xceed Fluent Assertions Community License. You may use Fluent Assertions free of charge for
+     non-commercial use only. An active subscription is required to use Fluent Assertions for commercial use.
+     Please contact Xceed Sales mailto:sales@xceed.com to acquire a subscription at a very low cost.
+     A paid commercial license supports the development and continued increasing support of
+     Fluent Assertions users under both commercial and community licenses. Help us
+     keep Fluent Assertions at the forefront of unit testing.
+     For more information, visit https://xceed.com/products/unit-testing/fluent-assertions/
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithInactiveUser_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs:line 22
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithExpiredToken_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs:line 22
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithValidTokenAndActiveUser_ShouldReturnSuccess [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs:line 22
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithNonExistentUser_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs:line 22
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithException_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs:line 22
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithEmptyRefreshToken_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs:line 22
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithRevokedToken_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs:line 22
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithNonExistentToken_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs:line 22
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithSingleValidRole_ShouldSucceed [106 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithLongRoleName_ShouldFail [24 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithEmptyRoles_ShouldFail [10 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithEmptyUserId_ShouldFail [2 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithNullRoles_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithEmptyRoleName_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithValidCommand_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_WithoutDescription_ShouldSucceed [47 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.HasPermission_WithNonExistingPermissionId_ShouldReturnFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_WithEmptyName_ShouldThrowArgumentException [15 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.RemovePermissionById_WithNonExistingPermissionId_ShouldNotThrow [41 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_WithValidData_ShouldSucceed [2 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.RemovePermission_WithExistingPermission_ShouldSucceed [8 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.AddPermission_WithValidPermission_ShouldSucceed [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.RemovePermission_WithNullPermission_ShouldThrowArgumentNullException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_WithNameExceeding100Characters_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.AddPermission_MultiplePermissions_ShouldSucceed [6 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_ShouldGenerateUniqueIds [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.HasPermission_WithExistingPermissionId_ShouldReturnTrue [6 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_WithNullName_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.RemovePermissionById_WithExistingPermissionId_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.RemovePermission_WithNonExistingPermission_ShouldNotThrow [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_WithWhitespaceName_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.AddPermission_WithDuplicatePermission_ShouldNotAddDuplicate [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.AddPermission_WithNullPermission_ShouldThrowArgumentNullException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithValidPhoneNumber_ShouldNormalizeByRemovingWhitespace [2 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.CreateOrThrow_WithValidPhoneNumber_ShouldReturnPhoneNumber [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Equals_WithSameValue_ShouldBeTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithWhitespacePhoneNumber_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithEmptyPhoneNumber_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.EqualityOperator_WithSameValue_ShouldBeTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Equals_WithNull_ShouldBeFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.EqualityOperator_WithDifferentValue_ShouldBeFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithValidPhoneNumber_ShouldSucceed(phoneNumber: "+1 (234) 567-8900") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithValidPhoneNumber_ShouldSucceed(phoneNumber: "123 456 7890") [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithValidPhoneNumber_ShouldSucceed(phoneNumber: "1234567890") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithValidPhoneNumber_ShouldSucceed(phoneNumber: "123-456-7890") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithMoreThan15Characters_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.InequalityOperator_WithDifferentValue_ShouldBeTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.ToString_ShouldReturnPhoneNumberValue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithNullPhoneNumber_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.CreateOrThrow_WithInvalidPhoneNumber_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Equals_WithDifferentValue_ShouldBeFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.GetHashCode_WithDifferentValue_ShouldReturnDifferentHashCode [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithLessThan10Digits_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.GetHashCode_WithSameValue_ShouldReturnSameHashCode [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Create_WithCustomDuration_ShouldSucceed [2 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Create_ShouldGenerateUniqueTokens [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.IsTokenExpired_ShouldReturnTrue_WhenTokenIsInvalid [162 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.IsTokenExpired_ShouldReturnTrue_WhenTokenIsEmpty [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenHasWrongAudience [43 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsExpired_WithPastExpiration_ShouldReturnTrue [101 ms]
+[xUnit.net 00:00:00.82]     LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.IsTokenExpired_ShouldReturnTrue_WhenTokenIsExpired [FAIL]
+[xUnit.net 00:00:00.82]       System.ArgumentException : IDX12401: Expires: '12/11/2025 11:03:10' must be after NotBefore: '12/11/2025 11:04:10'.
+[xUnit.net 00:00:00.82]       Stack Trace:
+[xUnit.net 00:00:00.83]            at System.IdentityModel.Tokens.Jwt.JwtPayload.AddFirstPriorityClaims(String issuer, String audience, IList`1 audiences, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt)
+[xUnit.net 00:00:00.83]            at System.IdentityModel.Tokens.Jwt.JwtPayload..ctor(String issuer, String audience, IList`1 audiences, IEnumerable`1 claims, IDictionary`2 claimsCollection, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt)
+[xUnit.net 00:00:00.83]            at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityTokenPrivate(SecurityTokenDescriptor tokenDescriptor)
+[xUnit.net 00:00:00.83]            at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+[xUnit.net 00:00:00.83]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/TokenValidatorTests.cs(204,0): at LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.GenerateExpiredToken()
+[xUnit.net 00:00:00.83]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/TokenValidatorTests.cs(119,0): at LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.IsTokenExpired_ShouldReturnTrue_WhenTokenIsExpired()
+[xUnit.net 00:00:00.83]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+[xUnit.net 00:00:00.83]            at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.91]     LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldContainExpectedClaims_WhenTokenIsValid [FAIL]
+[xUnit.net 00:00:00.91]       Expected principal!.Claims {http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 078e8c14-acaf-491b-a409-7574780b38b3, http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: test@example.com, jti: ac9a0fe7-a883-4985-ab03-9c593c4c7b57, nbf: 1765451050, exp: 1765451950, iat: 1765451050, iss: TestIssuer, aud: TestAudience} to have an item matching ((c.Type == "sub") AndAlso (c.Value == value(LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests+<>c__DisplayClass15_0).userId.ToString())).
+[xUnit.net 00:00:00.91]       Stack Trace:
+[xUnit.net 00:00:00.91]            at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+[xUnit.net 00:00:00.91]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:00.91]            at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+[xUnit.net 00:00:00.91]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:00.91]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:00.91]            at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+[xUnit.net 00:00:00.91]            at FluentAssertions.Collections.GenericCollectionAssertions`3.Contain(Expression`1 predicate, String because, Object[] becauseArgs)
+[xUnit.net 00:00:00.91]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/TokenValidatorTests.cs(154,0): at LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldContainExpectedClaims_WhenTokenIsValid()
+[xUnit.net 00:00:00.91]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+[xUnit.net 00:00:00.91]            at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.91]     LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenIsExpired [FAIL]
+[xUnit.net 00:00:00.91]       System.ArgumentException : IDX12401: Expires: '12/11/2025 11:03:10' must be after NotBefore: '12/11/2025 11:04:10'.
+[xUnit.net 00:00:00.91]       Stack Trace:
+[xUnit.net 00:00:00.91]            at System.IdentityModel.Tokens.Jwt.JwtPayload.AddFirstPriorityClaims(String issuer, String audience, IList`1 audiences, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt)
+[xUnit.net 00:00:00.91]            at System.IdentityModel.Tokens.Jwt.JwtPayload..ctor(String issuer, String audience, IList`1 audiences, IEnumerable`1 claims, IDictionary`2 claimsCollection, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt)
+[xUnit.net 00:00:00.91]            at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityTokenPrivate(SecurityTokenDescriptor tokenDescriptor)
+[xUnit.net 00:00:00.91]            at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+[xUnit.net 00:00:00.91]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/TokenValidatorTests.cs(204,0): at LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.GenerateExpiredToken()
+[xUnit.net 00:00:00.91]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/TokenValidatorTests.cs(61,0): at LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenIsExpired()
+[xUnit.net 00:00:00.91]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+[xUnit.net 00:00:00.91]            at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenIsEmpty [< 1 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.IsTokenExpired_ShouldReturnTrue_WhenTokenIsExpired [4 ms]
+  Error Message:
+   System.ArgumentException : IDX12401: Expires: '12/11/2025 11:03:10' must be after NotBefore: '12/11/2025 11:04:10'.
+  Stack Trace:
+     at System.IdentityModel.Tokens.Jwt.JwtPayload.AddFirstPriorityClaims(String issuer, String audience, IList`1 audiences, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt)
+   at System.IdentityModel.Tokens.Jwt.JwtPayload..ctor(String issuer, String audience, IList`1 audiences, IEnumerable`1 claims, IDictionary`2 claimsCollection, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityTokenPrivate(SecurityTokenDescriptor tokenDescriptor)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   at LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.GenerateExpiredToken() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/TokenValidatorTests.cs:line 204
+   at LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.IsTokenExpired_ShouldReturnTrue_WhenTokenIsExpired() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/TokenValidatorTests.cs:line 119
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenHasWrongSignature [5 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldContainExpectedClaims_WhenTokenIsValid [75 ms]
+  Error Message:
+   Expected principal!.Claims {http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 078e8c14-acaf-491b-a409-7574780b38b3, http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: test@example.com, jti: ac9a0fe7-a883-4985-ab03-9c593c4c7b57, nbf: 1765451050, exp: 1765451950, iat: 1765451050, iss: TestIssuer, aud: TestAudience} to have an item matching ((c.Type == "sub") AndAlso (c.Value == value(LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests+<>c__DisplayClass15_0).userId.ToString())).
+  Stack Trace:
+     at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+   at FluentAssertions.Collections.GenericCollectionAssertions`3.Contain(Expression`1 predicate, String because, Object[] becauseArgs)
+   at LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldContainExpectedClaims_WhenTokenIsValid() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/TokenValidatorTests.cs:line 154
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenIsInvalid [< 1 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenIsExpired [< 1 ms]
+  Error Message:
+   System.ArgumentException : IDX12401: Expires: '12/11/2025 11:03:10' must be after NotBefore: '12/11/2025 11:04:10'.
+  Stack Trace:
+     at System.IdentityModel.Tokens.Jwt.JwtPayload.AddFirstPriorityClaims(String issuer, String audience, IList`1 audiences, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt)
+   at System.IdentityModel.Tokens.Jwt.JwtPayload..ctor(String issuer, String audience, IList`1 audiences, IEnumerable`1 claims, IDictionary`2 claimsCollection, Nullable`1 notBefore, Nullable`1 expires, Nullable`1 issuedAt)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateJwtSecurityTokenPrivate(SecurityTokenDescriptor tokenDescriptor)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   at LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.GenerateExpiredToken() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/TokenValidatorTests.cs:line 204
+   at LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenIsExpired() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/TokenValidatorTests.cs:line 61
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnClaimsPrincipal_WhenTokenIsValid [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenHasWrongIssuer [8 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.IsTokenExpired_ShouldReturnFalse_WhenTokenIsValid [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsValid_WithExpiredToken_ShouldReturnFalse [101 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsRevoked_WithoutRevocation_ShouldReturnFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Create_WithValidUserId_ShouldSucceed [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsRevoked_AfterRevocation_ShouldReturnTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.CreateWithHash_ShouldCreateTokenWithHash [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Create_WithEmptyUserId_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Revoke_WithValidToken_ShouldSucceed [3 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsValid_WithValidToken_ShouldReturnTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Create_ShouldGenerateUniqueIds [< 1 ms]
+[xUnit.net 00:00:00.93]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithNonExistentUser_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:00.93]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:00.93]       Stack Trace:
+[xUnit.net 00:00:00.93]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:00.93]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUserByIdQueryHandlerTests.cs(16,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests..ctor()
+[xUnit.net 00:00:00.93]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:00.93]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithUserWithoutRoles_ShouldReturnEmptyRoles [FAIL]
+[xUnit.net 00:00:00.93]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:00.93]       Stack Trace:
+[xUnit.net 00:00:00.93]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:00.93]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUserByIdQueryHandlerTests.cs(16,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests..ctor()
+[xUnit.net 00:00:00.93]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:00.93]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithValidUserId_ShouldReturnSuccess [FAIL]
+[xUnit.net 00:00:00.93]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:00.93]       Stack Trace:
+[xUnit.net 00:00:00.93]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:00.93]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUserByIdQueryHandlerTests.cs(16,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests..ctor()
+[xUnit.net 00:00:00.93]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsExpired_WithFutureExpiration_ShouldReturnFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsValid_WithRevokedToken_ShouldReturnFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.MarkAsRotated_ShouldSetReplacedByTokenHash [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.GenerateToken_ShouldReturnNonEmptyString [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Revoke_WithAlreadyRevokedToken_ShouldNotThrow [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.GenerateToken_ShouldReturnUniqueTokens [< 1 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithNonExistentUser_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUserByIdQueryHandlerTests.cs:line 16
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithUserWithoutRoles_ShouldReturnEmptyRoles [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUserByIdQueryHandlerTests.cs:line 16
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithValidUserId_ShouldReturnSuccess [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUserByIdQueryHandlerTests.cs:line 16
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:00.93]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithEmptyUserId_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:00.93]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:00.93]       Stack Trace:
+[xUnit.net 00:00:00.93]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:00.93]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUserByIdQueryHandlerTests.cs(16,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests..ctor()
+[xUnit.net 00:00:00.93]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:00.93]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithException_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:00.93]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:00.93]       Stack Trace:
+[xUnit.net 00:00:00.93]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:00.93]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:00.93]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUserByIdQueryHandlerTests.cs(16,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests..ctor()
+[xUnit.net 00:00:00.93]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithEmptyUserId_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUserByIdQueryHandlerTests.cs:line 16
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithException_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUserByIdQueryHandlerTests.cs:line 16
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentActions_ShouldSucceed(action: "READ") [4 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentActions_ShouldSucceed(action: "UPDATE") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentActions_ShouldSucceed(action: "DELETE") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentActions_ShouldSucceed(action: "CREATE") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_ShouldGenerateUniqueIds [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithRequiredData_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithEmptyEntityId_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithNullEntityType_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithEmptyAction_ShouldThrowArgumentException [4 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentEntityTypes_ShouldSucceed(entityType: "Role") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentEntityTypes_ShouldSucceed(entityType: "RefreshToken") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentEntityTypes_ShouldSucceed(entityType: "Permission") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentEntityTypes_ShouldSucceed(entityType: "User") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithEmptyEntityType_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithNullAction_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithWhitespaceEntityType_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithAllData_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithWhitespaceAction_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.SetLastLogin_ShouldUpdateLastLoginAt [26 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.AssignRole_WithValidRole_ShouldSucceed [18 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_WithEmptyFirstName_ShouldThrowArgumentException [54 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.AssignRole_MultipleRoles_ShouldSucceed [17 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Activate_ShouldSetIsActiveTrue [18 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.RemoveRole_WithNullRole_ShouldThrowArgumentNullException [19 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.RemoveRoleById_WithExistingRoleId_ShouldSucceed [58 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.UpdateProfile_WithValidData_ShouldSucceed [19 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.UpdateProfile_WithEmptyLastName_ShouldThrowArgumentException [19 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.RemoveRoleById_WithNonExistingRoleId_ShouldNotThrow [47 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.UpdatePassword_WithNullPasswordHash_ShouldThrowArgumentNullException [24 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.AssignRole_WithDuplicateRole_ShouldNotAddDuplicate [17 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.GenerateTokensAsync_ShouldThrowException_WhenUserIsInactive [396 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.UpdateProfile_WithEmptyFirstName_ShouldThrowArgumentException [16 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_WithNullPasswordHash_ShouldThrowArgumentNullException [54 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_ShouldGenerateUniqueIds [14 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_WithValidData_ShouldSucceed [24 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_WithPhoneNumber_ShouldSucceed [49 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.UpdatePassword_WithNewPasswordHash_ShouldSucceed [38 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_WithNullEmail_ShouldThrowArgumentNullException [55 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.HasRole_WithExistingRoleId_ShouldReturnTrue [16 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Deactivate_ShouldSetIsActiveFalse [17 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.AssignRole_WithNullRole_ShouldThrowArgumentNullException [21 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.HasRole_WithNonExistingRoleId_ShouldReturnFalse [53 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_WithEmptyLastName_ShouldThrowArgumentException [21 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.RemoveRole_WithNonExistingRole_ShouldNotThrow [17 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.RemoveRole_WithExistingRole_ShouldSucceed [52 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithValidEmail_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithEmptyEmail_ShouldFail [9 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.GetHashCode_WithDifferentValue_ShouldReturnDifferentHashCode [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.EqualityOperator_WithSameValue_ShouldBeTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.EqualityOperator_WithDifferentValue_ShouldBeFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.GetHashCode_WithSameValue_ShouldReturnSameHashCode [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithInvalidEmailFormat_ShouldFail(email: "invalid@") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithInvalidEmailFormat_ShouldFail(email: "invalidemail") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithInvalidEmailFormat_ShouldFail(email: "invalid@.com") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithInvalidEmailFormat_ShouldFail(email: "invalid @email.com") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithInvalidEmailFormat_ShouldFail(email: "@invalid.com") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithValidEmail_ShouldNormalizeToLowercase [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Equals_WithNull_ShouldBeFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithEmailExceeding254Characters_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithNullEmail_ShouldFail [< 1 ms]
+[xUnit.net 00:00:01.79]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithValidQuery_ShouldReturnSuccess [FAIL]
+[xUnit.net 00:00:01.79]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.79]       Stack Trace:
+[xUnit.net 00:00:01.79]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.79]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(17,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests..ctor()
+[xUnit.net 00:00:01.79]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.InequalityOperator_WithDifferentValue_ShouldBeTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.ToString_ShouldReturnEmailValue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Equals_WithSameValue_ShouldBeTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.CreateOrThrow_WithInvalidEmail_ShouldThrowArgumentException [2 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithLeadingAndTrailingWhitespace_ShouldTrim [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.CreateOrThrow_WithValidEmail_ShouldReturnEmail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Equals_WithDifferentValue_ShouldBeFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithWhitespaceEmail_ShouldFail [< 1 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithValidQuery_ShouldReturnSuccess [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs:line 17
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.79]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithEmptyUsers_ShouldReturnEmptyList [FAIL]
+[xUnit.net 00:00:01.79]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.79]       Stack Trace:
+[xUnit.net 00:00:01.79]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.79]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(17,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests..ctor()
+[xUnit.net 00:00:01.79]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.79]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithSearchTerm_ShouldFilterCorrectly [FAIL]
+[xUnit.net 00:00:01.79]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.79]       Stack Trace:
+[xUnit.net 00:00:01.79]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.79]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(17,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests..ctor()
+[xUnit.net 00:00:01.79]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.79]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithActiveFilter_ShouldFilterCorrectly [FAIL]
+[xUnit.net 00:00:01.79]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.79]       Stack Trace:
+[xUnit.net 00:00:01.79]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.79]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(17,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests..ctor()
+[xUnit.net 00:00:01.79]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.79]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithPagination_ShouldReturnCorrectPage [FAIL]
+[xUnit.net 00:00:01.79]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.79]       Stack Trace:
+[xUnit.net 00:00:01.79]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.79]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(17,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests..ctor()
+[xUnit.net 00:00:01.79]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.79]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithException_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:01.79]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.79]       Stack Trace:
+[xUnit.net 00:00:01.79]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.79]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.79]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(17,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests..ctor()
+[xUnit.net 00:00:01.79]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.80]     LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithAddRolesFailure_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:01.80]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.80]       Stack Trace:
+[xUnit.net 00:00:01.80]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.80]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs(18,0): at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.80]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.80]     LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithEmptyRoles_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:01.80]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.80]       Stack Trace:
+[xUnit.net 00:00:01.80]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.80]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs(18,0): at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.80]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.80]     LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithRemoveRolesFailure_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:01.80]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.80]       Stack Trace:
+[xUnit.net 00:00:01.80]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.80]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs(18,0): at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.80]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithEmptyUsers_ShouldReturnEmptyList [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs:line 17
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithSearchTerm_ShouldFilterCorrectly [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs:line 17
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithActiveFilter_ShouldFilterCorrectly [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs:line 17
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithPagination_ShouldReturnCorrectPage [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs:line 17
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithException_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs:line 17
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Passed LiquorPOS.Services.Identity.UnitTests.PlaceholderTests.Placeholder_Test_Should_Pass [< 1 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithAddRolesFailure_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs:line 18
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithEmptyRoles_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs:line 18
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithRemoveRolesFailure_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs:line 18
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.80]     LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithNonExistentUser_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:01.80]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.80]       Stack Trace:
+[xUnit.net 00:00:01.80]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.80]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs(18,0): at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.80]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.80]     LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithNullRoles_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:01.80]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.80]       Stack Trace:
+[xUnit.net 00:00:01.80]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.80]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs(18,0): at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.80]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.80]     LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithValidData_RemovingRoles_ShouldReturnSuccess [FAIL]
+[xUnit.net 00:00:01.80]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.80]       Stack Trace:
+[xUnit.net 00:00:01.80]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.80]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs(18,0): at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.80]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.80]     LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithException_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:01.80]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.80]       Stack Trace:
+[xUnit.net 00:00:01.80]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.80]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs(18,0): at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.80]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.80]     LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithValidData_AddingNewRoles_ShouldReturnSuccess [FAIL]
+[xUnit.net 00:00:01.80]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.80]       Stack Trace:
+[xUnit.net 00:00:01.80]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.80]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs(18,0): at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.80]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.80]     LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithInvalidRoles_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:01.80]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.80]       Stack Trace:
+[xUnit.net 00:00:01.80]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.80]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs(18,0): at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.80]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.80]     LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithEmptyUserId_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:01.80]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.80]       Stack Trace:
+[xUnit.net 00:00:01.80]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.80]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.80]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs(18,0): at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.80]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithNonExistentUser_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs:line 18
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithNullRoles_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs:line 18
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithValidData_RemovingRoles_ShouldReturnSuccess [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs:line 18
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithException_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs:line 18
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithValidData_AddingNewRoles_ShouldReturnSuccess [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs:line 18
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithInvalidRoles_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs:line 18
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithEmptyUserId_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/AssignUserRolesCommandHandlerTests.cs:line 18
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.LoginCommandValidatorTests.Validate_WithEmptyEmail_ShouldFail [7 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.LoginCommandValidatorTests.Validate_WithLongEmail_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.LoginCommandValidatorTests.Validate_WithEmptyPassword_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.LoginCommandValidatorTests.Validate_WithInvalidEmail_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.LoginCommandValidatorTests.Validate_WithValidCommand_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithValidData_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithEmptyName_ShouldThrowArgumentException [3 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithWhitespaceScope_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithEmptyScope_ShouldThrowArgumentException [4 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithWhitespaceName_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithNullName_ShouldThrowArgumentException [< 1 ms]
+[xUnit.net 00:00:01.82]     LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithAlreadyRevokedToken_ShouldReturnSuccess [FAIL]
+[xUnit.net 00:00:01.82]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.82]       Stack Trace:
+[xUnit.net 00:00:01.82]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.82]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.82]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.82]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.82]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(22,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.82]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_ShouldGenerateUniqueIds [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithNullScope_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithoutDescription_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandValidatorTests.Validate_WithValidCommand_ShouldSucceed [7 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandValidatorTests.Validate_WithEmptyRefreshToken_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandValidatorTests.Validate_WithWhitespaceOnlyRefreshToken_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandValidatorTests.Validate_WithShortRefreshToken_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandValidatorTests.Validate_WithNullRefreshToken_ShouldFail [< 1 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithAlreadyRevokedToken_ShouldReturnSuccess [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs:line 22
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.83]     LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithValidToken_ShouldReturnSuccess [FAIL]
+[xUnit.net 00:00:01.83]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.83]       Stack Trace:
+[xUnit.net 00:00:01.83]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.83]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.83]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.83]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.83]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(22,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.83]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.83]     LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithNonExistentToken_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:01.83]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.83]       Stack Trace:
+[xUnit.net 00:00:01.83]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.83]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.83]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.83]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.83]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(22,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.83]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.83]     LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithException_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:01.83]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.83]       Stack Trace:
+[xUnit.net 00:00:01.83]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.83]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.83]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.83]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.83]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(22,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.83]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+[xUnit.net 00:00:01.83]     LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithEmptyRefreshToken_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:01.83]       System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+[xUnit.net 00:00:01.83]       Stack Trace:
+[xUnit.net 00:00:01.83]         /_/src/Moq/Guard.cs(207,0): at Moq.Guard.IsMockable(Type type)
+[xUnit.net 00:00:01.83]         /_/src/Moq/Mock`1.cs(173,0): at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args)
+[xUnit.net 00:00:01.83]         /_/src/Moq/Mock`1.cs(157,0): at Moq.Mock`1..ctor(MockBehavior behavior)
+[xUnit.net 00:00:01.83]         /_/src/Moq/Mock`1.cs(124,0): at Moq.Mock`1..ctor()
+[xUnit.net 00:00:01.83]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(22,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests..ctor()
+[xUnit.net 00:00:01.83]            at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithValidToken_ShouldReturnSuccess [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs:line 22
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithNonExistentToken_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs:line 22
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithException_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs:line 22
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithEmptyRefreshToken_ShouldReturnFailure [1 ms]
+  Error Message:
+   System.NotSupportedException : Type to mock (LiquorPOSIdentityDbContext) must be an interface, a delegate, or a non-sealed, non-static class.
+  Stack Trace:
+     at Moq.Guard.IsMockable(Type type) in /_/src/Moq/Guard.cs:line 207
+   at Moq.Mock`1..ctor(MockBehavior behavior, Object[] args) in /_/src/Moq/Mock`1.cs:line 173
+   at Moq.Mock`1..ctor(MockBehavior behavior) in /_/src/Moq/Mock`1.cs:line 157
+   at Moq.Mock`1..ctor() in /_/src/Moq/Mock`1.cs:line 124
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests..ctor() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs:line 22
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.EqualityOperator_WithDifferentHash_ShouldBeFalse [71 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Equals_WithSameHashAndSalt_ShouldBeTrue [17 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithWhitespacePassword_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.CreateOrThrow_WithValidPassword_ShouldReturnPasswordHash [58 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Verify_WithNullPassword_ShouldReturnFalse [21 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.FromHashAndSalt_WithValidValues_ShouldReturnPasswordHash [15 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Verify_WithIncorrectPassword_ShouldReturnFalse [70 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithEmptyPassword_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.FromHashAndSalt_WithEmptyHash_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithDifferentPasswords_ShouldGenerateDifferentHashes [75 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithValidPassword_ShouldSucceed [19 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Verify_WithCorrectPassword_ShouldReturnTrue [34 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.GetHashCode_WithSameHashAndSalt_ShouldReturnSameHashCode [51 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.ToString_ShouldReturnMaskedString [20 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithNullPassword_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.EqualityOperator_WithSameHashAndSalt_ShouldBeTrue [14 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Verify_WithEmptyPassword_ShouldReturnFalse [52 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithPasswordExceeding128Characters_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.CreateOrThrow_WithInvalidPassword_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.GetHashCode_WithDifferentHash_ShouldReturnDifferentHashCode [35 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.InequalityOperator_WithDifferentHash_ShouldBeTrue [77 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Equals_WithNull_ShouldBeFalse [17 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Equals_WithDifferentHash_ShouldBeFalse [63 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithPasswordLessThan8Characters_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.FromHashAndSalt_WithEmptySalt_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithEmptyEmail_ShouldFail [16 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithValidPhoneNumber_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithPasswordMissingLowercase_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithEmptyFirstName_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithEmptyLastName_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithValidRoles_ShouldSucceed [3 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithInvalidEmail_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithValidCommand_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithPasswordMissingDigit_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithPasswordMissingUppercase_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithWeakPassword_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandValidatorTests.Validate_WithShortRefreshToken_ShouldFail [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandValidatorTests.Validate_WithWhitespaceOnlyRefreshToken_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandValidatorTests.Validate_WithValidCommand_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandValidatorTests.Validate_WithNullRefreshToken_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandValidatorTests.Validate_WithEmptyRefreshToken_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.GenerateTokensAsync_AccessToken_ShouldExpireIn15Minutes [1 s]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RefreshTokensAsync_ShouldRevokeAllTokens_WhenRevokedTokenIsReused [236 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RevokeRefreshTokenAsync_ShouldRevokeToken [61 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.GenerateTokensAsync_RefreshToken_ShouldExpireIn7Days [12 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RefreshTokensAsync_ShouldRevokeOldToken [22 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RevokeAllUserRefreshTokensAsync_ShouldRevokeAllUserTokens [53 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RefreshTokensAsync_ShouldGenerateNewTokenPair [13 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.GenerateTokensAsync_RefreshToken_ShouldBeStoredInDatabase [11 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.GenerateTokensAsync_AccessToken_ShouldContainExpectedClaims [19 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RefreshTokensAsync_ShouldThrowException_WhenTokenIsExpired [11 ms]
+[xUnit.net 00:00:03.18]   Finished:    LiquorPOS.Services.Identity.UnitTests
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RefreshTokensAsync_ShouldThrowException_WhenTokenIsInvalid [2 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.GenerateTokensAsync_ShouldReturnAccessTokenAndRefreshToken [12 ms]
+
+Test Run Failed.
+Total tests: 251
+     Passed: 214
+     Failed: 37
+ Total time: 4.1444 Seconds
+       _VSTestConsole:
+         MSB4181: The "VSTestTask" task returned false but did not log an error.
+     1>Done Building Project "/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj" (VSTest target(s)) -- FAILED.
+
+Build FAILED.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:08.39

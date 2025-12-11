@@ -220,9 +220,11 @@ public class RefreshTokenCommandHandlerTests
         _jwtTokenServiceMock.Setup(x => x.RefreshTokensAsync("valid_token", It.IsAny<CancellationToken>()))
             .ReturnsAsync(("new_access_token", "new_refresh_token"));
 
-        _dbContextMock.Setup(x => x.AuditLogs.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
-            .Returns(new ValueTask<EntityEntry<AuditLog>>(new Mock<EntityEntry<AuditLog>>().Object));
+        var auditLogsDbSet = new Mock<DbSet<AuditLog>>();
+        auditLogsDbSet.Setup(x => x.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
+            .Returns(new ValueTask<EntityEntry<AuditLog>>(Task.FromResult(default(EntityEntry<AuditLog>)!)));
 
+        _dbContextMock.Setup(x => x.AuditLogs).Returns(auditLogsDbSet.Object);
         _dbContextMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(1);
 
