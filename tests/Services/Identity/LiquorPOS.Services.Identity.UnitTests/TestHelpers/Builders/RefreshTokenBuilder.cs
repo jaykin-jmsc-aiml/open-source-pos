@@ -71,21 +71,11 @@ public class RefreshTokenBuilder
 
     public RefreshToken Build()
     {
-        RefreshToken refreshToken;
-
-        if (_createWithHash)
-        {
-            var tokenHash = TokenHasher.Hash(_token);
-            refreshToken = RefreshToken.CreateWithHash(_userId, tokenHash, _expiresAt);
-            refreshToken.Id = _id;
-            refreshToken.CreatedAt = _createdAt;
-        }
-        else
-        {
-            (refreshToken, _) = RefreshToken.Create(_userId);
-            refreshToken.Id = _id;
-            refreshToken.CreatedAt = _createdAt;
-        }
+        // Always hash the token for consistency
+        var tokenHash = TokenHasher.Hash(_token);
+        var refreshToken = RefreshToken.CreateWithHash(_userId, tokenHash, _expiresAt);
+        refreshToken.Id = _id;
+        refreshToken.CreatedAt = _createdAt;
 
         if (_revokedAt.HasValue)
         {
@@ -94,8 +84,7 @@ public class RefreshTokenBuilder
 
         if (!string.IsNullOrEmpty(_replacedByTokenHash))
         {
-            var newTokenHash = TokenHasher.Hash("new_token");
-            refreshToken.MarkAsRotated(newTokenHash);
+            refreshToken.MarkAsRotated(_replacedByTokenHash);
         }
 
         return refreshToken;

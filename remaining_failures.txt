@@ -1,0 +1,5 @@
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithValidQuery_ShouldReturnSuccess [1 s]
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithSearchTerm_ShouldFilterCorrectly [31 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithActiveFilter_ShouldFilterCorrectly [52 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithPagination_ShouldReturnCorrectPage [16 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithValidTokenAndActiveUser_ShouldReturnSuccess [9 ms]

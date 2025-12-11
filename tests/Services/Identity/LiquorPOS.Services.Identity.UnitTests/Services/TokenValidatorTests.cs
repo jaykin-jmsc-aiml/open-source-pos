@@ -151,8 +151,9 @@ public sealed class TokenValidatorTests
         var principal = _sut.ValidateToken(token);
 
         principal.Should().NotBeNull();
-        principal!.Claims.Should().Contain(c => c.Type == JwtRegisteredClaimNames.Sub && c.Value == userId.ToString());
-        principal.Claims.Should().Contain(c => c.Type == JwtRegisteredClaimNames.Email && c.Value == email);
+        // JWT claims are normalized to their full URI forms after validation
+        principal!.Claims.Should().Contain(c => c.Type == ClaimTypes.NameIdentifier && c.Value == userId.ToString());
+        principal.Claims.Should().Contain(c => c.Type == ClaimTypes.Email && c.Value == email);
     }
 
     private string GenerateValidToken(Guid? userId = null, string? email = null)
