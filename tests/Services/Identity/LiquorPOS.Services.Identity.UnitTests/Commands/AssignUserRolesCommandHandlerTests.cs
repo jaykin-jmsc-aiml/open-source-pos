@@ -1,8 +1,8 @@
 using FluentAssertions;
 using LiquorPOS.Services.Identity.Application.Commands.AssignUserRoles;
 using LiquorPOS.Services.Identity.Domain.Entities;
-using LiquorPOS.Services.Identity.Infrastructure.Identity;
 using LiquorPOS.Services.Identity.Infrastructure.Persistence;
+using LiquorPOS.Services.Identity.UnitTests.TestHelpers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
