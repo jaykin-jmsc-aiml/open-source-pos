@@ -1,5 +1,5 @@
 using LiquorPOS.Services.Identity.Api;
-using LiquorPOS.Services.Identity.Infrastructure.Identity;
+using LiquorPOS.Services.Identity.Domain.Entities;
 using LiquorPOS.Services.Identity.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;

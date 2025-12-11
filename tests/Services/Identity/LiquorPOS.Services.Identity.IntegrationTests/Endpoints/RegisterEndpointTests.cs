@@ -3,13 +3,9 @@ using System.Net.Http.Json;
 using FluentAssertions;
 using LiquorPOS.Services.Identity.Application.Dtos;
 using LiquorPOS.Services.Identity.IntegrationTests.Infrastructure;
+using LiquorPOS.Services.Identity.IntegrationTests.Models;
 
 namespace LiquorPOS.Services.Identity.IntegrationTests.Endpoints;
-
-internal sealed record IdentityResponseDto<T>(
-    bool Success,
-    string? Message,
-    T? Data);
 
 public class RegisterEndpointTests : IClassFixture<IdentityWebApplicationFactory>
 {

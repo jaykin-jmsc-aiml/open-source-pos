@@ -9,6 +9,7 @@ using LiquorPOS.Services.Identity.Infrastructure.Security;
 using LiquorPOS.Services.Identity.UnitTests.TestHelpers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Logging;
 using Moq;
 
@@ -57,7 +58,7 @@ public class RefreshTokenCommandHandlerTests
         var command = new RefreshTokenCommand("non_existent_token");
         
         _dbContextMock.Setup(x => x.RefreshTokens)
-            .ReturnsDbSet(new List<RefreshToken>().AsQueryable());
+            .Returns(DbSetMockHelper.CreateMockDbSetFromList(new List<RefreshToken>()));
 
         // Act
         var result = await _handler.Handle(command, CancellationToken.None);
@@ -81,7 +82,7 @@ public class RefreshTokenCommandHandlerTests
         var command = new RefreshTokenCommand("revoked_token");
         
         _dbContextMock.Setup(x => x.RefreshTokens)
-            .ReturnsDbSet(new[] { revokedToken }.AsQueryable());
+            .Returns(DbSetMockHelper.CreateMockDbSetFromList(new[] { revokedToken }));
 
         _jwtTokenServiceMock.Setup(x => x.RevokeRefreshTokenAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .Returns(Task.CompletedTask);
@@ -107,7 +108,7 @@ public class RefreshTokenCommandHandlerTests
         var command = new RefreshTokenCommand("expired_token");
         
         _dbContextMock.Setup(x => x.RefreshTokens)
-            .ReturnsDbSet(new[] { expiredToken }.AsQueryable());
+            .Returns(DbSetMockHelper.CreateMockDbSetFromList(new[] { expiredToken }));
 
         // Act
         var result = await _handler.Handle(command, CancellationToken.None);
@@ -130,7 +131,7 @@ public class RefreshTokenCommandHandlerTests
         var command = new RefreshTokenCommand("valid_token");
         
         _dbContextMock.Setup(x => x.RefreshTokens)
-            .ReturnsDbSet(new[] { validToken }.AsQueryable());
+            .Returns(DbSetMockHelper.CreateMockDbSetFromList(new[] { validToken }));
 
         _userManagerMock.Setup(x => x.FindByIdAsync(It.IsAny<string>()))
             .ReturnsAsync((ApplicationUser?)null);
@@ -166,7 +167,7 @@ public class RefreshTokenCommandHandlerTests
         var command = new RefreshTokenCommand("valid_token");
         
         _dbContextMock.Setup(x => x.RefreshTokens)
-            .ReturnsDbSet(new[] { validToken }.AsQueryable());
+            .Returns(DbSetMockHelper.CreateMockDbSetFromList(new[] { validToken }));
 
         _userManagerMock.Setup(x => x.FindByIdAsync(userId.ToString()))
             .ReturnsAsync(inactiveUser);
@@ -211,7 +212,7 @@ public class RefreshTokenCommandHandlerTests
         var command = new RefreshTokenCommand("valid_token");
         
         _dbContextMock.Setup(x => x.RefreshTokens)
-            .ReturnsDbSet(new[] { validToken }.AsQueryable());
+            .Returns(DbSetMockHelper.CreateMockDbSetFromList(new[] { validToken }));
 
         _userManagerMock.Setup(x => x.FindByIdAsync(userId.ToString()))
             .ReturnsAsync(activeUser);
@@ -220,7 +221,7 @@ public class RefreshTokenCommandHandlerTests
             .ReturnsAsync(("new_access_token", "new_refresh_token"));
 
         _dbContextMock.Setup(x => x.AuditLogs.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
-            .Returns(ValueTask.CompletedTask);
+            .Returns(new ValueTask<EntityEntry<AuditLog>>(new Mock<EntityEntry<AuditLog>>().Object));
 
         _dbContextMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(1);

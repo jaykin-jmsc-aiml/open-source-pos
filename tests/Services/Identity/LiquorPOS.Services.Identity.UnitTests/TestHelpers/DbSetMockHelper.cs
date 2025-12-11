@@ -14,4 +14,9 @@ public static class DbSetMockHelper
         mockSet.As<IQueryable<T>>().Setup(m => m.GetEnumerator()).Returns(data.GetEnumerator());
         return mockSet.Object;
     }
+
+    public static DbSet<T> CreateMockDbSetFromList<T>(IEnumerable<T> data) where T : class
+    {
+        return CreateMockDbSet(data.AsQueryable());
+    }
 }
