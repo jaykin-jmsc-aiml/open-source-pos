@@ -3,9 +3,9 @@ using LiquorPOS.Services.Identity.Application.Commands.AssignUserRoles;
 using LiquorPOS.Services.Identity.Domain.Entities;
 using LiquorPOS.Services.Identity.Infrastructure.Persistence;
 using LiquorPOS.Services.Identity.UnitTests.TestHelpers;
+using LiquorPOS.Services.Identity.UnitTests.TestHelpers.Builders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Logging;
 using Moq;
 
@@ -15,9 +15,7 @@ public class AssignUserRolesCommandHandlerTests
 {
     private readonly Mock<UserManager<ApplicationUser>> _userManagerMock;
     private readonly Mock<RoleManager<ApplicationRole>> _roleManagerMock;
-    private readonly Mock<LiquorPOSIdentityDbContext> _dbContextMock = new();
     private readonly Mock<ILogger<AssignUserRolesCommandHandler>> _loggerMock = new();
-    private readonly AssignUserRolesCommandHandler _handler;
 
     public AssignUserRolesCommandHandlerTests()
     {
@@ -28,22 +26,22 @@ public class AssignUserRolesCommandHandlerTests
         _roleManagerMock = new Mock<RoleManager<ApplicationRole>>(
             Mock.Of<IRoleStore<ApplicationRole>>(),
             null!, null!, null!, null!);
-
-        _handler = new AssignUserRolesCommandHandler(
-            _userManagerMock.Object,
-            _roleManagerMock.Object,
-            _dbContextMock.Object,
-            _loggerMock.Object);
     }
 
     [Fact]
     public async Task Handle_WithEmptyUserId_ShouldReturnFailure()
     {
         // Arrange
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new AssignUserRolesCommandHandler(
+            _userManagerMock.Object,
+            _roleManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
         var command = new AssignUserRolesCommand(Guid.Empty, new List<string> { "Admin" }.AsReadOnly());
 
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeFalse();
@@ -54,10 +52,16 @@ public class AssignUserRolesCommandHandlerTests
     public async Task Handle_WithNullRoles_ShouldReturnFailure()
     {
         // Arrange
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new AssignUserRolesCommandHandler(
+            _userManagerMock.Object,
+            _roleManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
         var command = new AssignUserRolesCommand(Guid.NewGuid(), null!);
 
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeFalse();
@@ -68,10 +72,16 @@ public class AssignUserRolesCommandHandlerTests
     public async Task Handle_WithEmptyRoles_ShouldReturnFailure()
     {
         // Arrange
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new AssignUserRolesCommandHandler(
+            _userManagerMock.Object,
+            _roleManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
         var command = new AssignUserRolesCommand(Guid.NewGuid(), new List<string>().AsReadOnly());
 
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeFalse();
@@ -83,13 +93,19 @@ public class AssignUserRolesCommandHandlerTests
     {
         // Arrange
         var userId = Guid.NewGuid();
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new AssignUserRolesCommandHandler(
+            _userManagerMock.Object,
+            _roleManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
         var command = new AssignUserRolesCommand(userId, new List<string> { "Admin" }.AsReadOnly());
 
         _userManagerMock.Setup(x => x.FindByIdAsync(userId.ToString()))
             .ReturnsAsync((ApplicationUser?)null);
 
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeFalse();
@@ -101,13 +117,17 @@ public class AssignUserRolesCommandHandlerTests
     {
         // Arrange
         var userId = Guid.NewGuid();
-        var user = new ApplicationUser
-        {
-            Id = userId,
-            Email = "test@example.com",
-            FirstName = "Test",
-            LastName = "User"
-        };
+        var user = new UserBuilder()
+            .WithId(userId)
+            .WithEmail("test@example.com")
+            .Build();
+
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new AssignUserRolesCommandHandler(
+            _userManagerMock.Object,
+            _roleManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
 
         var command = new AssignUserRolesCommand(userId, new List<string> { "InvalidRole" }.AsReadOnly());
 
@@ -118,7 +138,7 @@ public class AssignUserRolesCommandHandlerTests
             .ReturnsAsync(false);
 
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeFalse();
@@ -130,13 +150,17 @@ public class AssignUserRolesCommandHandlerTests
     {
         // Arrange
         var userId = Guid.NewGuid();
-        var user = new ApplicationUser
-        {
-            Id = userId,
-            Email = "test@example.com",
-            FirstName = "Test",
-            LastName = "User"
-        };
+        var user = new UserBuilder()
+            .WithId(userId)
+            .WithEmail("test@example.com")
+            .Build();
+
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new AssignUserRolesCommandHandler(
+            _userManagerMock.Object,
+            _roleManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
 
         var currentRoles = new List<string> { "User" };
         var newRoles = new List<string> { "User", "Admin" };
@@ -157,16 +181,8 @@ public class AssignUserRolesCommandHandlerTests
         _userManagerMock.Setup(x => x.AddToRolesAsync(user, It.Is<IEnumerable<string>>(r => r.Contains("Admin"))))
             .ReturnsAsync(IdentityResult.Success);
 
-        var auditLogsDbSet = new Mock<DbSet<AuditLog>>();
-        auditLogsDbSet.Setup(x => x.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
-            .Returns(new ValueTask<EntityEntry<AuditLog>>(Task.FromResult(default(EntityEntry<AuditLog>)!)));
-
-        _dbContextMock.Setup(x => x.AuditLogs).Returns(auditLogsDbSet.Object);
-        _dbContextMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync(1);
-
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeTrue();
@@ -181,13 +197,17 @@ public class AssignUserRolesCommandHandlerTests
     {
         // Arrange
         var userId = Guid.NewGuid();
-        var user = new ApplicationUser
-        {
-            Id = userId,
-            Email = "test@example.com",
-            FirstName = "Test",
-            LastName = "User"
-        };
+        var user = new UserBuilder()
+            .WithId(userId)
+            .WithEmail("test@example.com")
+            .Build();
+
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new AssignUserRolesCommandHandler(
+            _userManagerMock.Object,
+            _roleManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
 
         var currentRoles = new List<string> { "Admin", "Manager", "User" };
         var newRoles = new List<string> { "User" };
@@ -205,16 +225,8 @@ public class AssignUserRolesCommandHandlerTests
         _userManagerMock.Setup(x => x.RemoveFromRolesAsync(user, It.Is<IEnumerable<string>>(r => r.Contains("Admin") && r.Contains("Manager"))))
             .ReturnsAsync(IdentityResult.Success);
 
-        var auditLogsDbSet = new Mock<DbSet<AuditLog>>();
-        auditLogsDbSet.Setup(x => x.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
-            .Returns(new ValueTask<EntityEntry<AuditLog>>(Task.FromResult(default(EntityEntry<AuditLog>)!)));
-
-        _dbContextMock.Setup(x => x.AuditLogs).Returns(auditLogsDbSet.Object);
-        _dbContextMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync(1);
-
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeTrue();
@@ -229,13 +241,17 @@ public class AssignUserRolesCommandHandlerTests
     {
         // Arrange
         var userId = Guid.NewGuid();
-        var user = new ApplicationUser
-        {
-            Id = userId,
-            Email = "test@example.com",
-            FirstName = "Test",
-            LastName = "User"
-        };
+        var user = new UserBuilder()
+            .WithId(userId)
+            .WithEmail("test@example.com")
+            .Build();
+
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new AssignUserRolesCommandHandler(
+            _userManagerMock.Object,
+            _roleManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
 
         var currentRoles = new List<string> { "User" };
         var newRoles = new List<string> { "User", "Admin" };
@@ -258,7 +274,7 @@ public class AssignUserRolesCommandHandlerTests
             .ReturnsAsync(errorResult);
 
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeFalse();
@@ -270,13 +286,17 @@ public class AssignUserRolesCommandHandlerTests
     {
         // Arrange
         var userId = Guid.NewGuid();
-        var user = new ApplicationUser
-        {
-            Id = userId,
-            Email = "test@example.com",
-            FirstName = "Test",
-            LastName = "User"
-        };
+        var user = new UserBuilder()
+            .WithId(userId)
+            .WithEmail("test@example.com")
+            .Build();
+
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new AssignUserRolesCommandHandler(
+            _userManagerMock.Object,
+            _roleManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
 
         var currentRoles = new List<string> { "Admin", "User" };
         var newRoles = new List<string> { "User" };
@@ -296,7 +316,7 @@ public class AssignUserRolesCommandHandlerTests
             .ReturnsAsync(errorResult);
 
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeFalse();
@@ -307,13 +327,20 @@ public class AssignUserRolesCommandHandlerTests
     public async Task Handle_WithException_ShouldReturnFailure()
     {
         // Arrange
-        var command = new AssignUserRolesCommand(Guid.NewGuid(), new List<string> { "Admin" }.AsReadOnly());
+        var userId = Guid.NewGuid();
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new AssignUserRolesCommandHandler(
+            _userManagerMock.Object,
+            _roleManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
+        var command = new AssignUserRolesCommand(userId, new List<string> { "Admin" }.AsReadOnly());
 
         _userManagerMock.Setup(x => x.FindByIdAsync(It.IsAny<string>()))
             .Throws(new Exception("Database error"));
 
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeFalse();
