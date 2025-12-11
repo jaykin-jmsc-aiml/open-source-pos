@@ -157,9 +157,11 @@ public class AssignUserRolesCommandHandlerTests
         _userManagerMock.Setup(x => x.AddToRolesAsync(user, It.Is<IEnumerable<string>>(r => r.Contains("Admin"))))
             .ReturnsAsync(IdentityResult.Success);
 
-        _dbContextMock.Setup(x => x.AuditLogs.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
-            .Returns(new ValueTask<EntityEntry<AuditLog>>(new Mock<EntityEntry<AuditLog>>().Object));
+        var auditLogsDbSet = new Mock<DbSet<AuditLog>>();
+        auditLogsDbSet.Setup(x => x.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
+            .Returns(new ValueTask<EntityEntry<AuditLog>>(Task.FromResult(default(EntityEntry<AuditLog>)!)));
 
+        _dbContextMock.Setup(x => x.AuditLogs).Returns(auditLogsDbSet.Object);
         _dbContextMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(1);
 
@@ -203,9 +205,11 @@ public class AssignUserRolesCommandHandlerTests
         _userManagerMock.Setup(x => x.RemoveFromRolesAsync(user, It.Is<IEnumerable<string>>(r => r.Contains("Admin") && r.Contains("Manager"))))
             .ReturnsAsync(IdentityResult.Success);
 
-        _dbContextMock.Setup(x => x.AuditLogs.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
-            .Returns(new ValueTask<EntityEntry<AuditLog>>(new Mock<EntityEntry<AuditLog>>().Object));
+        var auditLogsDbSet = new Mock<DbSet<AuditLog>>();
+        auditLogsDbSet.Setup(x => x.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
+            .Returns(new ValueTask<EntityEntry<AuditLog>>(Task.FromResult(default(EntityEntry<AuditLog>)!)));
 
+        _dbContextMock.Setup(x => x.AuditLogs).Returns(auditLogsDbSet.Object);
         _dbContextMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(1);
 
