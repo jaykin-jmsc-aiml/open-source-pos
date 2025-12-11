@@ -6,6 +6,7 @@ using LiquorPOS.Services.Identity.Infrastructure.Persistence;
 using LiquorPOS.Services.Identity.UnitTests.TestHelpers;
 using LiquorPOS.Services.Identity.UnitTests.TestHelpers.Builders;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -14,52 +15,56 @@ namespace LiquorPOS.Services.Identity.UnitTests.Queries;
 
 public class GetUsersQueryHandlerTests
 {
-    private readonly Mock<UserManager<ApplicationUser>> _userManagerMock;
     private readonly Mock<ILogger<GetUsersQueryHandler>> _loggerMock = new();
-    private readonly GetUsersQueryHandler _handler;
 
-    public GetUsersQueryHandlerTests()
+    private (UserManager<ApplicationUser>, LiquorPOSIdentityDbContext, GetUsersQueryHandler) CreateHandler()
     {
-        _userManagerMock = new Mock<UserManager<ApplicationUser>>(
-            Mock.Of<IUserStore<ApplicationUser>>(),
-            null!, null!, null!, null!, null!, null!, null!, null!);
-
-        _handler = new GetUsersQueryHandler(
-            _userManagerMock.Object,
-            InMemoryIdentityDbContextFactory.CreateDbContext(),
-            _loggerMock.Object);
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var userStore = new UserStore<ApplicationUser, IdentityRole<Guid>, LiquorPOSIdentityDbContext, Guid>(dbContext);
+        var userManager = new UserManager<ApplicationUser>(
+            userStore,
+            null,
+            new PasswordHasher<ApplicationUser>(),
+            null,
+            null,
+            null,
+            null,
+            null,
+            null);
+        var handler = new GetUsersQueryHandler(userManager, dbContext, _loggerMock.Object);
+        return (userManager, dbContext, handler);
     }
 
     [Fact]
     public async Task Handle_WithValidQuery_ShouldReturnSuccess()
     {
         // Arrange
-        var users = new List<ApplicationUser>
-        {
-            new UserBuilder()
-                .WithEmail("user1@example.com")
-                .WithFirstName("User")
-                .WithLastName("One")
-                .WithIsActive(true)
-                .Build(),
-            new UserBuilder()
-                .WithEmail("user2@example.com")
-                .WithFirstName("User")
-                .WithLastName("Two")
-                .WithIsActive(false)
-                .Build()
-        }.AsQueryable();
+        var (userManager, dbContext, handler) = CreateHandler();
+        
+        var user1 = new UserBuilder()
+            .WithEmail("user1@example.com")
+            .WithFirstName("User")
+            .WithLastName("One")
+            .WithIsActive(true)
+            .Build();
+        
+        var user2 = new UserBuilder()
+            .WithEmail("user2@example.com")
+            .WithFirstName("User")
+            .WithLastName("Two")
+            .WithIsActive(false)
+            .Build();
 
-        _userManagerMock.Setup(x => x.Users)
-            .Returns(users);
+        await userManager.CreateAsync(user1);
+        await userManager.CreateAsync(user2);
 
         var query = new GetUsersQuery(1, 10, null, null);
 
         // Act
-        var result = await _handler.Handle(query, CancellationToken.None);
+        var result = await handler.Handle(query, CancellationToken.None);
 
         // Assert
-        result.Success.Should().BeTrue();
+        result.Success.Should().BeTrue($"because query should succeed, but got message: {result.Message}");
         result.Message.Should().Be("Users retrieved successfully");
         result.Data.Should().NotBeNull();
         result.Data.Items.Should().HaveCount(2);
@@ -71,29 +76,29 @@ public class GetUsersQueryHandlerTests
     public async Task Handle_WithSearchTerm_ShouldFilterCorrectly()
     {
         // Arrange
-        var users = new List<ApplicationUser>
-        {
-            new UserBuilder()
-                .WithEmail("john@example.com")
-                .WithFirstName("John")
-                .WithLastName("Doe")
-                .WithIsActive(true)
-                .Build(),
-            new UserBuilder()
-                .WithEmail("jane@example.com")
-                .WithFirstName("Jane")
-                .WithLastName("Smith")
-                .WithIsActive(true)
-                .Build()
-        }.AsQueryable();
+        var (userManager, dbContext, handler) = CreateHandler();
+        
+        var user1 = new UserBuilder()
+            .WithEmail("john@example.com")
+            .WithFirstName("John")
+            .WithLastName("Doe")
+            .WithIsActive(true)
+            .Build();
+        
+        var user2 = new UserBuilder()
+            .WithEmail("jane@example.com")
+            .WithFirstName("Jane")
+            .WithLastName("Smith")
+            .WithIsActive(true)
+            .Build();
 
-        _userManagerMock.Setup(x => x.Users)
-            .Returns(users);
+        await userManager.CreateAsync(user1);
+        await userManager.CreateAsync(user2);
 
         var query = new GetUsersQuery(1, 10, "john", null);
 
         // Act
-        var result = await _handler.Handle(query, CancellationToken.None);
+        var result = await handler.Handle(query, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeTrue();
@@ -105,29 +110,29 @@ public class GetUsersQueryHandlerTests
     public async Task Handle_WithActiveFilter_ShouldFilterCorrectly()
     {
         // Arrange
-        var users = new List<ApplicationUser>
-        {
-            new UserBuilder()
-                .WithEmail("active@example.com")
-                .WithFirstName("Active")
-                .WithLastName("User")
-                .WithIsActive(true)
-                .Build(),
-            new UserBuilder()
-                .WithEmail("inactive@example.com")
-                .WithFirstName("Inactive")
-                .WithLastName("User")
-                .WithIsActive(false)
-                .Build()
-        }.AsQueryable();
+        var (userManager, dbContext, handler) = CreateHandler();
+        
+        var user1 = new UserBuilder()
+            .WithEmail("active@example.com")
+            .WithFirstName("Active")
+            .WithLastName("User")
+            .WithIsActive(true)
+            .Build();
+        
+        var user2 = new UserBuilder()
+            .WithEmail("inactive@example.com")
+            .WithFirstName("Inactive")
+            .WithLastName("User")
+            .WithIsActive(false)
+            .Build();
 
-        _userManagerMock.Setup(x => x.Users)
-            .Returns(users);
+        await userManager.CreateAsync(user1);
+        await userManager.CreateAsync(user2);
 
         var query = new GetUsersQuery(1, 10, null, true);
 
         // Act
-        var result = await _handler.Handle(query, CancellationToken.None);
+        var result = await handler.Handle(query, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeTrue();
@@ -139,15 +144,12 @@ public class GetUsersQueryHandlerTests
     public async Task Handle_WithEmptyUsers_ShouldReturnEmptyList()
     {
         // Arrange
-        var users = new List<ApplicationUser>().AsQueryable();
-
-        _userManagerMock.Setup(x => x.Users)
-            .Returns(users);
-
+        var (userManager, dbContext, handler) = CreateHandler();
+        
         var query = new GetUsersQuery(1, 10, null, null);
 
         // Act
-        var result = await _handler.Handle(query, CancellationToken.None);
+        var result = await handler.Handle(query, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeTrue();
@@ -159,22 +161,18 @@ public class GetUsersQueryHandlerTests
     public async Task Handle_WithPagination_ShouldReturnCorrectPage()
     {
         // Arrange
-        var users = new List<ApplicationUser>
-        {
-            new UserBuilder().WithEmail("user1@example.com").WithFirstName("User").WithLastName("One").WithIsActive(true).Build(),
-            new UserBuilder().WithEmail("user2@example.com").WithFirstName("User").WithLastName("Two").WithIsActive(true).Build(),
-            new UserBuilder().WithEmail("user3@example.com").WithFirstName("User").WithLastName("Three").WithIsActive(true).Build(),
-            new UserBuilder().WithEmail("user4@example.com").WithFirstName("User").WithLastName("Four").WithIsActive(true).Build(),
-            new UserBuilder().WithEmail("user5@example.com").WithFirstName("User").WithLastName("Five").WithIsActive(true).Build()
-        }.AsQueryable();
-
-        _userManagerMock.Setup(x => x.Users)
-            .Returns(users);
+        var (userManager, dbContext, handler) = CreateHandler();
+        
+        await userManager.CreateAsync(new UserBuilder().WithEmail("user1@example.com").WithFirstName("User").WithLastName("One").WithIsActive(true).Build());
+        await userManager.CreateAsync(new UserBuilder().WithEmail("user2@example.com").WithFirstName("User").WithLastName("Two").WithIsActive(true).Build());
+        await userManager.CreateAsync(new UserBuilder().WithEmail("user3@example.com").WithFirstName("User").WithLastName("Three").WithIsActive(true).Build());
+        await userManager.CreateAsync(new UserBuilder().WithEmail("user4@example.com").WithFirstName("User").WithLastName("Four").WithIsActive(true).Build());
+        await userManager.CreateAsync(new UserBuilder().WithEmail("user5@example.com").WithFirstName("User").WithLastName("Five").WithIsActive(true).Build());
 
         var query = new GetUsersQuery(2, 2, null, null);
 
         // Act
-        var result = await _handler.Handle(query, CancellationToken.None);
+        var result = await handler.Handle(query, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeTrue();
@@ -189,14 +187,28 @@ public class GetUsersQueryHandlerTests
     [Fact]
     public async Task Handle_WithException_ShouldReturnFailure()
     {
-        // Arrange
-        _userManagerMock.Setup(x => x.Users)
-            .Throws(new Exception("Database error"));
+        // Arrange - Use a disposed context to trigger an exception
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var userStore = new UserStore<ApplicationUser, IdentityRole<Guid>, LiquorPOSIdentityDbContext, Guid>(dbContext);
+        var userManager = new UserManager<ApplicationUser>(
+            userStore,
+            null,
+            new PasswordHasher<ApplicationUser>(),
+            null,
+            null,
+            null,
+            null,
+            null,
+            null);
+        var handler = new GetUsersQueryHandler(userManager, dbContext, _loggerMock.Object);
+        
+        // Dispose the context to cause an exception when accessing it
+        dbContext.Dispose();
 
         var query = new GetUsersQuery(1, 10, null, null);
 
         // Act
-        var result = await _handler.Handle(query, CancellationToken.None);
+        var result = await handler.Handle(query, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeFalse();

@@ -1,0 +1,649 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  LiquorPOS.BuildingBlocks -> /home/engine/project/src/BuildingBlocks/LiquorPOS.BuildingBlocks/bin/Debug/net8.0/LiquorPOS.BuildingBlocks.dll
+  LiquorPOS.Services.Identity.Domain -> /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Domain/bin/Debug/net8.0/LiquorPOS.Services.Identity.Domain.dll
+  LiquorPOS.Services.Identity.Infrastructure -> /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Infrastructure/bin/Debug/net8.0/LiquorPOS.Services.Identity.Infrastructure.dll
+  LiquorPOS.Services.Identity.Application -> /home/engine/project/src/Services/Identity/LiquorPOS.Services.Identity.Application/bin/Debug/net8.0/LiquorPOS.Services.Identity.Application.dll
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(31,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(33,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(34,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(35,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(36,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(37,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(38,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(156,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(158,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(159,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(160,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(161,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(162,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(163,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/JwtTokenServiceTests.cs(34,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/JwtTokenServiceTests.cs(34,19): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/JwtTokenServiceTests.cs(34,25): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/JwtTokenServiceTests.cs(34,31): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/JwtTokenServiceTests.cs(34,37): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/JwtTokenServiceTests.cs(34,43): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/JwtTokenServiceTests.cs(34,49): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Services/JwtTokenServiceTests.cs(34,55): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(31,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(33,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(34,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(35,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(36,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(37,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(38,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(252,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(254,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(255,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(256,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(257,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(258,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(259,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(26,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(28,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(29,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(30,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(31,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(32,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(33,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(105,9): warning CS8602: Dereference of a possibly null reference. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(139,9): warning CS8602: Dereference of a possibly null reference. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(156,9): warning CS8602: Dereference of a possibly null reference. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(179,9): warning CS8602: Dereference of a possibly null reference. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(195,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(197,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(198,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(199,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(200,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(201,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(202,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/LiquorPOS.Services.Identity.UnitTests.csproj]
+  LiquorPOS.Services.Identity.UnitTests -> /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Identity.UnitTests.dll
+Test run for /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/bin/Debug/net8.0/LiquorPOS.Services.Identity.UnitTests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.22)
+[xUnit.net 00:00:00.19]   Discovering: LiquorPOS.Services.Identity.UnitTests
+[xUnit.net 00:00:00.38]   Discovered:  LiquorPOS.Services.Identity.UnitTests
+[xUnit.net 00:00:00.39]   Starting:    LiquorPOS.Services.Identity.UnitTests
+     Warning:
+     The component "Fluent Assertions" is governed by the rules defined in the Xceed License Agreement and
+     the Xceed Fluent Assertions Community License. You may use Fluent Assertions free of charge for
+     non-commercial use only. An active subscription is required to use Fluent Assertions for commercial use.
+     Please contact Xceed Sales mailto:sales@xceed.com to acquire a subscription at a very low cost.
+     A paid commercial license supports the development and continued increasing support of
+     Fluent Assertions users under both commercial and community licenses. Help us
+     keep Fluent Assertions at the forefront of unit testing.
+     For more information, visit https://xceed.com/products/unit-testing/fluent-assertions/
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_WithoutDescription_ShouldSucceed [66 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.HasPermission_WithNonExistingPermissionId_ShouldReturnFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_WithEmptyName_ShouldThrowArgumentException [8 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.RemovePermissionById_WithNonExistingPermissionId_ShouldNotThrow [7 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_WithValidData_ShouldSucceed [3 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.RemovePermission_WithExistingPermission_ShouldSucceed [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.AddPermission_WithValidPermission_ShouldSucceed [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.RemovePermission_WithNullPermission_ShouldThrowArgumentNullException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_WithNameExceeding100Characters_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.AddPermission_MultiplePermissions_ShouldSucceed [5 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_ShouldGenerateUniqueIds [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.HasPermission_WithExistingPermissionId_ShouldReturnTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_WithNullName_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.RemovePermissionById_WithExistingPermissionId_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.RemovePermission_WithNonExistingPermission_ShouldNotThrow [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.Create_WithWhitespaceName_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.AddPermission_WithDuplicatePermission_ShouldNotAddDuplicate [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RoleTests.AddPermission_WithNullPermission_ShouldThrowArgumentNullException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithEmptyEmail_ShouldFail [112 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithValidPhoneNumber_ShouldSucceed [41 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandValidatorTests.Validate_WithValidCommand_ShouldSucceed [41 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithPasswordMissingLowercase_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandValidatorTests.Validate_WithEmptyRefreshToken_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithEmptyFirstName_ShouldFail [3 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithEmptyLastName_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithValidRoles_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithInvalidEmail_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithValidCommand_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithPasswordMissingDigit_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithPasswordMissingUppercase_ShouldFail [4 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RegisterCommandValidatorTests.Validate_WithWeakPassword_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithValidEmail_ShouldSucceed [8 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandValidatorTests.Validate_WithWhitespaceOnlyRefreshToken_ShouldFail [19 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithEmptyEmail_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandValidatorTests.Validate_WithShortRefreshToken_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.GetHashCode_WithDifferentValue_ShouldReturnDifferentHashCode [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.EqualityOperator_WithSameValue_ShouldBeTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.EqualityOperator_WithDifferentValue_ShouldBeFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.GetHashCode_WithSameValue_ShouldReturnSameHashCode [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithInvalidEmailFormat_ShouldFail(email: "invalid@") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithInvalidEmailFormat_ShouldFail(email: "invalidemail") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithInvalidEmailFormat_ShouldFail(email: "invalid@.com") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithInvalidEmailFormat_ShouldFail(email: "invalid @email.com") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithInvalidEmailFormat_ShouldFail(email: "@invalid.com") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithValidEmail_ShouldNormalizeToLowercase [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Equals_WithNull_ShouldBeFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithEmailExceeding254Characters_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithNullEmail_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.InequalityOperator_WithDifferentValue_ShouldBeTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.ToString_ShouldReturnEmailValue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Equals_WithSameValue_ShouldBeTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandValidatorTests.Validate_WithNullRefreshToken_ShouldFail [3 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.CreateOrThrow_WithInvalidEmail_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithLeadingAndTrailingWhitespace_ShouldTrim [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.CreateOrThrow_WithValidEmail_ShouldReturnEmail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Equals_WithDifferentValue_ShouldBeFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.EmailTests.Create_WithWhitespaceEmail_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.LoginCommandValidatorTests.Validate_WithEmptyEmail_ShouldFail [6 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.LoginCommandValidatorTests.Validate_WithLongEmail_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.LoginCommandValidatorTests.Validate_WithEmptyPassword_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.LoginCommandValidatorTests.Validate_WithInvalidEmail_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.LoginCommandValidatorTests.Validate_WithValidCommand_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithSingleValidRole_ShouldSucceed [33 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithLongRoleName_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithEmptyRoles_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithEmptyUserId_ShouldFail [33 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithNullRoles_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithEmptyRoleName_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandValidatorTests.Validate_WithValidCommand_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithValidPhoneNumber_ShouldNormalizeByRemovingWhitespace [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.CreateOrThrow_WithValidPhoneNumber_ShouldReturnPhoneNumber [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Equals_WithSameValue_ShouldBeTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithWhitespacePhoneNumber_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithEmptyPhoneNumber_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.EqualityOperator_WithSameValue_ShouldBeTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Equals_WithNull_ShouldBeFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.EqualityOperator_WithDifferentValue_ShouldBeFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithValidPhoneNumber_ShouldSucceed(phoneNumber: "+1 (234) 567-8900") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithValidPhoneNumber_ShouldSucceed(phoneNumber: "123 456 7890") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithValidPhoneNumber_ShouldSucceed(phoneNumber: "1234567890") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithValidPhoneNumber_ShouldSucceed(phoneNumber: "123-456-7890") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithMoreThan15Characters_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.InequalityOperator_WithDifferentValue_ShouldBeTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.ToString_ShouldReturnPhoneNumberValue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithNullPhoneNumber_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.CreateOrThrow_WithInvalidPhoneNumber_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Equals_WithDifferentValue_ShouldBeFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.GetHashCode_WithDifferentValue_ShouldReturnDifferentHashCode [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.Create_WithLessThan10Digits_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PhoneNumberTests.GetHashCode_WithSameValue_ShouldReturnSameHashCode [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Create_WithCustomDuration_ShouldSucceed [4 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Create_ShouldGenerateUniqueTokens [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsExpired_WithPastExpiration_ShouldReturnTrue [100 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsValid_WithExpiredToken_ShouldReturnFalse [102 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsRevoked_WithoutRevocation_ShouldReturnFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Create_WithValidUserId_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsRevoked_AfterRevocation_ShouldReturnTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.CreateWithHash_ShouldCreateTokenWithHash [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Create_WithEmptyUserId_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Revoke_WithValidToken_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsValid_WithValidToken_ShouldReturnTrue [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Create_ShouldGenerateUniqueIds [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsExpired_WithFutureExpiration_ShouldReturnFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.IsValid_WithRevokedToken_ShouldReturnFalse [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.MarkAsRotated_ShouldSetReplacedByTokenHash [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.GenerateToken_ShouldReturnNonEmptyString [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.Revoke_WithAlreadyRevokedToken_ShouldNotThrow [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.RefreshTokenTests.GenerateToken_ShouldReturnUniqueTokens [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.IsTokenExpired_ShouldReturnTrue_WhenTokenIsInvalid [282 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.IsTokenExpired_ShouldReturnTrue_WhenTokenIsEmpty [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenHasWrongAudience [131 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenIsEmpty [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.IsTokenExpired_ShouldReturnTrue_WhenTokenIsExpired [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenHasWrongSignature [41 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldContainExpectedClaims_WhenTokenIsValid [25 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenIsInvalid [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenIsExpired [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnClaimsPrincipal_WhenTokenIsValid [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.ValidateToken_ShouldReturnNull_WhenTokenHasWrongIssuer [5 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.TokenValidatorTests.IsTokenExpired_ShouldReturnFalse_WhenTokenIsValid [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.SetLastLogin_ShouldUpdateLastLoginAt [57 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.AssignRole_WithValidRole_ShouldSucceed [26 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_WithEmptyFirstName_ShouldThrowArgumentException [18 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.AssignRole_MultipleRoles_ShouldSucceed [53 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Activate_ShouldSetIsActiveTrue [31 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.RemoveRole_WithNullRole_ShouldThrowArgumentNullException [25 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.RemoveRoleById_WithExistingRoleId_ShouldSucceed [76 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.UpdateProfile_WithValidData_ShouldSucceed [68 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.UpdateProfile_WithEmptyLastName_ShouldThrowArgumentException [29 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.RemoveRoleById_WithNonExistingRoleId_ShouldNotThrow [26 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.UpdatePassword_WithNullPasswordHash_ShouldThrowArgumentNullException [64 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.AssignRole_WithDuplicateRole_ShouldNotAddDuplicate [31 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.UpdateProfile_WithEmptyFirstName_ShouldThrowArgumentException [49 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_WithNullPasswordHash_ShouldThrowArgumentNullException [29 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_ShouldGenerateUniqueIds [25 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_WithValidData_ShouldSucceed [57 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_WithPhoneNumber_ShouldSucceed [29 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.UpdatePassword_WithNewPasswordHash_ShouldSucceed [71 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_WithNullEmail_ShouldThrowArgumentNullException [16 ms]
+[xUnit.net 00:00:02.81]     LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithAlreadyRevokedToken_ShouldReturnSuccess [FAIL]
+[xUnit.net 00:00:02.81]       Expected result.Success to be True, but found False.
+[xUnit.net 00:00:02.81]       Stack Trace:
+[xUnit.net 00:00:02.81]            at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+[xUnit.net 00:00:02.81]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:02.81]            at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+[xUnit.net 00:00:02.81]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.81]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.81]            at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+[xUnit.net 00:00:02.81]            at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+[xUnit.net 00:00:02.81]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(107,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithAlreadyRevokedToken_ShouldReturnSuccess()
+[xUnit.net 00:00:02.81]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:02.81]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithValidQuery_ShouldReturnSuccess [FAIL]
+[xUnit.net 00:00:02.81]       Expected result.Success to be True, but found False.
+[xUnit.net 00:00:02.81]       Stack Trace:
+[xUnit.net 00:00:02.81]            at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+[xUnit.net 00:00:02.81]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:02.81]            at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+[xUnit.net 00:00:02.81]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.81]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.81]            at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+[xUnit.net 00:00:02.81]            at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+[xUnit.net 00:00:02.81]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(67,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithValidQuery_ShouldReturnSuccess()
+[xUnit.net 00:00:02.81]         --- End of stack trace from previous location ---
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.HasRole_WithExistingRoleId_ShouldReturnTrue [13 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Deactivate_ShouldSetIsActiveFalse [11 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.AssignRole_WithNullRole_ShouldThrowArgumentNullException [45 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.HasRole_WithNonExistingRoleId_ShouldReturnFalse [19 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.Create_WithEmptyLastName_ShouldThrowArgumentException [20 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.RemoveRole_WithNonExistingRole_ShouldNotThrow [52 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.UserTests.RemoveRole_WithExistingRole_ShouldSucceed [15 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithAlreadyRevokedToken_ShouldReturnSuccess [323 ms]
+  Error Message:
+   Expected result.Success to be True, but found False.
+  Stack Trace:
+     at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithAlreadyRevokedToken_ShouldReturnSuccess() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs:line 107
+--- End of stack trace from previous location ---
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithValidQuery_ShouldReturnSuccess [2 s]
+  Error Message:
+   Expected result.Success to be True, but found False.
+  Stack Trace:
+     at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithValidQuery_ShouldReturnSuccess() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs:line 67
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:02.85]     LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithValidToken_ShouldReturnSuccess [FAIL]
+[xUnit.net 00:00:02.85]       Expected result.Success to be True, but found False.
+[xUnit.net 00:00:02.85]       Stack Trace:
+[xUnit.net 00:00:02.85]            at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+[xUnit.net 00:00:02.85]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:02.85]            at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+[xUnit.net 00:00:02.85]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.85]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.85]            at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+[xUnit.net 00:00:02.85]            at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+[xUnit.net 00:00:02.85]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs(132,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithValidToken_ShouldReturnSuccess()
+[xUnit.net 00:00:02.85]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:02.87]     LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithInactiveUser_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:02.87]       Expected result.Message to be a match with the expectation, but it differs at index 0:
+[xUnit.net 00:00:02.87]          ↓ (actual)
+[xUnit.net 00:00:02.87]         "Invalid refresh token"
+[xUnit.net 00:00:02.87]         "User account is inactive"
+[xUnit.net 00:00:02.87]          ↑ (expected)
+[xUnit.net 00:00:02.87]       Stack Trace:
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionChain.FailWith(String message)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Primitives.StringEqualityStrategy.AssertForEquality(AssertionChain assertionChain, String subject, String expected)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Primitives.StringValidator.Validate(String subject, String expected)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
+[xUnit.net 00:00:02.87]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(197,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithInactiveUser_ShouldReturnFailure()
+[xUnit.net 00:00:02.87]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:02.87]     LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithExpiredToken_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:02.87]       Expected result.Message to be a match with the expectation, but it differs at index 0:
+[xUnit.net 00:00:02.87]          ↓ (actual)
+[xUnit.net 00:00:02.87]         "Invalid refresh token"
+[xUnit.net 00:00:02.87]         "Refresh token has expired. Please login again."
+[xUnit.net 00:00:02.87]          ↑ (expected)
+[xUnit.net 00:00:02.87]       Stack Trace:
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionChain.FailWith(String message)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Primitives.StringEqualityStrategy.AssertForEquality(AssertionChain assertionChain, String subject, String expected)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Primitives.StringValidator.Validate(String subject, String expected)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
+[xUnit.net 00:00:02.87]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(137,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithExpiredToken_ShouldReturnFailure()
+[xUnit.net 00:00:02.87]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:02.87]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithSearchTerm_ShouldFilterCorrectly [FAIL]
+[xUnit.net 00:00:02.87]       Expected result.Success to be True, but found False.
+[xUnit.net 00:00:02.87]       Stack Trace:
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+[xUnit.net 00:00:02.87]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(104,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithSearchTerm_ShouldFilterCorrectly()
+[xUnit.net 00:00:02.87]         --- End of stack trace from previous location ---
+  Passed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithEmptyUsers_ShouldReturnEmptyList [32 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithValidToken_ShouldReturnSuccess [39 ms]
+  Error Message:
+   Expected result.Success to be True, but found False.
+  Stack Trace:
+     at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithValidToken_ShouldReturnSuccess() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RevokeTokenCommandHandlerTests.cs:line 132
+--- End of stack trace from previous location ---
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithNonExistentToken_ShouldReturnFailure [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithException_ShouldReturnFailure [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RevokeTokenCommandHandlerTests.Handle_WithEmptyRefreshToken_ShouldReturnFailure [< 1 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithInactiveUser_ShouldReturnFailure [15 ms]
+  Error Message:
+   Expected result.Message to be a match with the expectation, but it differs at index 0:
+   ↓ (actual)
+  "Invalid refresh token"
+  "User account is inactive"
+   ↑ (expected)
+  Stack Trace:
+     at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(String message)
+   at FluentAssertions.Primitives.StringEqualityStrategy.AssertForEquality(AssertionChain assertionChain, String subject, String expected)
+   at FluentAssertions.Primitives.StringValidator.Validate(String subject, String expected)
+   at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithInactiveUser_ShouldReturnFailure() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs:line 197
+--- End of stack trace from previous location ---
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithExpiredToken_ShouldReturnFailure [3 ms]
+  Error Message:
+   Expected result.Message to be a match with the expectation, but it differs at index 0:
+   ↓ (actual)
+  "Invalid refresh token"
+  "Refresh token has expired. Please login again."
+   ↑ (expected)
+  Stack Trace:
+     at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(String message)
+   at FluentAssertions.Primitives.StringEqualityStrategy.AssertForEquality(AssertionChain assertionChain, String subject, String expected)
+   at FluentAssertions.Primitives.StringValidator.Validate(String subject, String expected)
+   at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithExpiredToken_ShouldReturnFailure() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs:line 137
+--- End of stack trace from previous location ---
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithSearchTerm_ShouldFilterCorrectly [26 ms]
+  Error Message:
+   Expected result.Success to be True, but found False.
+  Stack Trace:
+     at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithSearchTerm_ShouldFilterCorrectly() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs:line 104
+--- End of stack trace from previous location ---
+[xUnit.net 00:00:02.87]     LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithValidTokenAndActiveUser_ShouldReturnSuccess [FAIL]
+[xUnit.net 00:00:02.87]       Expected result.Success to be True, but found False.
+[xUnit.net 00:00:02.87]       Stack Trace:
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+[xUnit.net 00:00:02.87]            at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+[xUnit.net 00:00:02.87]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(230,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithValidTokenAndActiveUser_ShouldReturnSuccess()
+[xUnit.net 00:00:02.87]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:02.88]     LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithNonExistentUser_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:02.88]       Expected result.Message to be a match with the expectation, but it differs at index 0:
+[xUnit.net 00:00:02.88]          ↓ (actual)
+[xUnit.net 00:00:02.88]         "Invalid refresh token"
+[xUnit.net 00:00:02.88]         "User not found"
+[xUnit.net 00:00:02.88]          ↑ (expected)
+[xUnit.net 00:00:02.88]       Stack Trace:
+[xUnit.net 00:00:02.88]            at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Execution.AssertionChain.FailWith(String message)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Primitives.StringEqualityStrategy.AssertForEquality(AssertionChain assertionChain, String subject, String expected)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Primitives.StringValidator.Validate(String subject, String expected)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
+[xUnit.net 00:00:02.88]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(163,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithNonExistentUser_ShouldReturnFailure()
+[xUnit.net 00:00:02.88]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:02.88]     LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithRevokedToken_ShouldReturnFailure [FAIL]
+[xUnit.net 00:00:02.88]       Expected result.Message to be a match with the expectation, but it differs at index 0:
+[xUnit.net 00:00:02.88]          ↓ (actual)
+[xUnit.net 00:00:02.88]         "Invalid refresh token"
+[xUnit.net 00:00:02.88]         "Refresh token has been revoked. Please login again."
+[xUnit.net 00:00:02.88]          ↑ (expected)
+[xUnit.net 00:00:02.88]       Stack Trace:
+[xUnit.net 00:00:02.88]            at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Execution.AssertionChain.FailWith(String message)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Primitives.StringEqualityStrategy.AssertForEquality(AssertionChain assertionChain, String subject, String expected)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Primitives.StringValidator.Validate(String subject, String expected)
+[xUnit.net 00:00:02.88]            at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
+[xUnit.net 00:00:02.88]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs(110,0): at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithRevokedToken_ShouldReturnFailure()
+[xUnit.net 00:00:02.88]         --- End of stack trace from previous location ---
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithValidTokenAndActiveUser_ShouldReturnSuccess [3 ms]
+  Error Message:
+   Expected result.Success to be True, but found False.
+  Stack Trace:
+     at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithValidTokenAndActiveUser_ShouldReturnSuccess() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs:line 230
+--- End of stack trace from previous location ---
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithNonExistentUser_ShouldReturnFailure [2 ms]
+  Error Message:
+   Expected result.Message to be a match with the expectation, but it differs at index 0:
+   ↓ (actual)
+  "Invalid refresh token"
+  "User not found"
+   ↑ (expected)
+  Stack Trace:
+     at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(String message)
+   at FluentAssertions.Primitives.StringEqualityStrategy.AssertForEquality(AssertionChain assertionChain, String subject, String expected)
+   at FluentAssertions.Primitives.StringValidator.Validate(String subject, String expected)
+   at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithNonExistentUser_ShouldReturnFailure() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs:line 163
+--- End of stack trace from previous location ---
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithException_ShouldReturnFailure [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithEmptyRefreshToken_ShouldReturnFailure [< 1 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithRevokedToken_ShouldReturnFailure [2 ms]
+  Error Message:
+   Expected result.Message to be a match with the expectation, but it differs at index 0:
+   ↓ (actual)
+  "Invalid refresh token"
+  "Refresh token has been revoked. Please login again."
+   ↑ (expected)
+  Stack Trace:
+     at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(String message)
+   at FluentAssertions.Primitives.StringEqualityStrategy.AssertForEquality(AssertionChain assertionChain, String subject, String expected)
+   at FluentAssertions.Primitives.StringValidator.Validate(String subject, String expected)
+   at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
+   at LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithRevokedToken_ShouldReturnFailure() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Commands/RefreshTokenCommandHandlerTests.cs:line 110
+--- End of stack trace from previous location ---
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandHandlerTests.Handle_WithNonExistentToken_ShouldReturnFailure [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandValidatorTests.Validate_WithShortRefreshToken_ShouldFail [2 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandValidatorTests.Validate_WithWhitespaceOnlyRefreshToken_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandValidatorTests.Validate_WithValidCommand_ShouldSucceed [< 1 ms]
+[xUnit.net 00:00:02.89]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithActiveFilter_ShouldFilterCorrectly [FAIL]
+[xUnit.net 00:00:02.89]       Expected result.Success to be True, but found False.
+[xUnit.net 00:00:02.89]       Stack Trace:
+[xUnit.net 00:00:02.89]            at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+[xUnit.net 00:00:02.89]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:02.89]            at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+[xUnit.net 00:00:02.89]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.89]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.89]            at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+[xUnit.net 00:00:02.89]            at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+[xUnit.net 00:00:02.89]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(138,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithActiveFilter_ShouldFilterCorrectly()
+[xUnit.net 00:00:02.89]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:02.90]     LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithPagination_ShouldReturnCorrectPage [FAIL]
+[xUnit.net 00:00:02.90]       Expected result.Success to be True, but found False.
+[xUnit.net 00:00:02.90]       Stack Trace:
+[xUnit.net 00:00:02.90]            at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+[xUnit.net 00:00:02.90]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:02.90]            at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+[xUnit.net 00:00:02.90]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.90]            at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+[xUnit.net 00:00:02.90]            at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+[xUnit.net 00:00:02.90]            at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+[xUnit.net 00:00:02.90]         /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs(178,0): at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithPagination_ShouldReturnCorrectPage()
+[xUnit.net 00:00:02.90]         --- End of stack trace from previous location ---
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandValidatorTests.Validate_WithNullRefreshToken_ShouldFail [< 1 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithActiveFilter_ShouldFilterCorrectly [14 ms]
+  Error Message:
+   Expected result.Success to be True, but found False.
+  Stack Trace:
+     at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithActiveFilter_ShouldFilterCorrectly() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs:line 138
+--- End of stack trace from previous location ---
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.RefreshTokenCommandValidatorTests.Validate_WithEmptyRefreshToken_ShouldFail [< 1 ms]
+  Failed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithPagination_ShouldReturnCorrectPage [10 ms]
+  Error Message:
+   Expected result.Success to be True, but found False.
+  Stack Trace:
+     at FluentAssertions.Execution.LateBoundTestFramework.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.AddPreFormattedFailure(String formattedFailureMessage)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(Func`1 getFailureReason)
+   at FluentAssertions.Execution.AssertionChain.FailWith(String message, Object[] args)
+   at FluentAssertions.Primitives.BooleanAssertions`1.BeTrue(String because, Object[] becauseArgs)
+   at LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithPagination_ShouldReturnCorrectPage() in /home/engine/project/tests/Services/Identity/LiquorPOS.Services.Identity.UnitTests/Queries/GetUsersQueryHandlerTests.cs:line 178
+--- End of stack trace from previous location ---
+  Passed LiquorPOS.Services.Identity.UnitTests.Queries.GetUsersQueryHandlerTests.Handle_WithException_ShouldReturnFailure [2 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.GenerateTokensAsync_ShouldThrowException_WhenUserIsInactive [63 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithAddRolesFailure_ShouldReturnFailure [84 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithEmptyRoles_ShouldReturnFailure [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithRemoveRolesFailure_ShouldReturnFailure [4 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithNonExistentUser_ShouldReturnFailure [2 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithNullRoles_ShouldReturnFailure [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.GenerateTokensAsync_AccessToken_ShouldExpireIn15Minutes [26 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithValidData_RemovingRoles_ShouldReturnSuccess [36 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithException_ShouldReturnFailure [2 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithValidData_AddingNewRoles_ShouldReturnSuccess [5 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RefreshTokensAsync_ShouldRevokeAllTokens_WhenRevokedTokenIsReused [38 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithInvalidRoles_ShouldReturnFailure [2 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Commands.AssignUserRolesCommandHandlerTests.Handle_WithEmptyUserId_ShouldReturnFailure [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RevokeRefreshTokenAsync_ShouldRevokeToken [33 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithNonExistentUser_ShouldReturnFailure [39 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithUserWithoutRoles_ShouldReturnEmptyRoles [3 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.GenerateTokensAsync_RefreshToken_ShouldExpireIn7Days [13 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithValidUserId_ShouldReturnSuccess [26 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithEmptyUserId_ShouldReturnFailure [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Queries.GetUserByIdQueryHandlerTests.Handle_WithException_ShouldReturnFailure [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentActions_ShouldSucceed(action: "READ") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentActions_ShouldSucceed(action: "UPDATE") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentActions_ShouldSucceed(action: "DELETE") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentActions_ShouldSucceed(action: "CREATE") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_ShouldGenerateUniqueIds [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithRequiredData_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithEmptyEntityId_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithNullEntityType_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithEmptyAction_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentEntityTypes_ShouldSucceed(entityType: "Role") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentEntityTypes_ShouldSucceed(entityType: "RefreshToken") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentEntityTypes_ShouldSucceed(entityType: "Permission") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithDifferentEntityTypes_ShouldSucceed(entityType: "User") [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithEmptyEntityType_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithNullAction_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithWhitespaceEntityType_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RefreshTokensAsync_ShouldRevokeOldToken [33 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithAllData_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.AuditLogTests.Create_WithWhitespaceAction_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.EqualityOperator_WithDifferentHash_ShouldBeFalse [18 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RevokeAllUserRefreshTokensAsync_ShouldRevokeAllUserTokens [22 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Equals_WithSameHashAndSalt_ShouldBeTrue [9 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithWhitespacePassword_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RefreshTokensAsync_ShouldGenerateNewTokenPair [14 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.CreateOrThrow_WithValidPassword_ShouldReturnPasswordHash [13 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Verify_WithNullPassword_ShouldReturnFalse [9 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.GenerateTokensAsync_RefreshToken_ShouldBeStoredInDatabase [17 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.FromHashAndSalt_WithValidValues_ShouldReturnPasswordHash [9 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.GenerateTokensAsync_AccessToken_ShouldContainExpectedClaims [21 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Verify_WithIncorrectPassword_ShouldReturnFalse [18 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithEmptyPassword_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.FromHashAndSalt_WithEmptyHash_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RefreshTokensAsync_ShouldThrowException_WhenTokenIsExpired [13 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.RefreshTokensAsync_ShouldThrowException_WhenTokenIsInvalid [2 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithDifferentPasswords_ShouldGenerateDifferentHashes [39 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Services.JwtTokenServiceTests.GenerateTokensAsync_ShouldReturnAccessTokenAndRefreshToken [29 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.PlaceholderTests.Placeholder_Test_Should_Pass [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithValidData_ShouldSucceed [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithValidPassword_ShouldSucceed [22 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithEmptyName_ShouldThrowArgumentException [19 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithWhitespaceScope_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithEmptyScope_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithWhitespaceName_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithNullName_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_ShouldGenerateUniqueIds [1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithNullScope_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.Entities.PermissionTests.Create_WithoutDescription_ShouldSucceed [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Verify_WithCorrectPassword_ShouldReturnTrue [18 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.GetHashCode_WithSameHashAndSalt_ShouldReturnSameHashCode [9 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.ToString_ShouldReturnMaskedString [9 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithNullPassword_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.EqualityOperator_WithSameHashAndSalt_ShouldBeTrue [8 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Verify_WithEmptyPassword_ShouldReturnFalse [9 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithPasswordExceeding128Characters_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.CreateOrThrow_WithInvalidPassword_ShouldThrowArgumentException [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.GetHashCode_WithDifferentHash_ShouldReturnDifferentHashCode [17 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.InequalityOperator_WithDifferentHash_ShouldBeTrue [25 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Equals_WithNull_ShouldBeFalse [9 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Equals_WithDifferentHash_ShouldBeFalse [18 ms]
+[xUnit.net 00:00:03.39]   Finished:    LiquorPOS.Services.Identity.UnitTests
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.Create_WithPasswordLessThan8Characters_ShouldFail [< 1 ms]
+  Passed LiquorPOS.Services.Identity.UnitTests.ValueObjects.PasswordHashTests.FromHashAndSalt_WithEmptySalt_ShouldThrowArgumentException [< 1 ms]
+
+Test Run Failed.
+Total tests: 251
+     Passed: 240
+     Failed: 11
+ Total time: 4.4564 Seconds
