@@ -4,14 +4,19 @@ using FluentAssertions;
 using LiquorPOS.Services.Identity.Application.Dtos;
 using LiquorPOS.Services.Identity.IntegrationTests.Infrastructure;
 using LiquorPOS.Services.Identity.IntegrationTests.Models;
+using System.Text.Json;
 
 namespace LiquorPOS.Services.Identity.IntegrationTests.Endpoints;
 
-public class RegisterEndpointTests : IClassFixture<IdentityWebApplicationFactory>
+public class RegisterEndpointTests : IClassFixture<IdentityApiFactory>
 {
     private readonly HttpClient _httpClient;
+    private readonly JsonSerializerOptions _jsonOptions = new()
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+    };
 
-    public RegisterEndpointTests(IdentityWebApplicationFactory factory)
+    public RegisterEndpointTests(IdentityApiFactory factory)
     {
         _httpClient = factory.CreateClient();
     }
@@ -29,15 +34,16 @@ public class RegisterEndpointTests : IClassFixture<IdentityWebApplicationFactory
 
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var content = await response.Content.ReadAsAsync<IdentityResponseDto<AuthResponse>>();
-        content.Should().NotBeNull();
-        content!.Success.Should().BeTrue();
-        content.Data.Should().NotBeNull();
-        content.Data!.AccessToken.Should().NotBeNullOrEmpty();
-        content.Data.RefreshToken.Should().NotBeNullOrEmpty();
-        content.Data.Email.Should().Be("newuser@example.com");
-        content.Data.FirstName.Should().Be("John");
-        content.Data.LastName.Should().Be("Doe");
+        var content = await response.Content.ReadAsStringAsync();
+        var result = JsonSerializer.Deserialize<ApiResponse<AuthResponse>>(content, _jsonOptions);
+        result.Should().NotBeNull();
+        result.Success.Should().BeTrue();
+        result.Data.Should().NotBeNull();
+        result.Data.AccessToken.Should().NotBeNullOrEmpty();
+        result.Data.RefreshToken.Should().NotBeNullOrEmpty();
+        result.Data.Email.Should().Be("newuser@example.com");
+        result.Data.FirstName.Should().Be("John");
+        result.Data.LastName.Should().Be("Doe");
     }
 
     [Fact]
@@ -97,9 +103,10 @@ public class RegisterEndpointTests : IClassFixture<IdentityWebApplicationFactory
         var response2 = await _httpClient.PostAsJsonAsync("/api/identity/register", request);
         response2.StatusCode.Should().Be(HttpStatusCode.BadRequest);
 
-        var content = await response2.Content.ReadAsAsync<IdentityResponseDto<object>>();
-        content!.Success.Should().BeFalse();
-        content.Message.Should().Contain("already registered");
+        var content = await response2.Content.ReadAsStringAsync();
+        var result = JsonSerializer.Deserialize<ApiResponse<object>>(content, _jsonOptions);
+        result.Success.Should().BeFalse();
+        result.Message.Should().Contain("already registered");
     }
 
     [Fact]
@@ -115,8 +122,9 @@ public class RegisterEndpointTests : IClassFixture<IdentityWebApplicationFactory
         var response = await _httpClient.PostAsJsonAsync("/api/identity/register", request);
 
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var content = await response.Content.ReadAsAsync<IdentityResponseDto<AuthResponse>>();
-        content!.Success.Should().BeTrue();
+        var content = await response.Content.ReadAsStringAsync();
+        var result = JsonSerializer.Deserialize<ApiResponse<AuthResponse>>(content, _jsonOptions);
+        result.Success.Should().BeTrue();
     }
 
     [Fact]
@@ -133,7 +141,8 @@ public class RegisterEndpointTests : IClassFixture<IdentityWebApplicationFactory
         var response = await _httpClient.PostAsJsonAsync("/api/identity/register", request);
 
         response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var content = await response.Content.ReadAsAsync<IdentityResponseDto<AuthResponse>>();
-        content!.Success.Should().BeTrue();
+        var content = await response.Content.ReadAsStringAsync();
+        var result = JsonSerializer.Deserialize<ApiResponse<AuthResponse>>(content, _jsonOptions);
+        result.Success.Should().BeTrue();
     }
 }

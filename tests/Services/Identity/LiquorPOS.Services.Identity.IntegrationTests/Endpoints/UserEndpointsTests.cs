@@ -1,6 +1,7 @@
 using FluentAssertions;
 using LiquorPOS.Services.Identity.IntegrationTests.Infrastructure;
 using LiquorPOS.Services.Identity.IntegrationTests.Models;
+using LiquorPOS.Services.Identity.Application.Dtos;
 using System.Net.Http.Json;
 using System.Text.Json;
 
