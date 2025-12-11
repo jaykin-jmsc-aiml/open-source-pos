@@ -4,6 +4,7 @@ using LiquorPOS.Services.Identity.Application.Queries;
 using LiquorPOS.Services.Identity.Domain.Entities;
 using LiquorPOS.Services.Identity.Infrastructure.Persistence;
 using LiquorPOS.Services.Identity.UnitTests.TestHelpers;
+using LiquorPOS.Services.Identity.UnitTests.TestHelpers.Builders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -14,7 +15,6 @@ namespace LiquorPOS.Services.Identity.UnitTests.Queries;
 public class GetUsersQueryHandlerTests
 {
     private readonly Mock<UserManager<ApplicationUser>> _userManagerMock;
-    private readonly Mock<LiquorPOSIdentityDbContext> _dbContextMock = new();
     private readonly Mock<ILogger<GetUsersQueryHandler>> _loggerMock = new();
     private readonly GetUsersQueryHandler _handler;
 
@@ -26,7 +26,7 @@ public class GetUsersQueryHandlerTests
 
         _handler = new GetUsersQueryHandler(
             _userManagerMock.Object,
-            _dbContextMock.Object,
+            InMemoryIdentityDbContextFactory.CreateDbContext(),
             _loggerMock.Object);
     }
 
@@ -36,24 +36,18 @@ public class GetUsersQueryHandlerTests
         // Arrange
         var users = new List<ApplicationUser>
         {
-            new()
-            {
-                Id = Guid.NewGuid(),
-                Email = "user1@example.com",
-                FirstName = "User",
-                LastName = "One",
-                IsActive = true,
-                CreatedAt = DateTime.UtcNow.AddDays(-1)
-            },
-            new()
-            {
-                Id = Guid.NewGuid(),
-                Email = "user2@example.com",
-                FirstName = "User",
-                LastName = "Two",
-                IsActive = false,
-                CreatedAt = DateTime.UtcNow.AddDays(-2)
-            }
+            new UserBuilder()
+                .WithEmail("user1@example.com")
+                .WithFirstName("User")
+                .WithLastName("One")
+                .WithIsActive(true)
+                .Build(),
+            new UserBuilder()
+                .WithEmail("user2@example.com")
+                .WithFirstName("User")
+                .WithLastName("Two")
+                .WithIsActive(false)
+                .Build()
         }.AsQueryable();
 
         _userManagerMock.Setup(x => x.Users)
@@ -79,24 +73,18 @@ public class GetUsersQueryHandlerTests
         // Arrange
         var users = new List<ApplicationUser>
         {
-            new()
-            {
-                Id = Guid.NewGuid(),
-                Email = "john@example.com",
-                FirstName = "John",
-                LastName = "Doe",
-                IsActive = true,
-                CreatedAt = DateTime.UtcNow.AddDays(-1)
-            },
-            new()
-            {
-                Id = Guid.NewGuid(),
-                Email = "jane@example.com",
-                FirstName = "Jane",
-                LastName = "Smith",
-                IsActive = true,
-                CreatedAt = DateTime.UtcNow.AddDays(-2)
-            }
+            new UserBuilder()
+                .WithEmail("john@example.com")
+                .WithFirstName("John")
+                .WithLastName("Doe")
+                .WithIsActive(true)
+                .Build(),
+            new UserBuilder()
+                .WithEmail("jane@example.com")
+                .WithFirstName("Jane")
+                .WithLastName("Smith")
+                .WithIsActive(true)
+                .Build()
         }.AsQueryable();
 
         _userManagerMock.Setup(x => x.Users)
@@ -119,24 +107,18 @@ public class GetUsersQueryHandlerTests
         // Arrange
         var users = new List<ApplicationUser>
         {
-            new()
-            {
-                Id = Guid.NewGuid(),
-                Email = "active@example.com",
-                FirstName = "Active",
-                LastName = "User",
-                IsActive = true,
-                CreatedAt = DateTime.UtcNow.AddDays(-1)
-            },
-            new()
-            {
-                Id = Guid.NewGuid(),
-                Email = "inactive@example.com",
-                FirstName = "Inactive",
-                LastName = "User",
-                IsActive = false,
-                CreatedAt = DateTime.UtcNow.AddDays(-2)
-            }
+            new UserBuilder()
+                .WithEmail("active@example.com")
+                .WithFirstName("Active")
+                .WithLastName("User")
+                .WithIsActive(true)
+                .Build(),
+            new UserBuilder()
+                .WithEmail("inactive@example.com")
+                .WithFirstName("Inactive")
+                .WithLastName("User")
+                .WithIsActive(false)
+                .Build()
         }.AsQueryable();
 
         _userManagerMock.Setup(x => x.Users)
@@ -179,11 +161,11 @@ public class GetUsersQueryHandlerTests
         // Arrange
         var users = new List<ApplicationUser>
         {
-            new() { Id = Guid.NewGuid(), Email = "user1@example.com", FirstName = "User", LastName = "One", IsActive = true, CreatedAt = DateTime.UtcNow },
-            new() { Id = Guid.NewGuid(), Email = "user2@example.com", FirstName = "User", LastName = "Two", IsActive = true, CreatedAt = DateTime.UtcNow },
-            new() { Id = Guid.NewGuid(), Email = "user3@example.com", FirstName = "User", LastName = "Three", IsActive = true, CreatedAt = DateTime.UtcNow },
-            new() { Id = Guid.NewGuid(), Email = "user4@example.com", FirstName = "User", LastName = "Four", IsActive = true, CreatedAt = DateTime.UtcNow },
-            new() { Id = Guid.NewGuid(), Email = "user5@example.com", FirstName = "User", LastName = "Five", IsActive = true, CreatedAt = DateTime.UtcNow }
+            new UserBuilder().WithEmail("user1@example.com").WithFirstName("User").WithLastName("One").WithIsActive(true).Build(),
+            new UserBuilder().WithEmail("user2@example.com").WithFirstName("User").WithLastName("Two").WithIsActive(true).Build(),
+            new UserBuilder().WithEmail("user3@example.com").WithFirstName("User").WithLastName("Three").WithIsActive(true).Build(),
+            new UserBuilder().WithEmail("user4@example.com").WithFirstName("User").WithLastName("Four").WithIsActive(true).Build(),
+            new UserBuilder().WithEmail("user5@example.com").WithFirstName("User").WithLastName("Five").WithIsActive(true).Build()
         }.AsQueryable();
 
         _userManagerMock.Setup(x => x.Users)

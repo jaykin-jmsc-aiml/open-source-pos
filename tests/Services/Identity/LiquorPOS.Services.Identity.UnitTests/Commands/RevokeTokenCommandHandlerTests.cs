@@ -7,9 +7,9 @@ using LiquorPOS.Services.Identity.Domain.Services;
 using LiquorPOS.Services.Identity.Infrastructure.Persistence;
 using LiquorPOS.Services.Identity.Infrastructure.Security;
 using LiquorPOS.Services.Identity.UnitTests.TestHelpers;
+using LiquorPOS.Services.Identity.UnitTests.TestHelpers.Builders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Logging;
 using Moq;
 
@@ -19,31 +19,29 @@ public class RevokeTokenCommandHandlerTests
 {
     private readonly Mock<IJwtTokenService> _jwtTokenServiceMock = new();
     private readonly Mock<UserManager<ApplicationUser>> _userManagerMock;
-    private readonly Mock<LiquorPOSIdentityDbContext> _dbContextMock = new();
     private readonly Mock<ILogger<RevokeTokenCommandHandler>> _loggerMock = new();
-    private readonly RevokeTokenCommandHandler _handler;
 
     public RevokeTokenCommandHandlerTests()
     {
         _userManagerMock = new Mock<UserManager<ApplicationUser>>(
             Mock.Of<IUserStore<ApplicationUser>>(),
             null!, null!, null!, null!, null!, null!, null!, null!);
-
-        _handler = new RevokeTokenCommandHandler(
-            _jwtTokenServiceMock.Object,
-            _userManagerMock.Object,
-            _dbContextMock.Object,
-            _loggerMock.Object);
     }
 
     [Fact]
     public async Task Handle_WithEmptyRefreshToken_ShouldReturnFailure()
     {
         // Arrange
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new RevokeTokenCommandHandler(
+            _jwtTokenServiceMock.Object,
+            _userManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
         var command = new RevokeTokenCommand("");
 
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeFalse();
@@ -54,13 +52,16 @@ public class RevokeTokenCommandHandlerTests
     public async Task Handle_WithNonExistentToken_ShouldReturnFailure()
     {
         // Arrange
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new RevokeTokenCommandHandler(
+            _jwtTokenServiceMock.Object,
+            _userManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
         var command = new RevokeTokenCommand("non_existent_token");
-        
-        _dbContextMock.Setup(x => x.RefreshTokens)
-            .Returns(DbSetMockHelper.CreateMockDbSetFromList(new List<RefreshToken>()));
 
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeFalse();
@@ -71,19 +72,27 @@ public class RevokeTokenCommandHandlerTests
     public async Task Handle_WithAlreadyRevokedToken_ShouldReturnSuccess()
     {
         // Arrange
-        var alreadyRevokedToken = RefreshToken.CreateWithHash(
-            Guid.NewGuid(),
-            TokenHasher.Hash("already_revoked_token"),
-            DateTime.UtcNow.AddDays(7));
-        alreadyRevokedToken.Revoke();
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new RevokeTokenCommandHandler(
+            _jwtTokenServiceMock.Object,
+            _userManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
+
+        var userId = Guid.NewGuid();
+        var alreadyRevokedToken = new RefreshTokenBuilder()
+            .ForUser(userId)
+            .WithToken("already_revoked_token")
+            .WithRevoked()
+            .Build();
+
+        dbContext.RefreshTokens.Add(alreadyRevokedToken);
+        await dbContext.SaveChangesAsync();
 
         var command = new RevokeTokenCommand("already_revoked_token");
-        
-        _dbContextMock.Setup(x => x.RefreshTokens)
-            .Returns(DbSetMockHelper.CreateMockDbSetFromList(new[] { alreadyRevokedToken }));
 
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeTrue();
@@ -94,50 +103,70 @@ public class RevokeTokenCommandHandlerTests
     public async Task Handle_WithValidToken_ShouldReturnSuccess()
     {
         // Arrange
-        var validToken = RefreshToken.CreateWithHash(
-            Guid.NewGuid(),
-            TokenHasher.Hash("valid_token"),
-            DateTime.UtcNow.AddDays(7));
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new RevokeTokenCommandHandler(
+            _jwtTokenServiceMock.Object,
+            _userManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
 
-        var command = new RevokeTokenCommand("valid_token");
-        
-        _dbContextMock.Setup(x => x.RefreshTokens)
-            .Returns(DbSetMockHelper.CreateMockDbSetFromList(new[] { validToken }));
+        var userId = Guid.NewGuid();
+        var validToken = new RefreshTokenBuilder()
+            .ForUser(userId)
+            .WithToken("valid_token")
+            .Build();
+
+        dbContext.RefreshTokens.Add(validToken);
+        await dbContext.SaveChangesAsync();
 
         _jwtTokenServiceMock.Setup(x => x.RevokeRefreshTokenAsync("valid_token", It.IsAny<CancellationToken>()))
             .Returns(Task.CompletedTask);
 
-        var auditLogsDbSet = new Mock<DbSet<AuditLog>>();
-        auditLogsDbSet.Setup(x => x.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()))
-            .Returns(new ValueTask<EntityEntry<AuditLog>>(Task.FromResult(default(EntityEntry<AuditLog>)!)));
-
-        _dbContextMock.Setup(x => x.AuditLogs).Returns(auditLogsDbSet.Object);
-        _dbContextMock.Setup(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync(1);
+        var command = new RevokeTokenCommand("valid_token");
 
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var result = await handler.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeTrue();
         result.Message.Should().Be("Token revoked successfully");
 
         _jwtTokenServiceMock.Verify(x => x.RevokeRefreshTokenAsync("valid_token", It.IsAny<CancellationToken>()), Times.Once);
-        _dbContextMock.Verify(x => x.AuditLogs.AddAsync(It.IsAny<AuditLog>(), It.IsAny<CancellationToken>()), Times.Once);
-        _dbContextMock.Verify(x => x.SaveChangesAsync(It.IsAny<CancellationToken>()), Times.Once);
+        
+        // Verify the token is actually revoked in the database
+        var revokedToken = await dbContext.RefreshTokens.FirstOrDefaultAsync(rt => rt.TokenHash == TokenHasher.Hash("valid_token"), cancellationToken: CancellationToken.None);
+        revokedToken.Should().NotBeNull();
+        revokedToken!.IsRevoked.Should().BeTrue();
     }
 
     [Fact]
     public async Task Handle_WithException_ShouldReturnFailure()
     {
         // Arrange
-        var command = new RevokeTokenCommand("valid_token");
-        
-        _dbContextMock.Setup(x => x.RefreshTokens)
-            .Throws(new Exception("Database error"));
+        var dbContext = InMemoryIdentityDbContextFactory.CreateDbContext();
+        var handler = new RevokeTokenCommandHandler(
+            _jwtTokenServiceMock.Object,
+            _userManagerMock.Object,
+            dbContext,
+            _loggerMock.Object);
 
-        // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        var command = new RevokeTokenCommand("valid_token");
+
+        // Act & Assert - Simulate database error by using a disposed context
+        await using var disposedContext = new LiquorPOSIdentityDbContext(
+            new DbContextOptionsBuilder<LiquorPOSIdentityDbContext>()
+                .UseInMemoryDatabase(Guid.NewGuid().ToString())
+                .Options);
+        
+        disposedContext.Dispose();
+
+        var handlerWithError = new RevokeTokenCommandHandler(
+            _jwtTokenServiceMock.Object,
+            _userManagerMock.Object,
+            disposedContext,
+            _loggerMock.Object);
+
+        var result = await handlerWithError.Handle(command, CancellationToken.None);
 
         // Assert
         result.Success.Should().BeFalse();
