@@ -84,8 +84,8 @@ public sealed class IdentityController : ControllerBase
     /// <param name="request">Login request with credentials</param>
     /// <returns>Auth response with access and refresh tokens</returns>
     /// <response code="200">User logged in successfully</response>
-    /// <response code="400">Invalid credentials or user inactive</response>
-    /// <response code="401">Unauthorized</response>
+    /// <response code="400">Bad request (e.g., inactive/locked account)</response>
+    /// <response code="401">Unauthorized (invalid credentials)</response>
     /// <response code="500">Server error</response>
     [HttpPost("login")]
     [ProducesResponseType(typeof(IdentityResponse<AuthResponse>), StatusCodes.Status200OK)]
@@ -141,8 +141,8 @@ public sealed class IdentityController : ControllerBase
     /// <param name="request">Refresh token request</param>
     /// <returns>New auth response with fresh tokens</returns>
     /// <response code="200">Token refreshed successfully</response>
-    /// <response code="400">Invalid or expired refresh token</response>
-    /// <response code="401">Unauthorized</response>
+    /// <response code="400">Bad request (e.g., malformed request)</response>
+    /// <response code="401">Unauthorized (invalid, expired, or revoked refresh token)</response>
     /// <response code="500">Server error</response>
     [HttpPost("refresh-token")]
     [ProducesResponseType(typeof(IdentityResponse<AuthResponse>), StatusCodes.Status200OK)]
@@ -161,12 +161,7 @@ public sealed class IdentityController : ControllerBase
             if (!result.Success)
             {
                 _logger.LogWarning("Token refresh failed: {Message}", result.Message);
-                
-                // Assuming most refresh failures are due to invalid/expired tokens -> 401
-                // But could be 400 if token format is bad.
-                // For safety regarding ticket requirements, let's use 401 for things that look like auth failures.
-                // Or sticking to ticket: "Test Case 2: Invalid Token ... Expected: 401"
-                
+
                 return Problem(
                     statusCode: StatusCodes.Status401Unauthorized,
                     title: "Unauthorized",

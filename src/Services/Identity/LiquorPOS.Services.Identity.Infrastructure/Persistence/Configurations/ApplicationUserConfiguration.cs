@@ -10,6 +10,11 @@ public sealed class ApplicationUserConfiguration : IEntityTypeConfiguration<Appl
     {
         builder.ToTable("AspNetUsers");
 
+        builder.HasIndex(u => u.NormalizedEmail)
+            .IsUnique()
+            .HasDatabaseName("EmailIndex")
+            .HasFilter("[NormalizedEmail] IS NOT NULL");
+
         builder.Property(u => u.FirstName)
             .HasMaxLength(100)
             .IsRequired();
