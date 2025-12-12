@@ -27,15 +27,25 @@ builder.Host.UseSerilog((context, configuration) =>
         .WriteTo.Console()
         .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day));
 
-var connectionString = builder.Configuration.GetConnectionString("IdentityDatabase")
-    ?? throw new InvalidOperationException("Connection string 'IdentityDatabase' was not found.");
+var useInMemory = Environment.GetEnvironmentVariable("USE_IN_MEMORY_DB") == "true";
 
-builder.Services.AddDbContext<LiquorPOSIdentityDbContext>(options =>
-    options.UseSqlServer(connectionString, sqlOptions =>
-    {
-        sqlOptions.MigrationsAssembly(typeof(LiquorPOSIdentityDbContext).Assembly.FullName);
-        sqlOptions.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
-    }));
+if (useInMemory)
+{
+    builder.Services.AddDbContext<LiquorPOSIdentityDbContext>(options =>
+        options.UseInMemoryDatabase("LiquorPOSIdentityDb"));
+}
+else
+{
+    var connectionString = builder.Configuration.GetConnectionString("IdentityDatabase")
+        ?? throw new InvalidOperationException("Connection string 'IdentityDatabase' was not found.");
+
+    builder.Services.AddDbContext<LiquorPOSIdentityDbContext>(options =>
+        options.UseSqlServer(connectionString, sqlOptions =>
+        {
+            sqlOptions.MigrationsAssembly(typeof(LiquorPOSIdentityDbContext).Assembly.FullName);
+            sqlOptions.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
+        }));
+}
 
 builder.Services.AddDataProtection();
 
