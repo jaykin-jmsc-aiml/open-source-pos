@@ -36,8 +36,8 @@ public sealed class IdentityController : ControllerBase
     /// <response code="500">Server error</response>
     [HttpPost("register")]
     [ProducesResponseType(typeof(IdentityResponse<AuthResponse>), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> Register([FromBody] RegisterRequest request, CancellationToken cancellationToken)
     {
         try
@@ -57,7 +57,11 @@ public sealed class IdentityController : ControllerBase
             if (!result.Success)
             {
                 _logger.LogWarning("Registration failed: {Message}", result.Message);
-                return BadRequest(new IdentityResponse<object>(false, result.Message, null!));
+                return Problem(
+                    statusCode: StatusCodes.Status400BadRequest,
+                    title: "Registration Failed",
+                    detail: result.Message
+                );
             }
 
             _logger.LogInformation("Registration successful for email: {Email}", request.Email);
@@ -66,8 +70,11 @@ public sealed class IdentityController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "An error occurred during registration");
-            return StatusCode(StatusCodes.Status500InternalServerError,
-                new IdentityResponse<object>(false, "An error occurred during registration", null!));
+            return Problem(
+                statusCode: StatusCodes.Status500InternalServerError,
+                title: "Server Error",
+                detail: "An error occurred during registration"
+            );
         }
     }
 
@@ -78,11 +85,13 @@ public sealed class IdentityController : ControllerBase
     /// <returns>Auth response with access and refresh tokens</returns>
     /// <response code="200">User logged in successfully</response>
     /// <response code="400">Invalid credentials or user inactive</response>
+    /// <response code="401">Unauthorized</response>
     /// <response code="500">Server error</response>
     [HttpPost("login")]
     [ProducesResponseType(typeof(IdentityResponse<AuthResponse>), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> Login([FromBody] LoginRequest request, CancellationToken cancellationToken)
     {
         try
@@ -95,7 +104,21 @@ public sealed class IdentityController : ControllerBase
             if (!result.Success)
             {
                 _logger.LogWarning("Login failed: {Message}", result.Message);
-                return BadRequest(new IdentityResponse<object>(false, result.Message, null!));
+
+                if (result.Message == "Invalid credentials")
+                {
+                    return Problem(
+                        statusCode: StatusCodes.Status401Unauthorized,
+                        title: "Unauthorized",
+                        detail: result.Message
+                    );
+                }
+
+                return Problem(
+                    statusCode: StatusCodes.Status400BadRequest,
+                    title: "Bad Request",
+                    detail: result.Message
+                );
             }
 
             _logger.LogInformation("Login successful for email: {Email}", request.Email);
@@ -104,8 +127,11 @@ public sealed class IdentityController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "An error occurred during login");
-            return StatusCode(StatusCodes.Status500InternalServerError,
-                new IdentityResponse<object>(false, "An error occurred during login", null!));
+            return Problem(
+                statusCode: StatusCodes.Status500InternalServerError,
+                title: "Server Error",
+                detail: "An error occurred during login"
+            );
         }
     }
 
@@ -116,11 +142,13 @@ public sealed class IdentityController : ControllerBase
     /// <returns>New auth response with fresh tokens</returns>
     /// <response code="200">Token refreshed successfully</response>
     /// <response code="400">Invalid or expired refresh token</response>
+    /// <response code="401">Unauthorized</response>
     /// <response code="500">Server error</response>
     [HttpPost("refresh-token")]
     [ProducesResponseType(typeof(IdentityResponse<AuthResponse>), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> RefreshToken([FromBody] RefreshTokenRequest request, CancellationToken cancellationToken)
     {
         try
@@ -133,7 +161,17 @@ public sealed class IdentityController : ControllerBase
             if (!result.Success)
             {
                 _logger.LogWarning("Token refresh failed: {Message}", result.Message);
-                return BadRequest(new IdentityResponse<object>(false, result.Message, null!));
+                
+                // Assuming most refresh failures are due to invalid/expired tokens -> 401
+                // But could be 400 if token format is bad.
+                // For safety regarding ticket requirements, let's use 401 for things that look like auth failures.
+                // Or sticking to ticket: "Test Case 2: Invalid Token ... Expected: 401"
+                
+                return Problem(
+                    statusCode: StatusCodes.Status401Unauthorized,
+                    title: "Unauthorized",
+                    detail: result.Message
+                );
             }
 
             _logger.LogInformation("Token refreshed successfully");
@@ -142,8 +180,11 @@ public sealed class IdentityController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "An error occurred during token refresh");
-            return StatusCode(StatusCodes.Status500InternalServerError,
-                new IdentityResponse<object>(false, "An error occurred during token refresh", null!));
+            return Problem(
+                statusCode: StatusCodes.Status500InternalServerError,
+                title: "Server Error",
+                detail: "An error occurred during token refresh"
+            );
         }
     }
 
@@ -157,8 +198,8 @@ public sealed class IdentityController : ControllerBase
     /// <response code="500">Server error</response>
     [HttpPost("revoke-token")]
     [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> RevokeToken([FromBody] RevokeTokenRequest request, CancellationToken cancellationToken)
     {
         try
@@ -171,7 +212,11 @@ public sealed class IdentityController : ControllerBase
             if (!result.Success)
             {
                 _logger.LogWarning("Token revocation failed: {Message}", result.Message);
-                return BadRequest(new IdentityResponse<object>(false, result.Message, null!));
+                return Problem(
+                    statusCode: StatusCodes.Status400BadRequest,
+                    title: "Revocation Failed",
+                    detail: result.Message
+                );
             }
 
             _logger.LogInformation("Token revoked successfully");
@@ -180,8 +225,11 @@ public sealed class IdentityController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "An error occurred during token revocation");
-            return StatusCode(StatusCodes.Status500InternalServerError,
-                new IdentityResponse<object>(false, "An error occurred during token revocation", null!));
+            return Problem(
+                statusCode: StatusCodes.Status500InternalServerError,
+                title: "Server Error",
+                detail: "An error occurred during token revocation"
+            );
         }
     }
 
@@ -199,8 +247,8 @@ public sealed class IdentityController : ControllerBase
     [HttpGet("users")]
     [Authorize(Roles = "Admin,Manager")]
     [ProducesResponseType(typeof(IdentityResponse<PagedResult<UserListDto>>), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status401Unauthorized)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> GetUsers(
         [FromQuery] int pageNumber = 1,
         [FromQuery] int pageSize = 10,
@@ -219,7 +267,11 @@ public sealed class IdentityController : ControllerBase
             if (!result.Success)
             {
                 _logger.LogWarning("Get users failed: {Message}", result.Message);
-                return BadRequest(new IdentityResponse<object>(false, result.Message, null!));
+                return Problem(
+                    statusCode: StatusCodes.Status400BadRequest,
+                    title: "Get Users Failed",
+                    detail: result.Message
+                );
             }
 
             _logger.LogInformation("Users retrieved successfully");
@@ -228,8 +280,11 @@ public sealed class IdentityController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "An error occurred while retrieving users");
-            return StatusCode(StatusCodes.Status500InternalServerError,
-                new IdentityResponse<object>(false, "An error occurred while retrieving users", null!));
+            return Problem(
+                statusCode: StatusCodes.Status500InternalServerError,
+                title: "Server Error",
+                detail: "An error occurred while retrieving users"
+            );
         }
     }
 
@@ -245,9 +300,9 @@ public sealed class IdentityController : ControllerBase
     [HttpGet("users/{id:guid}")]
     [Authorize(Roles = "Admin,Manager")]
     [ProducesResponseType(typeof(IdentityResponse<UserDto>), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status401Unauthorized)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status404NotFound)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> GetUserById(Guid id, CancellationToken cancellationToken = default)
     {
         try
@@ -262,9 +317,17 @@ public sealed class IdentityController : ControllerBase
                 _logger.LogWarning("Get user failed: {Message}", result.Message);
                 if (result.Message?.Contains("not found", StringComparison.OrdinalIgnoreCase) == true)
                 {
-                    return NotFound(new IdentityResponse<object>(false, result.Message, null!));
+                    return Problem(
+                        statusCode: StatusCodes.Status404NotFound,
+                        title: "Not Found",
+                        detail: result.Message
+                    );
                 }
-                return BadRequest(new IdentityResponse<object>(false, result.Message, null!));
+                return Problem(
+                    statusCode: StatusCodes.Status400BadRequest,
+                    title: "Bad Request",
+                    detail: result.Message
+                );
             }
 
             _logger.LogInformation("User retrieved successfully");
@@ -273,8 +336,11 @@ public sealed class IdentityController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "An error occurred while retrieving user {UserId}", id);
-            return StatusCode(StatusCodes.Status500InternalServerError,
-                new IdentityResponse<object>(false, "An error occurred while retrieving user", null!));
+            return Problem(
+                statusCode: StatusCodes.Status500InternalServerError,
+                title: "Server Error",
+                detail: "An error occurred while retrieving user"
+            );
         }
     }
 
@@ -292,10 +358,10 @@ public sealed class IdentityController : ControllerBase
     [HttpPost("users/{id:guid}/roles")]
     [Authorize(Roles = "Admin,Manager")]
     [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status401Unauthorized)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status404NotFound)]
-    [ProducesResponseType(typeof(IdentityResponse<object>), StatusCodes.Status500InternalServerError)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> AssignUserRoles(Guid id, [FromBody] string[] roles, CancellationToken cancellationToken = default)
     {
         try
@@ -310,9 +376,17 @@ public sealed class IdentityController : ControllerBase
                 _logger.LogWarning("Assign roles failed: {Message}", result.Message);
                 if (result.Message?.Contains("not found", StringComparison.OrdinalIgnoreCase) == true)
                 {
-                    return NotFound(new IdentityResponse<object>(false, result.Message, null!));
+                    return Problem(
+                        statusCode: StatusCodes.Status404NotFound,
+                        title: "Not Found",
+                        detail: result.Message
+                    );
                 }
-                return BadRequest(new IdentityResponse<object>(false, result.Message, null!));
+                return Problem(
+                    statusCode: StatusCodes.Status400BadRequest,
+                    title: "Bad Request",
+                    detail: result.Message
+                );
             }
 
             _logger.LogInformation("Roles assigned successfully for user {UserId}", id);
@@ -321,8 +395,11 @@ public sealed class IdentityController : ControllerBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "An error occurred while assigning roles to user {UserId}", id);
-            return StatusCode(StatusCodes.Status500InternalServerError,
-                new IdentityResponse<object>(false, "An error occurred while assigning roles", null!));
+            return Problem(
+                statusCode: StatusCodes.Status500InternalServerError,
+                title: "Server Error",
+                detail: "An error occurred while assigning roles"
+            );
         }
     }
 }

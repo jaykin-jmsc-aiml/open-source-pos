@@ -289,11 +289,8 @@ public class UserEndpointsTests : IClassFixture<IdentityApiFactory>
         response.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
 
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonSerializer.Deserialize<ApiResponse<object>>(content, _jsonOptions);
-
-        result.Should().NotBeNull();
-        result.Success.Should().BeFalse();
-        result.Message.Should().Contain("Invalid roles");
+        using var doc = JsonDocument.Parse(content);
+        doc.RootElement.GetProperty("detail").GetString().Should().Contain("Invalid roles");
     }
 
     private async Task<string> CreateAdminUserAndGetToken()

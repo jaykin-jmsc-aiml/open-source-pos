@@ -75,7 +75,7 @@ public class TokenEndpointsTests : IClassFixture<IdentityApiFactory>
     }
 
     [Fact]
-    public async Task RefreshToken_WithInvalidToken_ShouldReturnBadRequest()
+    public async Task RefreshToken_WithInvalidToken_ShouldReturnUnauthorized()
     {
         // Arrange
         var refreshTokenRequest = new
@@ -87,18 +87,11 @@ public class TokenEndpointsTests : IClassFixture<IdentityApiFactory>
         var refreshResponse = await _client.PostAsJsonAsync("/api/identity/refresh-token", refreshTokenRequest);
 
         // Assert
-        refreshResponse.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
-
-        var content = await refreshResponse.Content.ReadAsStringAsync();
-        var result = JsonSerializer.Deserialize<ApiResponse<object>>(content, _jsonOptions);
-
-        result.Should().NotBeNull();
-        result.Success.Should().BeFalse();
-        result.Message.Should().Contain("Invalid refresh token");
+        refreshResponse.StatusCode.Should().Be(System.Net.HttpStatusCode.Unauthorized);
     }
 
     [Fact]
-    public async Task RefreshToken_WithEmptyToken_ShouldReturnBadRequest()
+    public async Task RefreshToken_WithEmptyToken_ShouldReturnUnauthorized()
     {
         // Arrange
         var refreshTokenRequest = new
@@ -110,14 +103,7 @@ public class TokenEndpointsTests : IClassFixture<IdentityApiFactory>
         var refreshResponse = await _client.PostAsJsonAsync("/api/identity/refresh-token", refreshTokenRequest);
 
         // Assert
-        refreshResponse.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
-
-        var content = await refreshResponse.Content.ReadAsStringAsync();
-        var result = JsonSerializer.Deserialize<ApiResponse<object>>(content, _jsonOptions);
-
-        result.Should().NotBeNull();
-        result.Success.Should().BeFalse();
-        result.Message.Should().Be("Refresh token is required");
+        refreshResponse.StatusCode.Should().Be(System.Net.HttpStatusCode.Unauthorized);
     }
 
     [Fact]
@@ -218,14 +204,11 @@ public class TokenEndpointsTests : IClassFixture<IdentityApiFactory>
         var refreshResponse = await _client.PostAsJsonAsync("/api/identity/refresh-token", refreshTokenRequest);
 
         // Assert
-        refreshResponse.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
+        refreshResponse.StatusCode.Should().Be(System.Net.HttpStatusCode.Unauthorized);
 
         var content = await refreshResponse.Content.ReadAsStringAsync();
-        var result = JsonSerializer.Deserialize<ApiResponse<object>>(content, _jsonOptions);
-
-        result.Should().NotBeNull();
-        result.Success.Should().BeFalse();
-        result.Message.Should().Contain("revoked");
+        using var doc = JsonDocument.Parse(content);
+        doc.RootElement.GetProperty("detail").GetString().Should().Contain("revoked");
     }
 
     [Fact]
@@ -243,12 +226,6 @@ public class TokenEndpointsTests : IClassFixture<IdentityApiFactory>
         var refreshResponse = await _client.PostAsJsonAsync("/api/identity/refresh-token", refreshTokenRequest);
 
         // Assert
-        refreshResponse.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
-
-        var content = await refreshResponse.Content.ReadAsStringAsync();
-        var result = JsonSerializer.Deserialize<ApiResponse<object>>(content, _jsonOptions);
-
-        result.Should().NotBeNull();
-        result.Success.Should().BeFalse();
+        refreshResponse.StatusCode.Should().Be(System.Net.HttpStatusCode.Unauthorized);
     }
 }

@@ -53,7 +53,7 @@ public class LoginEndpointTests : IClassFixture<IdentityApiFactory>
     }
 
     [Fact]
-    public async Task Login_WithInvalidPassword_ShouldReturnBadRequest()
+    public async Task Login_WithInvalidPassword_ShouldReturnUnauthorized()
     {
         var email = "invalidpass@example.com";
         var password = "SecurePass123";
@@ -69,53 +69,51 @@ public class LoginEndpointTests : IClassFixture<IdentityApiFactory>
         var loginRequest = new LoginRequest(email, "WrongPassword123");
         var response = await _httpClient.PostAsJsonAsync("/api/identity/login", loginRequest);
 
-        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
 
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonSerializer.Deserialize<ApiResponse<object>>(content, _jsonOptions);
-        result.Success.Should().BeFalse();
-        result.Message.Should().Contain("Invalid credentials");
+        using var doc = JsonDocument.Parse(content);
+        doc.RootElement.GetProperty("detail").GetString().Should().Contain("Invalid credentials");
     }
 
     [Fact]
-    public async Task Login_WithNonexistentEmail_ShouldReturnBadRequest()
+    public async Task Login_WithNonexistentEmail_ShouldReturnUnauthorized()
     {
         var loginRequest = new LoginRequest("nonexistent@example.com", "password");
         var response = await _httpClient.PostAsJsonAsync("/api/identity/login", loginRequest);
 
-        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
 
         var content = await response.Content.ReadAsStringAsync();
-        var result = JsonSerializer.Deserialize<ApiResponse<object>>(content, _jsonOptions);
-        result.Success.Should().BeFalse();
-        result.Message.Should().Contain("Invalid credentials");
+        using var doc = JsonDocument.Parse(content);
+        doc.RootElement.GetProperty("detail").GetString().Should().Contain("Invalid credentials");
     }
 
     [Fact]
-    public async Task Login_WithInvalidEmail_ShouldReturnBadRequest()
+    public async Task Login_WithInvalidEmail_ShouldReturnUnauthorized()
     {
         var loginRequest = new LoginRequest("invalid-email", "password");
         var response = await _httpClient.PostAsJsonAsync("/api/identity/login", loginRequest);
 
-        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
     }
 
     [Fact]
-    public async Task Login_WithEmptyPassword_ShouldReturnBadRequest()
+    public async Task Login_WithEmptyPassword_ShouldReturnUnauthorized()
     {
         var loginRequest = new LoginRequest("user@example.com", "");
         var response = await _httpClient.PostAsJsonAsync("/api/identity/login", loginRequest);
 
-        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
     }
 
     [Fact]
-    public async Task Login_WithEmptyEmail_ShouldReturnBadRequest()
+    public async Task Login_WithEmptyEmail_ShouldReturnUnauthorized()
     {
         var loginRequest = new LoginRequest("", "password");
         var response = await _httpClient.PostAsJsonAsync("/api/identity/login", loginRequest);
 
-        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+        response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
     }
 
     [Fact]

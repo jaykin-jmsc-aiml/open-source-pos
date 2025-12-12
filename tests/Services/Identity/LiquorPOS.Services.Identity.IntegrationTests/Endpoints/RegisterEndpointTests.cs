@@ -104,9 +104,8 @@ public class RegisterEndpointTests : IClassFixture<IdentityApiFactory>
         response2.StatusCode.Should().Be(HttpStatusCode.BadRequest);
 
         var content = await response2.Content.ReadAsStringAsync();
-        var result = JsonSerializer.Deserialize<ApiResponse<object>>(content, _jsonOptions);
-        result.Success.Should().BeFalse();
-        result.Message.Should().Contain("already registered");
+        using var doc = JsonDocument.Parse(content);
+        doc.RootElement.GetProperty("detail").GetString().Should().Contain("already registered");
     }
 
     [Fact]
