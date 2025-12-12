@@ -76,22 +76,22 @@ All 31 integration tests for the LiquorPOS Identity Service have been successful
   - Validates audit trail for login operations
 
 #### Error Case Tests
-- ✅ **Login_WithInvalidPassword_ShouldReturnBadRequest**
-  - Tests incorrect password rejection (400 Bad Request)
-  - Validates error message: "Invalid credentials"
+- ✅ **Login_WithInvalidPassword_ShouldReturnUnauthorized**
+  - Tests incorrect password rejection (401 Unauthorized)
+  - Validates ProblemDetails response with detail: "Invalid credentials"
   
-- ✅ **Login_WithNonexistentEmail_ShouldReturnBadRequest**
-  - Tests non-existent user rejection (400 Bad Request)
+- ✅ **Login_WithNonexistentEmail_ShouldReturnUnauthorized**
+  - Tests non-existent user rejection (401 Unauthorized)
   - Validates consistent error message for security
   
-- ✅ **Login_WithInvalidEmail_ShouldReturnBadRequest**
-  - Tests email format validation (400 Bad Request)
+- ✅ **Login_WithInvalidEmail_ShouldReturnUnauthorized**
+  - Tests invalid email format rejection (401 Unauthorized)
   
-- ✅ **Login_WithEmptyPassword_ShouldReturnBadRequest**
-  - Tests required field validation (400 Bad Request)
+- ✅ **Login_WithEmptyPassword_ShouldReturnUnauthorized**
+  - Tests empty password rejection (401 Unauthorized)
   
-- ✅ **Login_WithEmptyEmail_ShouldReturnBadRequest**
-  - Tests required field validation (400 Bad Request)
+- ✅ **Login_WithEmptyEmail_ShouldReturnUnauthorized**
+  - Tests empty email rejection (401 Unauthorized)
 
 **Database Validation:**
 - ✅ Login attempts logged in audit trail
@@ -110,16 +110,15 @@ All 31 integration tests for the LiquorPOS Identity Service have been successful
   - Tests token rotation (old token marked as parent)
   - Confirms ParentRefreshTokenId relationship tracked
   
-- ✅ **RefreshToken_WithInvalidToken_ShouldReturnBadRequest**
-  - Tests invalid/malformed token rejection (400 Bad Request)
-  - Validates error message: "Invalid refresh token"
+- ✅ **RefreshToken_WithInvalidToken_ShouldReturnUnauthorized**
+  - Tests invalid/malformed token rejection (401 Unauthorized)
+  - Validates ProblemDetails response
   
-- ✅ **RefreshToken_WithEmptyToken_ShouldReturnBadRequest**
-  - Tests required field validation (400 Bad Request)
-  - Validates error message: "Refresh token is required"
+- ✅ **RefreshToken_WithEmptyToken_ShouldReturnUnauthorized**
+  - Tests empty token rejection (401 Unauthorized)
   
 - ✅ **RefreshToken_WithExpiredToken_ShouldReturnError**
-  - Tests expired token rejection (400 Bad Request)
+  - Tests expired/malformed token rejection (401 Unauthorized)
 
 #### Token Revocation Tests
 - ✅ **RevokeToken_WithValidToken_ShouldReturnSuccess**
@@ -128,7 +127,7 @@ All 31 integration tests for the LiquorPOS Identity Service have been successful
   - Confirms success message returned
   
 - ✅ **RevokeToken_ThenRefresh_ShouldReturnError**
-  - Tests revoked token cannot be used for refresh (400 Bad Request)
+  - Tests revoked token cannot be used for refresh (401 Unauthorized)
   - Validates error message contains "revoked"
 
 **Database Validation:**
